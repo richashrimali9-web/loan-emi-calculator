@@ -78,9 +78,9 @@
 ## Before Deployment - Final Steps:
 
 ### 1. Replace Placeholder IDs
-- [ ] Google Analytics: Replace `UA-XXXXXXXXX-X` with your tracking ID (Line 495)
-- [ ] AdSense Publisher: Replace `ca-pub-XXXXXXXXXXXX` with your publisher ID (Line 505)
-- [ ] AdSense Slot: Replace `1234567890` with your ad slot ID (Line 506)
+- [x] Google Analytics: ~~Replace `UA-XXXXXXXXX-X` with your tracking ID~~ **COMPLETED** - Using `G-5M7LHTQF5Y` (GA4)
+- [ ] AdSense Publisher: Replace `ca-pub-XXXXXXXXXXXX` with your publisher ID (Line 505) - **COMMENTED OUT** until approval
+- [ ] AdSense Slot: Replace `1234567890` with your ad slot ID (Line 506) - **COMMENTED OUT** until approval
 - [ ] Open Graph Image: Replace `https://yourdomain.com/emi-preview.png` with actual image URL (Line 10)
 
 ### 2. Test on Real Devices

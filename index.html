@@ -501,15 +501,15 @@
       <div>Privacy: This calculator does not collect or store personal data. All calculations are done locally in your browser.</div>
     </footer>
   </div>
-  <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-XXXXXXXXX-X');
-    </script>
-    <!-- Google AdSense - To be added after approval -->
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5M7LHTQF5Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5M7LHTQF5Y');
+  </script>
+  <!-- Google AdSense - To be added after approval -->
     <!-- 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
@@ -631,8 +631,14 @@
         personal: 'Calculate EMI for Personal Loans. Compare offers, view amortization schedule, and more.',
         car: 'Calculate EMI for Car Loans. Compare offers, view amortization schedule, and more.'
       };
-      document.getElementById('pageTitle').textContent = titleMap[type];
-      document.getElementById('pageDesc').setAttribute('content', descMap[type]);
+      var titleElement = document.getElementById("pageTitle");
+      if (titleElement) {
+          titleElement.textContent = titleMap[type];
+      }
+      var descElement = document.getElementById("pageDesc");
+      if (descElement) {
+          descElement.textContent = descMap[type];
+      }
     }
 
     // Update input placeholders, helpers, and defaults
