@@ -214,8 +214,11 @@
       transition: background 0.2s, color 0.2s, border 0.2s;
       width: 100%;
       box-sizing: border-box;
-      padding: 0.8em;
+      padding: 0.8em 1em;
       margin: 0;
+      text-align: center;
+      text-decoration: none;
+      display: block;
     }
     .cta-btn.primary {
       background: var(--home);
@@ -238,10 +241,14 @@
       border-color: #1b4fa0;
     }
     @media (max-width: 600px) {
+      .cta-row {
+        flex-direction: column;
+        gap: 0.7em;
+      }
       .cta-btn, #showMoreBtn {
         min-height: 44px;
         font-size: 1rem;
-        padding: 12px 0;
+        padding: 12px 16px;
       }
       .amort-table-wrapper {
         min-width: 100vw;
