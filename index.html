@@ -101,10 +101,44 @@
     .tab.home:hover { background: #f0f6ff; }
     .tab.personal:hover { background: #f0fff6; }
     .tab.car:hover { background: #fff8f0; }
-    .tab:focus, .cta-btn:focus, #showMoreBtn:focus {
+    /* Use focus-visible to show outlines primarily for keyboard users and
+       avoid visual artifacts when clicking/tapping buttons. Provide a
+       subtle, consistent focus ring for CTA buttons and a custom ring for
+       the Show More button to prevent the short blue line issue. */
+    .tab:focus-visible {
       outline: 2px solid #3366cc;
       outline-offset: 2px;
-      box-shadow: 0 0 0 2px #eaf2ff;
+      box-shadow: 0 0 0 4px rgba(58, 104, 204, 0.08);
+    }
+    .cta-btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(27, 79, 160, 0.12);
+    }
+    /* Give the Show More button a slightly different, softer focus ring
+       to avoid the small blue artifact that appears on click. */
+    #showMoreBtn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(45, 108, 223, 0.12);
+      border-color: #1b4fa0;
+    }
+    /* Prevent mobile tap highlight and click/active shadows which can
+       create a short blue line or inconsistent bottom border on some
+       browsers. Keep focus-visible for keyboard users only. */
+    .cta-btn, #showMoreBtn {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* ensure no additional box-shadow shows on click */
+      box-shadow: none;
+    }
+    /* Suppress visual changes on pointer/active events to avoid the
+       bottom-border artifact while still allowing keyboard focus rings. */
+    .cta-btn:active, .cta-btn:focus:not(:focus-visible),
+    #showMoreBtn:active, #showMoreBtn:focus:not(:focus-visible) {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: inherit !important;
     }
     .tab .tab-icon {
       font-size: 1.3em;
@@ -331,6 +365,14 @@
       gap: 16px;
       flex-wrap: wrap;
     }
+    /* Container for the badges - control spacing and responsive stacking */
+    #summaryBadges {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     .amort-summary-heading {
       font-size: 1rem;
       color: #444;
@@ -346,6 +388,13 @@
       font-weight: 500;
       color: #fff;
       white-space: nowrap;
+      /* Allow badges to shrink inside flex containers on small screens */
+      flex: 0 1 auto;
+      min-width: 0; /* enables flex children to shrink properly */
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .amort-badge.principal {
       background: #1a4fa0;
@@ -372,6 +421,35 @@
       .amort-badge {
         font-size: 0.88rem;
         padding: 6px 12px;
+        /* On small screens allow wrapping of long numbers/labels to avoid overflow */
+        white-space: normal;
+        text-overflow: clip;
+      }
+      /* Stack badges vertically on small screens and add spacing so they don't touch */
+      #summaryBadges {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+      }
+    }
+
+    /* Extra small phones: ensure badge content doesn't overflow and keeps readable layout */
+    @media (max-width: 380px) {
+      .amort-badge {
+        padding: 6px 10px;
+        border-radius: 16px;
+        font-size: 0.86rem;
+        line-height: 1.1;
+      }
+      .amort-badge-amount {
+        font-weight: 600;
+        display: inline-block;
+        min-width: 0;
+        margin-right: 6px;
+      }
+      .amort-badge-percent {
+        display: inline-block;
+        opacity: 0.95;
       }
     }
     .amort-table-wrapper {
@@ -385,6 +463,27 @@
       background: #fff;
       -webkit-overflow-scrolling: touch;
       position: relative;
+    }
+
+    /* Ensure the Show More button row doesn't let the button border
+       collide with the amortization wrapper border. Add padding so the
+       button sits inset and use matching radii to keep corners consistent. */
+    .amort-showmore-row {
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      background: transparent;
+    }
+    .amort-showmore-row .cta-btn {
+      width: 100%;
+      max-width: 860px;
+      box-sizing: border-box;
+      margin: 0;
+      /* keep button radius slightly smaller than wrapper to avoid
+         double-rounded overlap when placed near edges */
+      border-radius: calc(var(--radius) - 4px);
+      /* remove extra shadows that can visually alter corners */
+      box-shadow: none;
     }
     .amort-table {
       width: 100%;
