@@ -11,8 +11,8 @@ node_modules/
 .vscode/
 # OS files
 .DS_Store
-# Manifest file
-manifest.json
+# Manifest file in project root (if any)
+/manifest.json
 // Local backup files
 *.local
 .gitignore.local
