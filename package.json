@@ -1,8 +1,7 @@
 {
       "name": "Enhance Visual Appeal",
       "version": "0.1.0",
-      "homepage": "https://richashrimali9-web.github.io/loan-emi-calculator",
-      "private": true,
+            "private": true,
       "dependencies": {
             "@radix-ui/react-accordion": "^1.2.3",
             "@radix-ui/react-alert-dialog": "^1.1.6",
@@ -52,10 +51,10 @@
             "gh-pages": "^6.3.0",
             "vite": "6.3.5"
       },
-      "scripts": {
-            "dev": "vite",
-            "build": "vite build",
-            "predeploy": "npm run build",
-            "deploy": "gh-pages -d build"
-      }
+                  "scripts": {
+                        "dev": "vite",
+                        "build": "vite build",
+                        "predeploy": "npm run build",
+                        "deploy": "gh-pages -d build"
+                  }
 }
