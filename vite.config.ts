@@ -4,7 +4,8 @@
   import path from 'path';
 
   export default defineConfig({
-    plugins: [react()],
+  base: '/loan-emi-calculator/',
+  plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
