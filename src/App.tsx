@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ModernGradientDesign } from './components/ModernGradientDesign';
 import { EnhancedHeader } from './components/layout/EnhancedHeader';
 import { LoanEducationSection } from './components/content/LoanEducationSection';
@@ -8,17 +7,8 @@ import { FAQSection } from './components/content/FAQSection';
 import { LoanOffersGrid } from './components/affiliate/LoanOffersGrid';
 import { LeadCaptureForm } from './components/affiliate/LeadCaptureForm';
 import { EnhancedFooter } from './components/layout/EnhancedFooter';
-import { Button } from './components/ui/button';
 
 export default function App() {
-  const [selectedDesign, setSelectedDesign] = useState<'modern' | 'minimal' | 'chart' | 'glass'>('modern');
-
-  // const designs = [
-  //   { id: 'modern' as const, name: 'Modern Gradient', icon: '🎨' },
-  //   { id: 'minimal' as const, name: 'Minimal Clean', icon: '✨' },
-  //   { id: 'chart' as const, name: 'With Charts', icon: '📊' },
-  //   { id: 'glass' as const, name: 'Glassmorphism', icon: '💎' },
-  // ];
 
   const handleNavigation = (section: string) => {
     console.log('Navigation clicked:', section);
@@ -67,26 +57,6 @@ export default function App() {
 
       {/* Main Calculator Section */}
       <div className="max-w-7xl mx-auto p-4 md:p-8">
-        {/* Design Selector */}
-        <div className="mb-8 text-center">
-          <h1 className="text-gray-800 mb-2">Loan EMI Calculator - Design Options</h1>
-          <p className="text-gray-600 mb-6">Choose your preferred design style</p>
-          
-          {/* <div className="flex flex-wrap justify-center gap-3">
-            {designs.map((design) => (
-              <Button
-                key={design.id}
-                onClick={() => setSelectedDesign(design.id)}
-                variant={selectedDesign === design.id ? 'default' : 'outline'}
-                className="gap-2"
-              >
-                <span>{design.icon}</span>
-                {design.name}
-              </Button>
-            ))}
-          </div> */}
-        </div>
-
         {/* Calculator Design Display */}
         {/* Anchors for individual calculators so header links can scroll to them */}
         <div id="home-loan" />
@@ -94,10 +64,7 @@ export default function App() {
         <div id="car-loan" />
         <div id="business-loan" />
         <div id="calculators" className="transition-all duration-300">
-          {selectedDesign === 'modern' && <ModernGradientDesign />}
-          {/* {selectedDesign === 'minimal' && <MinimalCleanDesign />} */}
-          {/* {selectedDesign === 'chart' && <ChartVisualizationDesign />} */}
-          {/* {selectedDesign === 'glass' && <GlassmorphismDesign />} */}
+          <ModernGradientDesign />
         </div>
       </div>
 
