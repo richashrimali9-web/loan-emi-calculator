@@ -2,11 +2,57 @@
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
+  import fs from 'fs';
 
   export default defineConfig({
   // Serve from root for custom domain
   base: '/',
-  plugins: [react()],
+  plugins: [
+    {
+      name: 'serve-static-pages',
+      apply: 'serve',
+      enforce: 'pre',
+      configureServer(server: any) {
+        return () => {
+          // Add middleware to handle static routes BEFORE other middleware
+          server.middlewares.stack.unshift({
+            route: '',
+            handle: (req: any, res: any, next: any) => {
+              const url = req.url?.split('?')[0];
+              if (!url) return next();
+              
+              const staticRoutes = ['/privacy-policy/', '/terms-of-service/', '/about/', '/contact/', '/blog/'];
+              const isBlogPost = /^\/blog\/post-\d+\.html$/.test(url);
+              
+              if (staticRoutes.includes(url) || isBlogPost) {
+                const publicDir = path.join(process.cwd(), 'public');
+                let filePath: string;
+                
+                if (staticRoutes.includes(url)) {
+                  filePath = path.join(publicDir, url, 'index.html');
+                } else {
+                  filePath = path.join(publicDir, url);
+                }
+                
+                if (fs.existsSync(filePath)) {
+                  const html = fs.readFileSync(filePath, 'utf-8');
+                  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+                  res.end(html);
+                  return;
+                }
+              }
+              next();
+            }
+          });
+        };
+      }
+    },
+    react()
+  ],
+  server: {
+    port: 3000,
+    open: true,
+  },
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -67,9 +113,5 @@
           }
         }
       },
-    },
-    server: {
-      port: 3000,
-      open: true,
     },
   });

@@ -222,20 +222,20 @@ export const EnhancedFooter: React.FC<EnhancedFooterProps> = ({ onNavigate }) =>
 
             {/* Legal Links */}
             <div className="flex items-center justify-center gap-6">
-              <button
-                onClick={() => handleNavClick('privacy')}
+              <a
+                href="/privacy-policy/"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 Privacy Policy
-              </button>
-              <button
-                onClick={() => handleNavClick('terms')}
+              </a>
+              <a
+                href="/terms-of-service/"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 Terms of Service
-              </button>
+              </a>
               <button
-                onClick={() => handleNavClick('disclaimer')}
+                onClick={() => handleNavClick('faq')}
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 Disclaimer

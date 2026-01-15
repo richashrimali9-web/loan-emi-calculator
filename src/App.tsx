@@ -13,10 +13,21 @@ export default function App() {
   const handleNavigation = (section: string) => {
     console.log('Navigation clicked:', section);
 
+    // External pages that should redirect
+    const externalPages: Record<string, string> = {
+      privacy: '/privacy-policy/',
+      about: '/about/',
+      contact: '/contact/',
+      blog: '/blog/',
+    };
+
+    // If it's an external page, redirect
+    if (externalPages[section]) {
+      window.location.href = externalPages[section];
+      return;
+    }
+
     const map: Record<string, string> = {
-      blog: 'education',
-      about: 'tips',
-      contact: 'faq',
       apply: 'lead-capture',
     };
 
@@ -39,8 +50,6 @@ export default function App() {
     const el = document.getElementById(targetId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      console.warn('No element found for navigation target:', targetId);
     }
   };
 
