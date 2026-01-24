@@ -1,2 +1,79 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>PMAY Scheme — Loan EMI Calculator</title><style>* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; } header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 1rem 0; } nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; } nav a { margin-right: 2rem; text-decoration: none; color: #666; } nav a:hover { color: #7c3aed; } article { max-width: 900px; margin: 2rem auto; padding: 0 1rem; } h1 { margin-bottom: 1rem; color: #1a1a1a; } p { margin-bottom: 1rem; } a { color: #7c3aed; }</style></head><body><header><nav><a href="/blog/">Blog</a> | <a href="/">Calculator</a></nav></header><article><h1>PMAY Scheme: Benefits and Eligibility</h1><p>Summary of the Pradhan Mantri Awas Yojana and how borrowers can benefit.</p><p>PMAY offers subsidized housing loans and credit-linked assistance to eligible homebuyers. Check the <a href="/">home loan calculator</a> for instant EMI estimates.</p></article></body></html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PMAY (Pradhan Mantri Awas Yojana): Benefits, Eligibility, and EMI Impact — Loan EMI Calculator</title>
+<meta name="description" content="Understand PMAY: CLSS benefits, income categories, eligibility, property criteria, documentation, and how subsidies affect your EMI with worked examples and tables." />
+<style>* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #1f2937; } header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 1rem 0; } nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; } nav a { margin-right: 1rem; text-decoration: none; color: #6b7280; } nav a:hover { color: #7c3aed; } article { max-width: 900px; margin: 2rem auto; padding: 0 1rem; } h1 { margin-bottom: 0.75rem; color: #111827; font-size: 2rem; } h2 { margin: 2rem 0 0.5rem; color: #111827; font-size: 1.35rem; } h3 { margin: 1.25rem 0 0.25rem; color: #111827; font-size: 1.1rem; } p { margin-bottom: 1rem; } ul { margin-left: 1.25rem; margin-bottom: 1rem; } li { margin: 0.25rem 0; } a { color: #7c3aed; } .muted { color: #6b7280; } .box { background: #f9fafb; border: 1px solid #e5e7eb; padding: 1rem; border-radius: 8px; } .note { background: #f5f3ff; border: 1px solid #ddd6fe; padding: 0.75rem 1rem; border-radius: 8px; } table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; } th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.5rem; text-align: left; } th { background: #fafafa; color: #374151; } td.num, th.num { text-align: right; } .small { font-size: 0.9rem; color: #4b5563; } .toc { margin: 1rem 0; } .toc a { display: inline-block; margin-right: 0.75rem; font-size: 0.95rem; } footer { margin-top: 2rem; font-size: 0.95rem; color: #6b7280; }</style></head>
+<body>
+<header><nav><a href="/blog/">Blog</a> | <a href="/">Calculator</a> | <a href="/guides/">Guides</a></nav></header>
+<article>
+  <h1>PMAY Scheme: Benefits, Eligibility, and Impact on EMI</h1>
+  <p class="muted">A simplified explainer of the Pradhan Mantri Awas Yojana (PMAY) and Credit Linked Subsidy Scheme (CLSS): who can apply, benefits available, and how it reduces your EMI with examples.</p>
+
+  <div class="toc"><strong>On this page:</strong>
+    <a href="#what">What is PMAY?</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#benefits">Benefits (CLSS)</a>
+    <a href="#examples">Worked examples</a>
+    <a href="#apply">How to apply</a>
+    <a href="#faq">FAQs</a>
+  </div>
+
+  <div class="note">Use the <a href="/">EMI Calculator</a> to simulate your home loan before and after subsidy to see the difference in EMI and total interest.</div>
+
+  <h2 id="what">What is PMAY?</h2>
+  <p>PMAY aims to enable affordable housing for urban and rural households. One key component is the Credit Linked Subsidy Scheme (CLSS), which offers an interest subsidy on home loans for eligible beneficiaries across income groups, subject to property and income criteria.</p>
+
+  <h2 id="eligibility">Eligibility (high level)</h2>
+  <ul>
+    <li>Income groups: EWS, LIG, MIG-I, MIG-II with prescribed annual income limits.</li>
+    <li>Family definition: beneficiary family includes spouse and unmarried children.</li>
+    <li>Ownership: applicant/family should not own a pucca house in India (subject to scheme rules).</li>
+    <li>Property criteria: carpet area caps vary by income category; property must meet statutory building norms.</li>
+    <li>First-time beneficiary: should not have availed prior central assistance under housing schemes.</li>
+  </ul>
+
+  <h2 id="benefits">Benefits: how CLSS affects your loan</h2>
+  <ul>
+    <li>Interest subsidy credited upfront to the loan account, effectively reducing principal.</li>
+    <li>Subsidy rate and cap depend on income category; subsidy is calculated on a notional principal up to a limit and a specified rate for a given tenure.</li>
+    <li>Lower effective principal means lower EMI and reduced total interest outgo.</li>
+  </ul>
+
+  <table aria-label="Illustrative CLSS snapshot">
+    <thead><tr><th>Category</th><th>Illustrative subsidy rate</th><th>Max subsidy principal</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td>EWS/LIG</td><td>Up to a prescribed %</td><td>Up to a prescribed cap</td><td>Significant EMI reduction for lower-ticket loans</td></tr>
+      <tr><td>MIG-I/II</td><td>Lower than EWS/LIG</td><td>Cap applies</td><td>Moderate EMI reduction</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Exact rates/caps are notified by authorities and can change. Check latest official circulars and lender communication.</p>
+
+  <h2 id="examples">Worked example: EMI impact</h2>
+  <p>Assume a borrower in an eligible category takes a home loan of ₹20,00,000 at 9.0% p.a. for 20 years.</p>
+  <ul>
+    <li>Without subsidy: EMI ≈ ₹17,994; total interest ≈ ₹23,18,560.</li>
+    <li>With an illustrative upfront subsidy credit of ₹2,00,000 (effective principal ₹18,00,000): EMI ≈ ₹16,195; total interest ≈ ₹20,86,704.</li>
+  </ul>
+  <p><strong>Impact:</strong> EMI lower by ~₹1,800/month; total interest lower by ~₹2.3 lakh over the tenure. Your actual benefit depends on category, caps, and lender processing timelines.</p>
+
+  <h2 id="apply">How to apply</h2>
+  <ul>
+    <li>Confirm eligibility with your lender and gather documents: KYC, income proof, property details, self-declaration as per PMAY rules.</li>
+    <li>Apply for a home loan; the lender processes the CLSS claim upon disbursal as per scheme workflow.</li>
+    <li>Track the subsidy credit to your loan account; confirm revised amortization schedule after credit.</li>
+  </ul>
+
+  <div class="note">Related resources: <a href="/guides/home-loan-emi-guide.html">Home loan EMI guide</a> · <a href="/guides/how-emi-is-calculated.html">How EMI is calculated</a> · <a href="/">EMI calculator</a></div>
+
+  <h2 id="faq">FAQs</h2>
+  <h3>Can I claim PMAY for resale properties?</h3>
+  <p>Subject to scheme guidelines and lender policy; many resale purchases qualify if they meet area and eligibility norms.</p>
+
+  <h3>Is PMAY available for home improvement?</h3>
+  <p>Some categories include enhancement/renovation; review the latest circulars for permitted use.</p>
+
+  <h3>How long does subsidy credit take?</h3>
+  <p>Timelines vary; it can take weeks to months after loan disbursal. Track status through your lender.</p>
+
+  <footer>Educational overview only. Always rely on the latest official notifications and lender communications for exact benefits and criteria.</footer>
+</article></body></html>
