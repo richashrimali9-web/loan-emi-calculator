@@ -1,107 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://mytotalemi.co.in/" />
-  <meta name="theme-color" content="#2d6cdf" />
-  <meta name="description" content="Calculate EMI for Home, Personal, and Car Loans. Fast, accurate, and free tool to plan your repayment." />
-  <meta property="og:title" content="Unified Loan EMI Calculator" />
-  <meta property="og:description" content="Calculate EMI for Home, Personal, and Car Loans. Compare offers and view amortization schedule." />
-  <meta property="og:image" content="https://mytotalemi.co.in/favicon.ico" />
-  <meta property="og:type" content="website" />
-  <!-- Twitter Card metadata -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@mytotalemi" />
-  <meta name="twitter:title" content="Unified Loan EMI Calculator" />
-  <meta name="twitter:description" content="Calculate EMI for Home, Personal, and Car Loans. Compare offers and view amortization schedule." />
-  <meta name="twitter:image" content="https://mytotalemi.co.in/favicon.ico" />
-  <!-- Google Fonts preload and stylesheet -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;700&display=swap" rel="stylesheet" />
-  <!-- Performance and resource hints -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
-
-  <!-- SEO Keywords -->
-  <meta name="keywords" content="EMI calculator, loan EMI calculator, home loan EMI, car loan EMI, personal loan EMI" />
-
-  <!-- Web App Manifest -->
-  <link rel="manifest" href="/manifest.json" />
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Unified Loan EMI Calculator",
-    "url": "https://mytotalemi.co.in/",
-    "applicationCategory": "Finance",
-    "description": "Calculate EMI for Home, Personal, and Car Loans. Compare offers and view amortization schedule.",
-    "operatingSystem": "All",
-    "screenshot": "https://mytotalemi.co.in/favicon.ico"
-  }
-  </script>
-  <title>Unified Loan EMI Calculator</title>
-
-    <!-- Google Analytics (GA4) - preserved from previous setup -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5M7LHTQF5Y"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('js', new Date());
-      gtag('config', 'G-5M7LHTQF5Y');
-    </script>
-
-  <!-- Google AdSense for monetization (exact snippet with client and crossorigin) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="/assets/index-BbRn4XB0.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/core-js-DlAkEqUg.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-C0Fj75IP.js">
-    <link rel="modulepreload" crossorigin href="/assets/scheduler-CoSDG3-6.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-dom-EXyTz37M.js">
-    <link rel="modulepreload" crossorigin href="/assets/clsx-B-dksMZM.js">
-    <link rel="modulepreload" crossorigin href="/assets/tailwind-merge-D6B6e0vX.js">
-    <link rel="modulepreload" crossorigin href="/assets/@radix-ui-CJPO_Q2x.js">
-    <link rel="modulepreload" crossorigin href="/assets/class-variance-authority-B8k91cqS.js">
-    <link rel="modulepreload" crossorigin href="/assets/@babel-BgpAVVkQ.js">
-    <link rel="modulepreload" crossorigin href="/assets/fflate-_ayOYiT1.js">
-    <link rel="modulepreload" crossorigin href="/assets/jspdf-BiCMmzbc.js">
-    <link rel="modulepreload" crossorigin href="/assets/jspdf-autotable-WS9NJXkA.js">
-    <link rel="modulepreload" crossorigin href="/assets/lucide-react-BEZwk6d7.js">
-    <link rel="modulepreload" crossorigin href="/assets/lodash-62VrY_kq.js">
-    <link rel="modulepreload" crossorigin href="/assets/prop-types-kYW7kWT3.js">
-    <link rel="modulepreload" crossorigin href="/assets/fast-equals-BZzMcSdc.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-smooth-CFNsAvLJ.js">
-    <link rel="modulepreload" crossorigin href="/assets/tiny-invariant-BaFNuDhB.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-is-BpBQ4hf7.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-path-CimkQT29.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-shape-nwul2LtV.js">
-    <link rel="modulepreload" crossorigin href="/assets/internmap-BkD7Hj8s.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-array-g_qRI3rN.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-time-g9mLz1m7.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-time-format-j2_s_XYn.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-color-9lF95FHy.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-interpolate-CCf1iqz-.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-format-CzD4bSOQ.js">
-    <link rel="modulepreload" crossorigin href="/assets/d3-scale-_jV4VZB3.js">
-    <link rel="modulepreload" crossorigin href="/assets/victory-vendor-DUBx-XN0.js">
-    <link rel="modulepreload" crossorigin href="/assets/decimal.js-light-DQE-3iDJ.js">
-    <link rel="modulepreload" crossorigin href="/assets/recharts-scale-C1tgrEou.js">
-    <link rel="modulepreload" crossorigin href="/assets/eventemitter3-cvJOXV9x.js">
-    <link rel="modulepreload" crossorigin href="/assets/recharts-BKmp2lgZ.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-GyoqVY92.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="EMI Calculator for Home, Personal, and Car Loans. Pure static HTML with immediate results."
+    />
+    <title>EMI Calculator | mytotalemi</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.8;
+        color: #333;
+        background: #f9f9f9;
+      }
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand { font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none; }
+      nav a {
+        margin-left: 1.2rem;
+        text-decoration: none;
+        color: white;
+        transition: opacity 0.3s;
+      }
+      nav a:hover { opacity: 0.8; }
+      main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 8px;
+        padding: 2.5rem 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .hero h1 {
+        font-size: 2.75rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .calculator {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+      .calculator label {
+        display: block;
+        margin: 1rem 0 0.3rem;
+        font-weight: 600;
+        color: #333;
+      }
+      .calculator input {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ced4da;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+      .calculate-btn {
+        margin-top: 1rem;
+        padding: 0.85rem 1.3rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background: #667eea;
+        color: white;
+        cursor: pointer;
+      }
+      .calculate-btn:hover { background: #5d6ad3; }
+      .output {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: #f5f7ff;
+        border: 1px solid #e4e8ff;
+        border-radius: 6px;
+      }
+      .output div {
+        margin: 0.6rem 0;
+        font-size: 1.05rem;
+      }
+      .output strong { color: #1f3aa5; }
+      footer {
+        background: #f9f9f9;
+        border-top: 1px solid #e0e0e0;
+        padding: 1.5rem;
+        text-align: center;
+        color: #666;
+        margin-top: 2rem;
+      }
+    </style>
   </head>
-
   <body>
-    <div id="root"></div>
-  <!-- Vite entry to be processed for auto asset injection -->
+    <header>
+      <nav>
+        <a href="/" class="brand">mytotalemi</a>
+        <div>
+          <a href="/">Calculator</a>
+          <a href="/blog/">Blog</a>
+          <a href="/guides/">Guides</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <h1>EMI Calculator</h1>
+        <p>Calculate EMI instantly for Loan Amount, Interest Rate, and Tenure. No page reload required.</p>
+      </div>
+
+      <section class="calculator" aria-label="EMI calculator form">
+        <label for="loanAmount">Loan Amount (₹)</label>
+        <input id="loanAmount" type="number" min="0" value="100000" />
+
+        <label for="interestRate">Interest Rate (% per annum)</label>
+        <input id="interestRate" type="number" step="0.01" min="0" value="8.5" />
+
+        <label for="loanTenure">Loan Tenure (years)</label>
+        <input id="loanTenure" type="number" min="1" value="10" />
+
+        <button id="calculateBtn" class="calculate-btn" type="button">Calculate</button>
+
+        <div class="output" id="output" aria-live="polite">
+          <div>Monthly EMI: <strong id="emiResult">₹0.00</strong></div>
+          <div>Total Interest: <strong id="interestResult">₹0.00</strong></div>
+          <div>Total Payment: <strong id="paymentResult">₹0.00</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 mytotalemi. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function formatINR(num) {
+        return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(num);
+      }
+      function calculateEMI() {
+        const P = parseFloat(document.getElementById('loanAmount').value) || 0;
+        const annualRate = parseFloat(document.getElementById('interestRate').value) || 0;
+        const years = parseFloat(document.getElementById('loanTenure').value) || 0;
+
+        if (P <= 0 || annualRate <= 0 || years <= 0) {
+          alert('Please enter valid values for all fields.');
+          return;
+        }
+
+        const r = annualRate / 12 / 100;
+        const n = years * 12;
+        const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        const totalPayment = emi * n;
+        const totalInterest = totalPayment - P;
+
+        document.getElementById('emiResult').innerText = formatINR(emi);
+        document.getElementById('interestResult').innerText = formatINR(totalInterest);
+        document.getElementById('paymentResult').innerText = formatINR(totalPayment);
+      }
+
+      document.getElementById('calculateBtn').addEventListener('click', calculateEMI);
+      calculateEMI();
+    </script>
   </body>
 </html>
