@@ -93,6 +93,15 @@ export const EnhancedHeader: React.FC<EnhancedHeaderProps> = ({ onNavigate }) =>
 
             <Button
               variant="ghost"
+              onClick={() => handleNavClick('guides')}
+              className="gap-2"
+            >
+              <BookOpen className="w-4 h-4" />
+              Guides
+            </Button>
+
+            <Button
+              variant="ghost"
               onClick={() => handleNavClick('about')}
               className="gap-2"
             >
@@ -168,6 +177,15 @@ export const EnhancedHeader: React.FC<EnhancedHeaderProps> = ({ onNavigate }) =>
               >
                 <BookOpen className="w-4 h-4" />
                 Blog
+              </Button>
+
+              <Button
+                variant="ghost"
+                onClick={() => handleNavClick('guides')}
+                className="w-full justify-start gap-2"
+              >
+                <BookOpen className="w-4 h-4" />
+                Guides
               </Button>
 
               <Button

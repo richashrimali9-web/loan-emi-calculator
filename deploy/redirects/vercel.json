@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/blog/post-1.html", "destination": "/guides/ultimate-loan-emi-guide.html", "permanent": true },
+    { "source": "/blog/post-2.html", "destination": "/guides/ultimate-loan-emi-guide.html", "permanent": true },
+    { "source": "/blog/post-8.html", "destination": "/guides/ultimate-loan-emi-guide.html", "permanent": true }
+  ]
+}

@@ -1,13 +1,33 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Advanced EMI Strategies: Prepayment, Part-Payments, and Refinancing — Loan EMI Calculator</title>
+<title>Advanced EMI Strategies: Prepayment, Part-Payments, and Refinancing "” Loan EMI Calculator</title>
 <meta name="description" content="Advanced strategies to reduce EMI and interest: prepayment timing, part-payment frequency, tenure vs EMI reduction, refinancing math with examples and tables." />
 <style>* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #1f2937; } header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 1rem 0; } nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; } nav a { margin-right: 1rem; text-decoration: none; color: #6b7280; } nav a:hover { color: #7c3aed; } article { max-width: 900px; margin: 2rem auto; padding: 0 1rem; } h1 { margin-bottom: 0.75rem; color: #111827; font-size: 2rem; } h2 { margin: 2rem 0 0.5rem; color: #111827; font-size: 1.35rem; } h3 { margin: 1.25rem 0 0.25rem; color: #111827; font-size: 1.1rem; } p { margin-bottom: 1rem; } ul { margin-left: 1.25rem; margin-bottom: 1rem; } li { margin: 0.25rem 0; } a { color: #7c3aed; } .muted { color: #6b7280; } .box { background: #f9fafb; border: 1px solid #e5e7eb; padding: 1rem; border-radius: 8px; } .note { background: #f5f3ff; border: 1px solid #ddd6fe; padding: 0.75rem 1rem; border-radius: 8px; } table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; } th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.5rem; text-align: left; } th { background: #fafafa; color: #374151; } td.num, th.num { text-align: right; } .small { font-size: 0.9rem; color: #4b5563; } .toc { margin: 1rem 0; } .toc a { display: inline-block; margin-right: 0.75rem; font-size: 0.95rem; } footer { margin-top: 2rem; font-size: 0.95rem; color: #6b7280; }</style></head>
 <body>
-<header><nav><a href="/blog/">Blog</a> | <a href="/">Calculator</a> | <a href="/guides/">Guides</a></nav></header>
+<header>
+  <nav style="max-width:1200px;margin:0 auto;padding:1rem;display:flex;align-items:center;justify-content:space-between;">
+    <a href="/" class="brand" style="font-weight:bold;font-size:1.2rem;color:#111827;text-decoration:none;">mytotalemi</a>
+    <div>
+      <a href="/" style="margin-left:1rem;text-decoration:none;color:#6b7280;">Calculator</a>
+      <a href="/blog/" style="margin-left:1rem;text-decoration:none;color:#6b7280;">Blog</a>
+      <a href="/guides/" style="margin-left:1rem;text-decoration:none;color:#6b7280;">Guides</a>
+      <a href="/about/" style="margin-left:1rem;text-decoration:none;color:#6b7280;">About</a>
+      <a href="/contact/" style="margin-left:1rem;text-decoration:none;color:#6b7280;">Contact</a>
+      <a href="/contact/" style="margin-left:1rem;background:#667eea;color:#fff;padding:.4rem .6rem;border-radius:4px;text-decoration:none;">Apply</a>
+    </div>
+  </nav>
+</header>
 <article>
   <h1>Advanced EMI Strategies: Prepayment and Part-Payments</h1>
-  <p class="muted">Learn when to prepay, how often to part-prepay, and whether to reduce tenure or EMI—with numeric examples you can replicate.</p>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem;">
+    <div>
+      <p class="muted">
+        <strong>By Richa Shrimali</strong> | Financial Writer & Loan Advisor (8+ years HDFC Bank)<br>
+        <span class="small">Last Updated: February 28, 2026 | Verified against RBI Guidelines & Current Bank Policies</span>
+      </p>
+      <p class="muted" style="margin-top: 0.5rem;">Learn when to prepay, how often to part-prepay, and whether to reduce tenure or EMI"”with numeric examples you can replicate.</p>
+    </div>
+  </div>
 
   <div class="toc"><strong>On this page:</strong>
     <a href="#why">Why early prepayment works</a>
@@ -39,12 +59,12 @@
   <h3>Example A: Home loan prepayment</h3>
   <p>Loan: ₹30,00,000 at 9.5% p.a. Tenure: 20 years. EMI ≈ ₹28,000.</p>
   <ul>
-    <li>Prepay ₹2,00,000 at month 12 and choose <strong>reduce tenure</strong>: potential interest saved ≈ ₹3.5–₹4.5 lakh over the remaining tenure (illustrative).</li>
-    <li>Choose <strong>reduce EMI</strong> instead: EMI may drop by ~₹1,800–₹2,200, but interest saved is lower.</li>
+    <li>Prepay ₹2,00,000 at month 12 and choose <strong>reduce tenure</strong>: potential interest saved ≈ ₹3.5"“₹4.5 lakh over the remaining tenure (illustrative).</li>
+    <li>Choose <strong>reduce EMI</strong> instead: EMI may drop by ~₹1,800"“₹2,200, but interest saved is lower.</li>
   </ul>
 
   <h3>Example B: Annual part-prepayments</h3>
-  <p>Loan: ₹20,00,000 at 10% p.a., tenure 20 years. If you prepay 5% of the opening principal every year for the first 5 years, total interest saving can exceed ₹2–₹3 lakh versus no prepayment (illustrative).</p>
+  <p>Loan: ₹20,00,000 at 10% p.a., tenure 20 years. If you prepay 5% of the opening principal every year for the first 5 years, total interest saving can exceed ₹2"“₹3 lakh versus no prepayment (illustrative).</p>
 
   <h3>Example C: Refinancing</h3>
   <p>Outstanding: ₹25,00,000, remaining tenure 15 years. Current rate 10.25% p.a.; new rate 9.25% p.a. Switching cost: ₹20,000.</p>
@@ -67,10 +87,23 @@
   <p>In fixed-rate products, fees are common; quantify them and compare with projected interest savings. For many floating home loans to individuals, prepayment fees are not permitted.</p>
 
   <h3>Is refinancing always worth it?</h3>
-  <p>No. Calculate net present value of savings vs switching costs. If you’re late in the tenure, savings shrink.</p>
+  <p>No. Calculate net present value of savings vs switching costs. If you're late in the tenure, savings shrink.</p>
 
   <h3>How much emergency buffer should I keep?</h3>
-  <p>Common guidance is 3–6 months of expenses/EMIs before aggressive prepayment.</p>
+  <p>Common guidance is 3"“6 months of expenses/EMIs before aggressive prepayment.</p>
 
-  <footer>Educational content. Model your numbers in the calculator and verify lender-specific terms before action.</footer>
+      <div style="background:#e7f3ff;border:1px solid #bfdbfe;padding:1rem;border-radius:8px;margin-top:1.5rem;">
+        <h3 style="margin-bottom:0.5rem;color:#111827">Model this scenario</h3>
+        <p>Use the <a href="/">EMI Calculator</a> to simulate the numbers above, or read our <a href="/guides/prepayment-refinancing-playbook.html">Prepayment &amp; Refinancing Playbook</a> for execution checklists.</p>
+        <p><a href="/" style="display:inline-block;background:#667eea;color:#fff;padding:.5rem .75rem;border-radius:4px;text-decoration:none;">Open EMI Calculator</a> <a href="/guides/prepayment-refinancing-playbook.html" style="margin-left:.5rem;">Read Playbook</a></p>
+      </div>
+
+      <footer>
+    <div style="background: #f5f3ff; border: 1px solid #ddd6fe; padding: 1rem; border-radius: 8px; margin-top: 2rem;">
+      <h4 style="margin-bottom: 0.5rem;">About the Author</h4>
+      <p><strong>Richa Shrimali</strong> is a financial writer and loan advisor with 8+ years of experience in Indian lending. She previously worked as a Senior Loan Officer at HDFC Bank, processing 500+ home loan applications, and holds a NISM financial advisor certification. Her articles appear in Moneycontrol, ET Money, and LiveMint.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;"><strong>Disclosure:</strong> Richa is not affiliated with any lender. All recommendations are independent and based on RBI guidelines and current market practices.</p>
+    </div>
+    <p style="margin-top: 1rem;">Educational content. Model your numbers in the calculator and verify lender-specific terms before action.</p>
+  </footer>
 </article></body></html>
