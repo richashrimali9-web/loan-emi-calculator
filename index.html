@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="EMI Calculator for Home, Personal, and Car Loans. Pure static HTML with immediate results."
-    />
+    <meta name="description" content="Free EMI Calculator for Home Loan, Car Loan, Personal Loan and Education Loan. Calculate monthly EMI, total interest and payment instantly. Trusted by borrowers across India." />
     <title>EMI Calculator | mytotalemi</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -98,6 +97,14 @@
         font-size: 1.05rem;
       }
       .output strong { color: #1f3aa5; }
+      .info-section { background: white; margin: 2rem 0; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+      .info-section h2 { color: #1f3aa5; margin-bottom: 1rem; }
+      .info-section ul, .info-section ol { margin-left: 1.2rem; margin-top: 0.8rem; }
+      .loan-cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+      .loan-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1rem; }
+      .loan-card h3 { color: #667eea; margin-bottom: 0.4rem; }
+      .faq div { margin-bottom: 1rem; }
+
       footer {
         background: #f9f9f9;
         border-top: 1px solid #e0e0e0;
@@ -109,7 +116,7 @@
     </style>
   </head>
   <body>
-    <header>
+        <header>
       <nav>
         <a href="/" class="brand">mytotalemi</a>
         <div>
@@ -118,6 +125,7 @@
           <a href="/guides/">Guides</a>
           <a href="/about/">About</a>
           <a href="/contact/">Contact</a>
+          <a href="/contact/" class="btn-apply">Apply</a>
         </div>
       </nav>
     </header>
@@ -145,11 +153,58 @@
           <div>Total Payment: <strong id="paymentResult">₹0.00</strong></div>
         </div>
       </section>
+    <section class="info-section" aria-label="How to Use This Calculator">
+      <h2>How to Use This Calculator</h2>
+      <ol>
+        <li><strong>Step 1:</strong> Enter your loan amount in rupees.</li>
+        <li><strong>Step 2:</strong> Enter the annual interest rate offered by your bank.</li>
+        <li><strong>Step 3:</strong> Enter the loan tenure in years and click <em>Calculate</em>.</li>
+      </ol>
+    </section>
+
+    <section class="info-section" aria-label="What is EMI?">
+      <h2>What is EMI?</h2>
+      <p>EMI stands for Equated Monthly Installment, which is the fixed amount you pay every month to the lender until the loan is fully repaid. The EMI value includes both the principal amount and the interest charged. Calculating the EMI before taking a loan helps you plan your monthly budget and verify affordability.</p>
+      <p>The EMI formula is: <strong>EMI = P × r × (1+r)<sup>n</sup> / ((1+r)<sup>n</sup> - 1)</strong>, where:</p>
+      <ul>
+        <li><strong>P</strong> = principal loan amount</li>
+        <li><strong>r</strong> = monthly interest rate (annual rate divided by 12 and then by 100)</li>
+        <li><strong>n</strong> = total number of monthly payments (years × 12)</li>
+      </ul>
+      <p>Example: For a ₹10,00,000 loan at 8.5% annual interest over 10 years, the EMI is around ₹12,399 per month. This example uses the formula above and shows how even a small rate difference can impact monthly cash flow.</p>
+      <p>Knowing your EMI matters because it tells you the monthly commitment and total cost of the loan. With this information, you can compare different loan offers and avoid taking a loan that strains your budget. Always verify processing fees, insurance costs, and additional charges when choosing a lender.</p>
+      <p>Pro tips: compare lenders by effective interest rate, check for hidden processing fees, and consider prepayment options. Prepayment can save interest over time, but confirm whether your bank charges penalties for early repayment.</p>
+    </section>
+
+    <section class="loan-types" aria-label="Loan Types We Support">
+      <h2>Loan Types We Support</h2>
+      <div class="loan-cards">
+        <article class="loan-card"><h3>Home Loan</h3><p>Typical 8-10% p.a., 20-30 years</p></article>
+        <article class="loan-card"><h3>Car Loan</h3><p>Typical 9-12% p.a., 1-7 years</p></article>
+        <article class="loan-card"><h3>Personal Loan</h3><p>Typical 12-24% p.a., 1-5 years</p></article>
+        <article class="loan-card"><h3>Education Loan</h3><p>Typical 8-15% p.a., 5-15 years</p></article>
+      </div>
+    </section>
+
+    <section class="faq" aria-label="Frequently Asked Questions">
+      <h2>FAQ</h2>
+      <div><strong>Q: What is a good EMI to income ratio?</strong><br />A: Ideally below 40% of your monthly take-home salary.</div>
+      <div><strong>Q: Can I reduce my EMI?</strong><br />A: Yes, by making prepayments or refinancing at a lower rate.</div>
+      <div><strong>Q: Is EMI fixed or variable?</strong><br />A: Depends on loan type — fixed rate loans have fixed EMI, floating rate loans vary.</div>
+      <div><strong>Q: What happens if I miss an EMI?</strong><br />A: Late fee charged, CIBIL score drops, bank may issue legal notice.</div>
+      <div><strong>Q: How does tenure affect EMI?</strong><br />A: Longer tenure = lower EMI but higher total interest paid.</div>
+    </section>
     </main>
 
-    <footer>
+        <footer>
       <p>© 2026 mytotalemi. All rights reserved.</p>
+      <p>
+        <a href="/privacy-policy/">Privacy Policy</a> | 
+        <a href="/about/">About</a> | 
+        <a href="/contact/">Contact</a>
+      </p>
     </footer>
+
 
     <script>
       function formatINR(num) {
