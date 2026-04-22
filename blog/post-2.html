@@ -1,153 +1,427 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Home Loan vs Personal Loan: Which to Choose for Indian Borrowers</title>
-    <meta name="description" content="Compare home loans vs personal loans in India: interest rates, eligibility, tax benefits, repayment terms, and when to choose each. Make the right borrowing decision with examples and calculators." />
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #1f2937; }
-      header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 1rem 0; }
-      nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-      nav a { margin-right: 1rem; text-decoration: none; color: #6b7280; }
-      nav a:hover { color: #7c3aed; }
-      article { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-      h1 { margin-bottom: 0.75rem; color: #111827; font-size: 2rem; }
-      h2 { margin: 2rem 0 0.5rem; color: #111827; font-size: 1.35rem; }
-      h3 { margin: 1.25rem 0 0.25rem; color: #111827; font-size: 1.1rem; }
-      p { margin-bottom: 1rem; }
-      ul { margin-left: 1.25rem; margin-bottom: 1rem; }
-      li { margin: 0.25rem 0; }
-      a { color: #7c3aed; }
-      .muted { color: #6b7280; }
-      .box { background: #f9fafb; border: 1px solid #e5e7eb; padding: 1rem; border-radius: 8px; }
-      .note { background: #f5f3ff; border: 1px solid #ddd6fe; padding: 0.75rem 1rem; border-radius: 8px; }
-      table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
-      th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.5rem; text-align: right; }
-      th { background: #fafafa; color: #374151; }
-      td.left, th.left { text-align: left; }
-      .small { font-size: 0.9rem; color: #4b5563; }
-      .toc { margin: 1rem 0; }
-      .toc a { display: inline-block; margin-right: 0.75rem; font-size: 0.95rem; }
-      footer { margin-top: 2rem; font-size: 0.95rem; color: #6b7280; }
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Loan vs Personal Loan: Which to Choose for Indian Borrowers</title>
+  <meta name="description" content="Comprehensive comparison of home loans vs personal loans in India: interest rates, tax benefits, eligibility, repayment options, and real-world examples to help you choose the right loan.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
+  <style>
   </head>
-  <body>
-    <header style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;">
-  <nav style="max-width:1200px;margin:0 auto;padding:1rem;display:flex;align-items:center;justify-content:space-between;">
-    <a href="/" class="brand" style="font-weight:bold;font-size:1.2rem;color:white;text-decoration:none;">mytotalemi</a>
-    <div style="display:flex;align-items:center;gap:1rem;">
-      <a href="/" style="color:white;text-decoration:none;">Calculator</a>
-      <a href="/blog/" style="color:white;text-decoration:none;">Blog</a>
-      <a href="/guides/" style="color:white;text-decoration:none;">Guides</a>
-      <a href="/about/" style="color:white;text-decoration:none;">About</a>
-      <a href="/contact/" style="color:white;text-decoration:none;">Contact</a>
-      <a href="/contact/" style="padding:0.4rem 0.8rem;border-radius:4px;background:#fff;color:#3b3b3b;text-decoration:none;font-weight:600;">Apply</a>
-    </div>
-  </nav>
-</header>
-    <article>
-      <h1>Home Loan vs Personal Loan: Which to Choose for Indian Borrowers</h1>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem;">
-        <div>
-          <p class="muted">
-            <span class="small">Last Updated: March 2026 | Information sourced from RBI guidelines and current bank policies</span>
-          </p>
-          <p class="muted" style="margin-top: 0.5rem;">A comprehensive comparison of home loans and personal loans in India, including interest rates, eligibility, tax benefits, and real-world scenarios to help you choose the right financing option.</p>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main">
+    <article class="article">
+      <!-- Article Header -->
+      <header class="article-header">
+        <h1>Home Loan vs Personal Loan: Which to Choose</h1>
+        <div class="article-meta">
+          <span>March 2026</span> • <span>RBI guidelines and current bank policies</span>
+        </div>
+        <p class="article-intro">A comprehensive comparison of home loans and personal loans in India, including interest rates, tax benefits, eligibility criteria, and real-world scenarios to help you make the right financing decision for your specific situation.</p>
+      </header>
+
+      <!-- Table of Contents Box -->
+      <div class="toc-box">
+        <h3>On This Page</h3>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#key-differences">Key Differences</a></li>
+          <li><a href="#interest-rates">Interest Rates</a></li>
+          <li><a href="#eligibility">Eligibility Criteria</a></li>
+          <li><a href="#tax-benefits">Tax Benefits</a></li>
+          <li><a href="#repayment">Repayment Terms</a></li>
+          <li><a href="#examples">Real Examples</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Calculator CTA -->
+      <div class="cta-calculator">
+        <h3>Use the Free EMI Calculator</h3>
+        <p>While reading this article, use the <a href="/">EMI Calculator</a> to model different scenarios. Compare how various interest rates and loan tenures affect your monthly payments and total interest cost.</p>
+      </div>
+
+      <!-- Main Content -->
+      <h2 id="overview">Home Loan vs Personal Loan: Quick Overview</h2>
+      <p>In India, home loans and personal loans are two of the most frequently used financing options, yet they serve fundamentally different purposes. A home loan is specifically designed for purchasing or constructing property, while a personal loan can be used for virtually any personal need. Understanding the key differences between these two loan types is crucial for making the right borrowing decision.</p>
+
+      <p>Home loans typically offer lower interest rates and longer repayment periods because the property serves as collateral, reducing the lender's risk. Personal loans, being unsecured, come with higher interest rates but offer maximum flexibility in terms of usage and disbursement speed.</p>
+
+      <h2 id="key-differences">Key Differences Between Home Loans and Personal Loans</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Home Loan</th>
+              <th>Personal Loan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Purpose</strong></td>
+              <td>Property purchase/construction/renovation</td>
+              <td>Any personal use (education, medical, consolidation, etc.)</td>
+            </tr>
+            <tr>
+              <td><strong>Loan Amount</strong></td>
+              <td>₹10 lakh to ₹10 crore</td>
+              <td>₹1 lakh to ₹50 lakh</td>
+            </tr>
+            <tr>
+              <td><strong>Tenure</strong></td>
+              <td>5-30 years</td>
+              <td>1-7 years</td>
+            </tr>
+            <tr>
+              <td><strong>Collateral</strong></td>
+              <td>Required (the property itself)</td>
+              <td>Not required (unsecured)</td>
+            </tr>
+            <tr>
+              <td><strong>Processing Time</strong></td>
+              <td>15-45 days</td>
+              <td>1-7 days</td>
+            </tr>
+            <tr>
+              <td><strong>Interest Rate Range</strong></td>
+              <td>6.5% - 9.5% p.a.</td>
+              <td>10.5% - 24% p.a.</td>
+            </tr>
+            <tr>
+              <td><strong>Tax Benefits</strong></td>
+              <td>Yes (Section 24, 80C)</td>
+              <td>No (generally)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="interest-rates">Interest Rates: A Major Cost Differentiator</h2>
+      <p>Interest rates are one of the biggest differentiators between home and personal loans. As of March 2026, home loan rates in India typically range from 6.5% to 9.5% per annum, while personal loan rates start from 10.5% and can exceed 24%.</p>
+
+      <p>The lower home loan rates exist because:</p>
+      <ul>
+        <li>The property serves as security for the lender, reducing default risk</li>
+        <li>Government schemes like PMAY offer subsidized rates for first-time buyers</li>
+        <li>Longer tenures allow lenders to spread risk over extended periods</li>
+        <li>Higher loan amounts justify lower margins for lenders</li>
+      </ul>
+
+      <p>Personal loan rates are significantly higher because:</p>
+      <ul>
+        <li>No collateral means higher risk exposure for the lender</li>
+        <li>Shorter tenures require faster principal recovery</li>
+        <li>Loans are used for various purposes, some inherently riskier than others</li>
+        <li>CIBIL score and income verification are the only safeguards</li>
+      </ul>
+
+      <h2 id="eligibility">Eligibility Criteria and Documentation</h2>
+      <h3>Home Loan Eligibility Requirements</h3>
+      <ul>
+        <li><strong>Age:</strong> 18-70 years (co-applicant up to 75 years)</li>
+        <li><strong>Annual Income:</strong> Minimum ₹2.5-3 lakh (varies by lender)</li>
+        <li><strong>Credit Score:</strong> 650+ (750+ for best rates)</li>
+        <li><strong>Employment Status:</strong> Salaried with 2+ years of continuous employment, or self-employed with stable income</li>
+        <li><strong>Property Documents:</strong> Clear title, AERA approval, property valuation report</li>
+        <li><strong>Down Payment:</strong> 10-20% of property value</li>
+      </ul>
+
+      <h3>Personal Loan Eligibility Requirements</h3>
+      <ul>
+        <li><strong>Age:</strong> 21-60 years</li>
+        <li><strong>Annual Income:</strong> Minimum ₹1.5-2 lakh</li>
+        <li><strong>Credit Score:</strong> 650+ (700+ for competitive rates)</li>
+        <li><strong>Employment Status:</strong> Salaried with 1+ year experience or established self-employed</li>
+        <li><strong>Documentation:</strong> ID proof, address proof, income proof, bank statements (last 6-12 months)</li>
+        <li><strong>Collateral:</strong> Not required</li>
+      </ul>
+
+      <h2 id="tax-benefits">Tax Benefits: A Significant Advantage of Home Loans</h2>
+      <p>One of the most compelling advantages of home loans over personal loans is the availability of substantial tax benefits. Personal loans offer virtually no tax deductions.</p>
+
+      <h3>Home Loan Tax Benefits (FY 2025-26)</h3>
+      <ul>
+        <li><strong>Principal Repayment:</strong> Up to ₹1.5 lakh deduction annually under Section 80C</li>
+        <li><strong>Interest Payment:</strong> Up to ₹2 lakh deduction annually under Section 24(b)</li>
+        <li><strong>Additional Interest:</strong> ₹50,000 extra deduction for first-time buyers under Section 80EE</li>
+        <li><strong>Stamp Duty Concessions:</strong> Available in some states for women buyers or affordable housing</li>
+        <li><strong>Combined Annual Tax Benefit:</strong> ₹50,000-₹1.2 lakh (depending on income tax bracket)</li>
+      </ul>
+
+      <p>These tax benefits can effectively reduce your home loan's effective interest rate by 1-2%, translating to significant savings over the loan tenure.</p>
+
+      <h3>Personal Loan Tax Treatment</h3>
+      <p>Personal loans provide no tax deductions. The interest you pay is not tax-deductible, and the EMI amounts don't qualify under any income tax-saving sections. This makes personal loans more expensive in real terms.</p>
+
+      <h2 id="repayment">Repayment Terms and Flexibility</h2>
+      <h3>Home Loan Repayment Features</h3>
+      <ul>
+        <li><strong>Standard Tenure:</strong> 5-30 years (most borrowers choose 15-20 years)</li>
+        <li><strong>EMI Structure:</strong> Fixed rate or floating rate options available</li>
+        <li><strong>Prepayment:</strong> Allowed, though fixed-rate loans may have prepayment penalties</li>
+        <li><strong>Part-Payment:</strong> Usually allowed 1-2 times per financial year</li>
+        <li><strong>Balance Transfer:</strong> Possible to a different lender for better rates</li>
+      </ul>
+
+      <h3>Personal Loan Repayment Features</h3>
+      <ul>
+        <li><strong>Standard Tenure:</strong> 1-7 years (typically 3-5 years)</li>
+        <li><strong>EMI Structure:</strong> Fixed rate throughout the tenure</li>
+        <li><strong>Prepayment:</strong> Generally allowed without penalty</li>
+        <li><strong>Part-Payment:</strong> Allowed, usually with minimal or no charges</li>
+        <li><strong>Foreclosure:</strong> Possible with prepayment charges ranging from 2-5%</li>
+      </ul>
+
+      <p>Home loans offer longer repayment periods, which significantly reduces the monthly EMI burden but increases total interest paid. Personal loans have shorter durations, resulting in higher EMIs but lower total interest costs.</p>
+
+      <h2 id="examples">Real-World Examples and Calculations</h2>
+      <h3>Example 1: Purchasing a Property</h3>
+      <p><strong>Scenario:</strong> Rahul wants to purchase a ₹50 lakh apartment with ₹10 lakh down payment.</p>
+
+      <p><strong>Home Loan Option:</strong></p>
+      <ul>
+        <li>Loan Amount: ₹40 lakh at 8% interest</li>
+        <li>Tenure: 20 years</li>
+        <li>Monthly EMI: ₹33,400</li>
+        <li>Total Interest Paid: ₹60 lakh</li>
+        <li>Annual Tax Benefit: ₹2-3 lakh (combined)</li>
+        <li>Effective Cost After Tax Benefit: ₹40-50 lakh</li>
+      </ul>
+
+      <p><strong>If Using a Personal Loan (not recommended but for comparison):</strong></p>
+      <ul>
+        <li>Loan Amount: ₹40 lakh at 14% interest</li>
+        <li>Tenure: 5 years (too short to be practical for property)</li>
+        <li>Monthly EMI: ₹95,500</li>
+        <li>Total Interest Paid: ₹17.3 lakh</li>
+        <li>Tax Benefit: None</li>
+      </ul>
+
+      <p>The home loan is clearly more suitable, with a significantly lower EMI and tax-advantaged financing.</p>
+
+      <h3>Example 2: Education Expenses</h3>
+      <p><strong>Scenario:</strong> Priya needs ₹10 lakh for her daughter's overseas education.</p>
+
+      <p><strong>Personal Loan Option:</strong></p>
+      <ul>
+        <li>Loan Amount: ₹10 lakh at 13% interest</li>
+        <li>Tenure: 5 years</li>
+        <li>Monthly EMI: ₹25,300</li>
+        <li>Total Interest: ₹3.18 lakh</li>
+        <li>Tax Benefit: None</li>
+      </ul>
+
+      <p>A home loan is unsuitable here since it's not for property. Education loans might offer better rates (8-10%) if available.</p>
+
+      <h3>Example 3: Debt Consolidation</h3>
+      <p><strong>Scenario:</strong> Amit has multiple credit card debts totaling ₹3 lakh at 36% interest annually.</p>
+
+      <p><strong>Personal Loan Option:</strong></p>
+      <ul>
+        <li>Loan Amount: ₹3 lakh at 15% interest</li>
+        <li>Tenure: 3 years</li>
+        <li>Monthly EMI: ₹10,800</li>
+        <li>Total Interest: ₹88,800</li>
+        <li>Interest Savings vs Credit Card: ₹1.5+ lakh</li>
+      </ul>
+
+      <!-- FAQ Accordion -->
+      <div class="faq">
+        <h2 id="faq">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I use a personal loan to purchase a property?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Technically yes, but it's not recommended. Personal loans have significantly higher interest rates (14-24% vs 7-9% for home loans) and offer no tax benefits. Most lenders restrict personal loan usage for property purchases. Home loans are specifically designed for property financing and are always the better choice.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Which loan is faster to approve?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Personal loans are significantly faster. They typically get approved within 1-7 days with minimal documentation. Home loans involve property valuation, legal checks, and title verification, taking 15-45 days. If speed is paramount, personal loans win; for affordability, home loans are superior.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I convert a personal loan to a home loan?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Direct conversion isn't typical, but some lenders allow balance transfer from a personal loan to a home loan if you purchase property subsequently. However, this involves additional processing and may not always be financially beneficial due to different terms and conditions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do credit scores affect loan approval?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Both loans require good credit scores (minimum 650+). Home loans may be slightly lenient for first-time buyers with scores of 650-700, while personal loans strictly enforce credit requirements. A score of 750+ qualifies for the best interest rates in either category.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can self-employed individuals get both loans?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, but requirements differ. Home loans for self-employed applicants typically require 2-3 years of ITR (Income Tax Returns) and financial statements. Personal loans are more flexible, often requiring just 1-2 years of ITR. Self-employed individuals often benefit from home loans due to tax advantages offsetting the stricter requirements.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Which loan option saves more interest overall?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Home loans save more interest when: (1) using for property, (2) you can afford the tenure, and (3) you factor in tax benefits. Personal loans save interest when kept to short 2-3 year tenures for smaller amounts. Always use the EMI Calculator to model your specific scenario with your actual rates and tenure.</p>
+          </div>
         </div>
       </div>
 
-      <div class="toc">
-        <strong>On this page:</strong>
-        <a href="#overview">Overview</a>
-        <a href="#comparison">Key Differences</a>
-        <a href="#interest-rates">Interest Rates</a>
-        <a href="#eligibility">Eligibility Criteria</a>
-        <a href="#tax-benefits">Tax Benefits</a>
-        <a href="#repayment">Repayment Terms</a>
-        <a href="#when-to-choose">When to Choose Each</a>
-        <a href="#examples">Real Examples</a>
-        <a href="#faq">FAQs</a>
+      <!-- Related Articles Section -->
+      <aside class="related-articles">
+        <h2>Related Articles</h2>
+        <div class="related-grid">
+          <article class="related-card">
+            <h4>How EMI is Calculated</h4>
+            <p>Learn the formula, components, and how small rate changes impact monthly payments</p>
+            <a href="/guides/how-emi-is-calculated.html" class="card-link">Learn more</a>
+          </article>
+          <article class="related-card">
+            <h4>Home Loan EMI Guide</h4>
+            <p>Complete guide to home loan EMI, rates, eligibility, and smart borrowing strategies</p>
+            <a href="/guides/home-loan-emi-guide.html" class="card-link">Read guide</a>
+          </article>
+          <article class="related-card">
+            <h4>Prepayment & Refinancing</h4>
+            <p>Master strategies to reduce interest burden and optimize your loan repayment</p>
+            <a href="/guides/prepayment-refinancing-playbook.html" class="card-link">Read playbook</a>
+          </article>
+        </div>
+      </aside>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="note">
-        Use the free <a href="/">Loan EMI Calculator</a> while reading. Compare different loan scenarios and see how interest rates and tenures affect your monthly payments.
+      <div class="footer-divider">
+        © 2026 mytotalemi. All rights reserved.
       </div>
+    </div>
+  </footer>
 
-      <h2 id="overview">Home Loan vs Personal Loan: Quick Overview</h2>
-      <p>In India, home loans and personal loans are two of the most popular financing options, but they serve very different purposes. A home loan is specifically for purchasing or constructing property, while a personal loan can be used for almost anything. Understanding the differences is crucial for making the right borrowing decision.</p>
+  <!-- JavaScript: Mobile Menu Toggle -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-      <p>Home loans typically offer lower interest rates and longer repayment periods because the property serves as collateral, reducing the lender's risk. Personal loans, being unsecured, come with higher rates but offer more flexibility in usage.</p>
+    hamburgerBtn.addEventListener('click', function() {
+      hamburgerBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
 
-      <h2 id="comparison">Key Differences Between Home Loans and Personal Loans</h2>
-      <table aria-label="Home Loan vs Personal Loan Comparison">
-        <thead>
-          <tr>
-            <th class="left">Aspect</th>
-            <th>Home Loan</th>
-            <th>Personal Loan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="left">Purpose</td>
-            <td>Property purchase/construction</td>
-            <td>Any personal use</td>
-          </tr>
-          <tr>
-            <td class="left">Loan Amount</td>
-            <td>Up to ₹10 crore</td>
-            <td>Up to ₹50 lakh</td>
-          </tr>
-          <tr>
-            <td class="left">Tenure</td>
-            <td>5-30 years</td>
-            <td>1-7 years</td>
-          </tr>
-          <tr>
-            <td class="left">Collateral</td>
-            <td>Required (property)</td>
-            <td>Not required</td>
-          </tr>
-          <tr>
-            <td class="left">Processing Time</td>
-            <td>15-45 days</td>
-            <td>1-7 days</td>
-          </tr>
-          <tr>
-            <td class="left">Tax Benefits</td>
-            <td>Yes (Section 24, 80C)</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+  </script>
 
-      <h2 id="interest-rates">Interest Rates: Home Loans vs Personal Loans</h2>
-      <p>Interest rates are one of the biggest differentiators between these loan types. As of March 2026, home loan rates in India range from 6.5% to 9.5% per annum, depending on your credit score, lender, and loan-to-value ratio. Personal loan rates typically start from 10.5% and can go up to 24% or more.</p>
+  <!-- JavaScript: Reading Progress Bar -->
+  <script>
+    const progressBar = document.querySelector('.reading-progress');
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      progressBar.style.width = scrollPercent + '%';
+    });
+  </script>
 
-      <p>The lower home loan rates are possible because:</p>
-      <ul>
-        <li>The property acts as security for the lender</li>
-        <li>Government schemes like PMAY offer subsidized rates</li>
-        <li>Longer tenures allow lenders to earn through extended interest periods</li>
-      </ul>
-
-      <p>Personal loan rates are higher because:</p>
-      <ul>
-        <li>No collateral means higher risk for lenders</li>
-        <li>Shorter tenures mean lenders need to recover principal faster</li>
-        <li>Used for various purposes, some riskier than others</li>
-      </ul>
-
-      <div class="box">
-        <h3>Current Interest Rate Ranges (March 2026)</h3>
-        <table aria-label="Interest Rate Comparison">
-          <thead>
-            <tr>
-              <th class="left">Loan Type</th>
-              <th>Min Rate</th>
-              <th>Max Rate</th>
+  <!-- JavaScript: FAQ Accordion -->
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', function() {
+        this.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
               <th>Average Rate</th>
             </tr>
           </thead>
