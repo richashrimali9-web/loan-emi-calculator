@@ -1,0 +1,158 @@
+const fs = require('fs');
+
+const headerStr = `  <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>`;
+
+const footerStr = `  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        © 2026 mytotalemi. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          hamburgerBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>`;
+
+// Fix Privacy Policy
+const ppContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - mytotalemi</title>
+  <meta name="description" content="Privacy Policy for mytotalemi. Learn how we collect, use, and protect your information.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+${headerStr}
+  <main style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated:</strong> March 2026</p>
+    <p>We value your privacy. This page explains how we collect, use and protect information when you use the Loan EMI Calculator site.</p>
+    <h2>Information We Collect</h2>
+    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+      <li>Non-personal usage data (analytics)</li>
+      <li>Contact information you submit via forms</li>
+    </ul>
+    <h2>How We Use Information</h2>
+    <p>To provide and improve our services, respond to inquiries, and send occasional updates when requested.</p>
+    <h2>Third-Party Services</h2>
+    <p>We may use analytics and advertising partners; see ads.txt for our ads publisher declaration.</p>
+    <h2>Contact</h2>
+    <p>Questions? See our <a href="/contact/">Contact page</a>.</p>
+  </main>
+${footerStr}
+</body>
+</html>`;
+
+fs.writeFileSync('public/privacy-policy/index.html', ppContent);
+fs.writeFileSync('privacy-policy/index.html', ppContent);
+
+// Fix Terms of Service
+const tosContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - mytotalemi</title>
+  <meta name="description" content="Terms of Service for mytotalemi borrower tools and EMI calculators.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+${headerStr}
+  <main style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
+    <h1>Terms of Service</h1>
+    <p><strong>Last updated:</strong> March 2026</p>
+    <p>Welcome to mytotalemi. These terms govern your use of our website and tools, including EMI calculators, guides, and informational content. By using this site, you agree to these terms.</p>
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using the site, you acknowledge that you have read, understood, and accepted these terms. If you do not agree, please do not use the site.</p>
+    <h2>2. Use of Content</h2>
+    <p>Content on mytotalemi is for educational and informational purposes only. Calculated values are estimates and should not be considered financial or legal advice. Always verify loan terms and eligibility with your lender before signing any agreement.</p>
+    <h2>3. Accuracy and Updates</h2>
+    <p>We make reasonable efforts to keep information accurate and current, but we do not guarantee completeness or correctness. Loan rates, policies, and eligibility criteria may change frequently.</p>
+    <h2>4. Limitation of Liability</h2>
+    <p>mytotalemi is not responsible for any loss or damage arising from use of the site. We are not a lender, financial advisor, or loan broker, and we do not approve or disburse loans.</p>
+    <h2>5. Third-Party Services</h2>
+    <p>We may use third-party analytics and advertising services. Use of those services is subject to their own terms and privacy policies.</p>
+    <h2>6. Intellectual Property</h2>
+    <p>All content on this site, including text, design, and code, is owned by mytotalemi unless otherwise stated. You may use the content for personal, non-commercial purposes only.</p>
+    <h2>7. Changes to Terms</h2>
+    <p>We may update these terms at any time. Continued use of the site after changes indicates acceptance of the new terms.</p>
+    <h2>8. Contact</h2>
+    <p>For questions or concerns, please use our <a href="/contact/">Contact page</a>.</p>
+  </main>
+${footerStr}
+</body>
+</html>`;
+
+fs.writeFileSync('public/terms-of-service/index.html', tosContent);
+fs.writeFileSync('terms-of-service/index.html', tosContent);
+
+console.log('Fixed privacy policy and TOS pages.');

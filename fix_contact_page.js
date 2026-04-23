@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - mytotalemi</title>
-  <meta name="description" content="Contact mytotalemi. Get in touch with our team for questions, feedback, or partnership inquiries.">
-  <meta name="theme-color" content="#4f46e5">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
-  <link rel="stylesheet" href="/css/style.css">
-  <style>
-    .contact-wrapper { max-width: 900px; margin: 3rem auto; padding: 0 1rem; }
-    .intro { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--primary-light); }
-    .contact-info { background: var(--primary-light); padding: 2rem; border-radius: var(--radius); border-left: 4px solid var(--primary); margin: 2rem 0; }
-    .contact-info h3 { color: var(--primary); margin-top: 0; }
-    .contact-item { margin: 1.5rem 0; }
-    .contact-item strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
-    .contact-form-box { margin-top: 2rem; padding: 2rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); }
-    .response-time { background: #dcfce7; color: #166534; padding: 1rem; border-radius: var(--radius); border-left: 4px solid #22c55e; margin-top: 1rem; }
-  </style>
-</head>
-<body>
-  <header>
+const fs = require('fs');
+
+const headerStr = `  <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
       
@@ -46,7 +26,79 @@
         <a href="/contact/">Contact</a>
       </div>
     </nav>
-  </header>
+  </header>`;
+
+const footerStr = `  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        © 2026 mytotalemi. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          hamburgerBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>`;
+
+const contactContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - mytotalemi</title>
+  <meta name="description" content="Contact mytotalemi. Get in touch with our team for questions, feedback, or partnership inquiries.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .contact-wrapper { max-width: 900px; margin: 3rem auto; padding: 0 1rem; }
+    .intro { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--primary-light); }
+    .contact-info { background: var(--primary-light); padding: 2rem; border-radius: var(--radius); border-left: 4px solid var(--primary); margin: 2rem 0; }
+    .contact-info h3 { color: var(--primary); margin-top: 0; }
+    .contact-item { margin: 1.5rem 0; }
+    .contact-item strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+    .contact-form-box { margin-top: 2rem; padding: 2rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .response-time { background: #dcfce7; color: #166534; padding: 1rem; border-radius: var(--radius); border-left: 4px solid #22c55e; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+${headerStr}
   <main class="contact-wrapper">
     <div style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">
       <a href="/" style="color: var(--primary); text-decoration: none;">Home</a> / Contact
@@ -115,52 +167,11 @@
       </form>
     </div>
   </main>
-  <footer>
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>mytotalemi</h4>
-          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="/">Calculator</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/guides/">Guides</a></li>
-            <li><a href="/about/">About</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="/terms-of-service/">Terms of Service</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-divider">
-        © 2026 mytotalemi. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburgerBtn && mobileMenu) {
-      hamburgerBtn.addEventListener('click', function() {
-        hamburgerBtn.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-      });
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function() {
-          hamburgerBtn.classList.remove('active');
-          mobileMenu.classList.remove('active');
-        });
-      });
-    }
-  </script>
+${footerStr}
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync('public/contact/index.html', contactContent);
+fs.writeFileSync('contact/index.html', contactContent);
+
+console.log('Fixed contact page.');

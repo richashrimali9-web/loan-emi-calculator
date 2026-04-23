@@ -1,216 +1,26 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-  <meta charset="UTF-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Contact Loan EMI Calculator. Get in touch with our team for questions, feedback, or partnership inquiries." />
-    <title>Contact Us - Loan EMI Calculator</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
-        line-height: 1.8; 
-        color: #333;
-        background: #f9f9f9;
-      }
-      nav { 
-        max-width: 1200px; 
-        margin: 0 auto; 
-        padding: 0 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .logo { font-size: 1.5rem; font-weight: bold; }
-      nav a { 
-        margin-left: 2rem; 
-        text-decoration: none; 
-        color: white;
-        transition: opacity 0.3s;
-      }
-      nav a:hover { opacity: 0.8; }
-      main { 
-        max-width: 900px; 
-        margin: 2rem auto; 
-        padding: 0 1rem;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        padding: 2rem;
-      }
-      h1 { 
-        margin-bottom: 1rem; 
-        color: #1a1a1a;
-        font-size: 2.5rem;
-      }
-      h2 { 
-        margin-top: 2rem; 
-        margin-bottom: 1rem; 
-        color: #333;
-        font-size: 1.8rem;
-        border-left: 4px solid #667eea;
-        padding-left: 1rem;
-      }
-      .intro { 
-        font-size: 1.1rem;
-        color: #666;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid #667eea;
-      }
-      .contact-info {
-        background: #f0f8ff;
-        padding: 2rem;
-        border-radius: 6px;
-        border-left: 4px solid #667eea;
-        margin: 2rem 0;
-      }
-      .contact-info h3 {
-        color: #667eea;
-        margin-top: 0;
-      }
-      .contact-item {
-        margin: 1.5rem 0;
-      }
-      .contact-item strong {
-        color: #667eea;
-        display: block;
-        margin-bottom: 0.5rem;
-      }
-      form { 
-        margin-top: 2rem;
-        padding: 2rem;
-        background: #f9f9f9;
-        border-radius: 6px;
-      }
-      .form-group {
-        margin-bottom: 1.5rem;
-      }
-      label { 
-        display: block; 
-        margin-bottom: 0.5rem; 
-        font-weight: 500;
-        color: #333;
-      }
-      input, textarea { 
-        width: 100%; 
-        padding: 0.8rem; 
-        margin-bottom: 0; 
-        border: 1px solid #ddd; 
-        border-radius: 4px; 
-        font-family: inherit;
-        font-size: 1rem;
-      }
-      input:focus, textarea:focus {
-        outline: none;
-        border-color: #667eea;
-        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
-      }
-      button { 
-        background: #667eea; 
-        color: white; 
-        padding: 0.75rem 1.5rem; 
-        border: none; 
-        border-radius: 4px; 
-        cursor: pointer; 
-        font-weight: 500;
-        font-size: 1rem;
-        transition: background 0.3s;
-      }
-      button:hover { 
-        background: #764ba2; 
-      }
-      footer {
-        background: #f9f9f9;
-        border-top: 1px solid #e0e0e0;
-        padding: 2rem;
-        margin-top: 3rem;
-        text-align: center;
-        color: #666;
-      }
-      .breadcrumb {
-        color: #999;
-        margin-bottom: 1.5rem;
-        font-size: 0.9rem;
-      }
-      .breadcrumb a { color: #667eea; text-decoration: none; }
-      .breadcrumb a:hover { text-decoration: underline; }
-      .response-time {
-        background: #d4edda;
-        padding: 1rem;
-        border-radius: 6px;
-        border-left: 4px solid #28a745;
-        margin-top: 1rem;
-      }
-    
-      /* Fix for new header layout */
-      nav ul {
-        display: flex;
-        list-style: none;
-        gap: 1.5rem;
-        margin: 0;
-        padding: 0;
-      }
-      .brand {
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-decoration: none;
-        color: #667eea;
-      }
-      .nav-btn-apply {
-        background-color: #667eea;
-        color: white !important;
-        padding: 0.4rem 1rem;
-        border-radius: 20px;
-        text-decoration: none;
-      }
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 2rem;
-        height: 1.5rem;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-      }
-      .hamburger span {
-        width: 2rem;
-        height: 0.2rem;
-        background: #333;
-        border-radius: 10px;
-      }
-      .mobile-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        z-index: 100;
-      }
-      .mobile-menu.visible {
-        display: flex;
-      }
-      .mobile-menu a {
-        padding: 1rem 2rem;
-        text-decoration: none;
-        color: #333;
-        border-bottom: 1px solid #eee;
-      }
-      @media (max-width: 768px) {
-        nav ul { display: none; }
-        .hamburger { display: flex; }
-      }
-
-    </style>
-  </head>
-  <body>
-      <header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - mytotalemi</title>
+  <meta name="description" content="Contact mytotalemi. Get in touch with our team for questions, feedback, or partnership inquiries.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .contact-wrapper { max-width: 900px; margin: 3rem auto; padding: 0 1rem; }
+    .intro { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--primary-light); }
+    .contact-info { background: var(--primary-light); padding: 2rem; border-radius: var(--radius); border-left: 4px solid var(--primary); margin: 2rem 0; }
+    .contact-info h3 { color: var(--primary); margin-top: 0; }
+    .contact-item { margin: 1.5rem 0; }
+    .contact-item strong { color: var(--primary); display: block; margin-bottom: 0.5rem; }
+    .contact-form-box { margin-top: 2rem; padding: 2rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .response-time { background: #dcfce7; color: #166534; padding: 1rem; border-radius: var(--radius); border-left: 4px solid #22c55e; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
       
@@ -237,45 +47,45 @@
       </div>
     </nav>
   </header>
-    <main>
-      <div class="breadcrumb">
-        <a href="/">Home</a> / Contact
+  <main class="contact-wrapper">
+    <div style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.9rem;">
+      <a href="/" style="color: var(--primary); text-decoration: none;">Home</a> / Contact
+    </div>
+
+    <h1>Get in Touch with Us</h1>
+    
+    <div class="intro">
+      Have questions, feedback, or partnership inquiries? We'd love to hear from you. Our team responds to all inquiries promptly.
+    </div>
+
+    <h2>Contact Information</h2>
+    <div class="contact-info">
+      <h3>Reach Us Here:</h3>
+      <div class="contact-item">
+        <strong>Email</strong>
+        <a href="mailto:support@mytotalemi.co.in">support@mytotalemi.co.in</a>
       </div>
-
-      <h1>Get in Touch with Us</h1>
-      
-      <div class="intro">
-        Have questions, feedback, or partnership inquiries? We'd love to hear from you. Our team responds to all inquiries promptly.
+      <div class="contact-item">
+        <strong>Response Time</strong>
+        <p>We typically respond to emails within 24-48 hours during business days.</p>
       </div>
-
-      <h2>Contact Information</h2>
-      <div class="contact-info">
-        <h3>Reach Us Here:</h3>
-        <div class="contact-item">
-          <strong>Email</strong>
-          <a href="mailto:support@mytotalemi.co.in">support@mytotalemi.co.in</a>
-        </div>
-        <div class="contact-item">
-          <strong>Response Time</strong>
-          <p>We typically respond to emails within 24-48 hours during business days.</p>
-        </div>
-        <div class="contact-item">
-          <strong>Website</strong>
-          <p>www.mytotalemi.co.in</p>
-        </div>
+      <div class="contact-item">
+        <strong>Website</strong>
+        <p>www.mytotalemi.co.in</p>
       </div>
+    </div>
 
-      <h2>Why Contact Us?</h2>
-      <ul>
-        <li><strong>General Inquiries:</strong> Questions about our calculators or guides</li>
-        <li><strong>Technical Support:</strong> Issues with the website or calculator</li>
-        <li><strong>Feedback & Suggestions:</strong> Help us improve our platform</li>
-        <li><strong>Content Corrections:</strong> Report any inaccuracies</li>
-        <li><strong>Partnership Opportunities:</strong> Collaborate with us</li>
-        <li><strong>Media Inquiries:</strong> Press and media requests</li>
-      </ul>
+    <h2>Why Contact Us?</h2>
+    <ul style="margin-left: 1.5rem; margin-bottom: 2rem;">
+      <li><strong>General Inquiries:</strong> Questions about our calculators or guides</li>
+      <li><strong>Technical Support:</strong> Issues with the website or calculator</li>
+      <li><strong>Feedback & Suggestions:</strong> Help us improve our platform</li>
+      <li><strong>Content Corrections:</strong> Report any inaccuracies</li>
+      <li><strong>Partnership Opportunities:</strong> Collaborate with us</li>
+    </ul>
 
-      <h2>Send Us a Message</h2>
+    <h2>Send Us a Message</h2>
+    <div class="contact-form-box">
       <form action="mailto:support@mytotalemi.co.in" method="post" enctype="text/plain">
         <div class="form-group">
           <label for="name">Your Name *</label>
@@ -289,7 +99,7 @@
 
         <div class="form-group">
           <label for="subject">Subject *</label>
-          <input type="text" id="subject" name="subject" required placeholder="What is this about- />
+          <input type="text" id="subject" name="subject" required placeholder="What is this about?" />
         </div>
 
         <div class="form-group">
@@ -297,52 +107,60 @@
           <textarea id="message" name="message" rows="6" required placeholder="Please describe your inquiry in detail..."></textarea>
         </div>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" class="btn btn-primary">Send Message</button>
         
         <div class="response-time">
           <strong>Thank you!</strong> We'll get back to you as soon as possible.
         </div>
       </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        © 2026 mytotalemi. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
-      <h2>Frequently Asked Questions</h2>
-      
-      <h3>What can I use Loan EMI Calculator for?</h3>
-      <p>Our calculators help you calculate EMI for any loan type, compare different scenarios, and make informed borrowing decisions. All tools are free to use.</p>
-
-      <h3>Is my data safe?</h3>
-      <p>Yes, we don't store any personal or financial information. All calculations happen on your device. We follow strict privacy and security practices.</p>
-
-      <h3>Can I use the calculator for my business?</h3>
-      <p>Yes, you can use our calculator for business loans as well. For bulk integration or API access, please contact our sales team.</p>
-
-      <h3>Do you offer affiliate or partnership programs?</h3>
-      <p>Yes, we're open to partnerships and collaborations. Please reach out via email to discuss opportunities.</p>
-
-      <h2>Other Ways to Connect</h2>
-      <ul>
-        <li><strong>Browse Our Guides:</strong> Check out our comprehensive <a href="/guides/">loan guides</a> for detailed information</li>
-        <li><strong>Read Our Blog:</strong> Visit our <a href="/blog/">blog</a> for latest articles and tips</li>
-        <li><strong>Use Our Calculator:</strong> Try our <a href="/">EMI calculator</a> to calculate your loan</li>
-        <li><strong>About Us:</strong> Learn more <a href="/about/">about our mission and team</a></li>
-      </ul>
-
-      <h2>Terms of Use</h2>
-      <p>
-        By using our contact form, you agree to our <a href="/terms-of-service/">Terms of Service</a>. Please review our <a href="/privacy-policy/">Privacy Policy</a> to understand how we handle your information.
-      </p>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 Loan EMI Calculator. All rights reserved.</p>
-      <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-service/">Terms of Service</a> | <a href="/about/">About</a> | <a href="/contact/">Contact</a></p>
-    </footer>
   <script>
-  const btn = document.getElementById('hamburgerBtn');
-  const menu = document.getElementById('mobileMenu');
-  if (btn && menu) {
-    btn.addEventListener('click', () => menu.classList.toggle('visible'));
-  }
-</script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          hamburgerBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
-
