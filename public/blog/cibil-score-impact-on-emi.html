@@ -10,7 +10,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #333; background: #f9fafb; }
-    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; }
+    
     nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; }
     nav a { color: white; text-decoration: none; margin: 0 0.5rem; }
     main { max-width: 750px; margin: 0 auto; padding: 2rem 1rem; background: white; }
@@ -33,13 +33,92 @@
     footer { background: #1f2937; color: white; padding: 2rem 1rem; text-align: center; margin-top: 3rem; }
     footer a { color: #93c5fd; text-decoration: none; }
     .internal-link { color: #667eea; text-decoration: none; font-weight: 600; }
-  </style>
+  
+      /* Fix for new header layout */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+      .brand {
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #667eea;
+      }
+      .nav-btn-apply {
+        background-color: #667eea;
+        color: white !important;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      .hamburger span {
+        width: 2rem;
+        height: 0.2rem;
+        background: #333;
+        border-radius: 10px;
+      }
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 100;
+      }
+      .mobile-menu.visible {
+        display: flex;
+      }
+      .mobile-menu a {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+      }
+      @media (max-width: 768px) {
+        nav ul { display: none; }
+        .hamburger { display: flex; }
+      }
+
+    </style>
 </head>
 <body>
-  <header>
+    <header>
     <nav>
-      <div style="font-weight:bold;font-size:1.4rem;">mytotalemi</div>
-      <div style="display:flex;gap:1rem;align-items:center;">
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
         <a href="/">Calculator</a>
         <a href="/blog/">Blog</a>
         <a href="/guides/">Guides</a>
@@ -153,7 +232,7 @@
         </tr>
       </table>
 
-      <p><strong>The difference is significant:</strong> With an excellent CIBIL score of 800+, your EMI is ?38,330. But with a fair score of 675, your EMI jumps to ?42,003 ” an extra ?3,673 per month! Over 20 years, you pay ?3.64 lakh more in interest.</p>
+      <p><strong>The difference is significant:</strong> With an excellent CIBIL score of 800+, your EMI is ?38,330. But with a fair score of 675, your EMI jumps to ?42,003 ï¿½ an extra ?3,673 per month! Over 20 years, you pay ?3.64 lakh more in interest.</p>
 
       <h2>Why Banks Care About CIBIL Score</h2>
 
@@ -275,9 +354,9 @@
   <footer>
     <p>&copy; 2026 mytotalemi. All rights reserved.</p>
     <p>
-      <a href="/privacy-policy/">Privacy Policy</a> "¢ 
-      <a href="/terms-of-service/">Terms of Service</a> "¢ 
-      <a href="/about/">About</a> "¢ 
+      <a href="/privacy-policy/">Privacy Policy</a> "ï¿½ 
+      <a href="/terms-of-service/">Terms of Service</a> "ï¿½ 
+      <a href="/about/">About</a> "ï¿½ 
       <a href="/contact/">Contact</a>
     </p>
   </footer>

@@ -10,7 +10,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #333; background: #f9fafb; }
-    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; }
+    
     nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; }
     nav a { color: white; text-decoration: none; margin: 0 0.5rem; }
     main { max-width: 750px; margin: 0 auto; padding: 2rem 1rem; background: white; }
@@ -33,13 +33,92 @@
     footer { background: #1f2937; color: white; padding: 2rem 1rem; text-align: center; margin-top: 3rem; }
     footer a { color: #93c5fd; text-decoration: none; }
     .internal-link { color: #667eea; text-decoration: none; font-weight: 600; }
-  </style>
+  
+      /* Fix for new header layout */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+      .brand {
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #667eea;
+      }
+      .nav-btn-apply {
+        background-color: #667eea;
+        color: white !important;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      .hamburger span {
+        width: 2rem;
+        height: 0.2rem;
+        background: #333;
+        border-radius: 10px;
+      }
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 100;
+      }
+      .mobile-menu.visible {
+        display: flex;
+      }
+      .mobile-menu a {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+      }
+      @media (max-width: 768px) {
+        nav ul { display: none; }
+        .hamburger { display: flex; }
+      }
+
+    </style>
 </head>
 <body>
-  <header>
+    <header>
     <nav>
-      <div style="font-weight:bold;font-size:1.4rem;">mytotalemi</div>
-      <div style="display:flex;gap:1rem;align-items:center;">
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
         <a href="/">Calculator</a>
         <a href="/blog/">Blog</a>
         <a href="/guides/">Guides</a>
@@ -54,7 +133,7 @@
       <h1>Prepayment vs Investing: Where Should Your Extra Money Go?</h1>
       <p class="article-meta">By mytotalemi Team | March 2026 | 12 min read</p>
 
-      <p>When you have extra money ” from a bonus, inheritance, or salary increase ” you face a classic Indian financial dilemma: Should you prepay your home loan or invest the money? This decision depends on your interest rate, investment returns, tax situation, and risk tolerance. We'll walk through both options with real ? examples and tax calculations.</p>
+      <p>When you have extra money ï¿½ from a bonus, inheritance, or salary increase ï¿½ you face a classic Indian financial dilemma: Should you prepay your home loan or invest the money? This decision depends on your interest rate, investment returns, tax situation, and risk tolerance. We'll walk through both options with real ? examples and tax calculations.</p>
 
       <div class="highlight">
         <strong>The Short Answer:</strong> If your loan rate is 9% and you can reliably earn 12%+ from investments (mutual funds, stocks), investing wins. If loan rates are 8.5% and market returns are uncertain, prepayment is safer.
@@ -160,21 +239,21 @@
         <tr>
           <td>Tax benefit from prepayment</td>
           <td>?0 (you lose 30% tax deduction = ?13,500 tax deduction lost)</td>
-          <td>”</td>
+          <td>ï¿½</td>
         </tr>
         <tr>
           <td>After-tax cost of loan</td>
-          <td>9% × (1 - 30%) = 6.3% effective</td>
-          <td>”</td>
+          <td>9% ï¿½ (1 - 30%) = 6.3% effective</td>
+          <td>ï¿½</td>
         </tr>
         <tr>
           <td>MF returns (15 years)</td>
-          <td>”</td>
+          <td>ï¿½</td>
           <td>?27.2 lakh gross</td>
         </tr>
         <tr>
           <td>LTCG tax on MF (20%)</td>
-          <td>”</td>
+          <td>ï¿½</td>
           <td>?4.44 lakh tax</td>
         </tr>
         <tr>
@@ -219,7 +298,7 @@
         <li>This hidden subsidy from the government means your real cost of borrowing is lower than the stated interest rate</li>
       </ul>
 
-      <p><strong>Example:</strong> You save ?60,000 in taxes every year from the Section 24(b) deduction. If you prepay ?5 lakh, you lose ?60,000 × 5-6 years = ?3-3.6 lakh in future tax benefits.</p>
+      <p><strong>Example:</strong> You save ?60,000 in taxes every year from the Section 24(b) deduction. If you prepay ?5 lakh, you lose ?60,000 ï¿½ 5-6 years = ?3-3.6 lakh in future tax benefits.</p>
 
       <h2>Real-Life Scenarios for Indian Homeowners</h2>
 
@@ -227,7 +306,7 @@
       <p><strong>Recommendation: Invest, not prepay.</strong> You have 30 years until retirement. Equity mutual funds are appropriate for your age. Historical returns (12%+) beat the after-tax cost of your loan (6.3%). Bonus: Maintain high tax deductions while building wealth through investments.</p>
 
       <h3>Scenario B: Sole proprietor, 48 years old, ?30 lakh loan at 8.5%, 10 years remaining</h3>
-      <p><strong>Recommendation: Split approach ” prepay 60%, invest 40%.</strong> You're closer to retirement and shouldn't take high investment risk. Use 60% for prepayment to reduce loan burden, invest remaining 40% in conservative options (debt mutual funds, fixed deposits) for liquidity and modest tax-advantaged returns.</p>
+      <p><strong>Recommendation: Split approach ï¿½ prepay 60%, invest 40%.</strong> You're closer to retirement and shouldn't take high investment risk. Use 60% for prepayment to reduce loan burden, invest remaining 40% in conservative options (debt mutual funds, fixed deposits) for liquidity and modest tax-advantaged returns.</p>
 
       <h3>Scenario C: Homeowner, 60 years old, already retired, ?10 lakh loan at 8.5%, 5 years remaining</h3>
       <p><strong>Recommendation: Prepay.100%</strong> You're unlikely to invest aggressively at 65+. Your priority is becoming debt-free. Prepayment provides stability and peace of mind. You also won't need the income tax deduction if you've already stopped working.</p>
@@ -324,9 +403,9 @@
   <footer>
     <p>&copy; 2026 mytotalemi. All rights reserved.</p>
     <p>
-      <a href="/privacy-policy/">Privacy Policy</a> "¢ 
-      <a href="/terms-of-service/">Terms of Service</a> "¢ 
-      <a href="/about/">About</a> "¢ 
+      <a href="/privacy-policy/">Privacy Policy</a> "ï¿½ 
+      <a href="/terms-of-service/">Terms of Service</a> "ï¿½ 
+      <a href="/about/">About</a> "ï¿½ 
       <a href="/contact/">Contact</a>
     </p>
   </footer>

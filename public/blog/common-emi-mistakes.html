@@ -10,7 +10,7 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #333; background: #f9fafb; }
-    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; }
+    
     nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; }
     nav a { color: white; text-decoration: none; margin: 0 0.5rem; }
     main { max-width: 750px; margin: 0 auto; padding: 2rem 1rem; background: white; }
@@ -33,13 +33,92 @@
     footer { background: #1f2937; color: white; padding: 2rem 1rem; text-align: center; margin-top: 3rem; }
     footer a { color: #93c5fd; text-decoration: none; }
     .internal-link { color: #667eea; text-decoration: none; font-weight: 600; }
-  </style>
+  
+      /* Fix for new header layout */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+      .brand {
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #667eea;
+      }
+      .nav-btn-apply {
+        background-color: #667eea;
+        color: white !important;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      .hamburger span {
+        width: 2rem;
+        height: 0.2rem;
+        background: #333;
+        border-radius: 10px;
+      }
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 100;
+      }
+      .mobile-menu.visible {
+        display: flex;
+      }
+      .mobile-menu a {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+      }
+      @media (max-width: 768px) {
+        nav ul { display: none; }
+        .hamburger { display: flex; }
+      }
+
+    </style>
 </head>
 <body>
-  <header>
+    <header>
     <nav>
-      <div style="font-weight:bold;font-size:1.4rem;">mytotalemi</div>
-      <div style="display:flex;gap:1rem;align-items:center;">
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
         <a href="/">Calculator</a>
         <a href="/blog/">Blog</a>
         <a href="/guides/">Guides</a>
@@ -66,11 +145,11 @@
 
       <h3>The Wrong Way (Most People Do This):</h3>
       <p>Loan: ?50,00,000 | Annual Rate: 9% | Tenure: 20 years (240 months)</p>
-      <p>Wrong calculation: EMI = ?50,00,000 × (9% × 240) / 240 = ?95,55,555 (completely wrong!)</p>
+      <p>Wrong calculation: EMI = ?50,00,000 ï¿½ (9% ï¿½ 240) / 240 = ?95,55,555 (completely wrong!)</p>
 
       <h3>The Correct Way:</h3>
-      <p>Monthly rate = Annual rate ÷ 12 = 9% ÷ 12 = 0.75% = 0.0075</p>
-      <p>EMI = P × [r(1+r)^n] / [(1+r)^n - 1]</p>
+      <p>Monthly rate = Annual rate ï¿½ 12 = 9% ï¿½ 12 = 0.75% = 0.0075</p>
+      <p>EMI = P ï¿½ [r(1+r)^n] / [(1+r)^n - 1]</p>
       <p>where P = ?50,00,000, r = 0.0075, n = 240</p>
       <p>EMI = ?44,986 (correct)</p>
 
@@ -213,17 +292,17 @@
 
       <h3>Common Formula Mistakes:</h3>
       <ul>
-        <li><strong>Simple Interest (wrong):</strong> EMI = (Principal + Simple Interest) ÷ Months. This doesn't account for compounding.</li>
-        <li><strong>Flat Rate (sometimes used):</strong> EMI = (Principal + Flat Interest) ÷ Months. Banks don't use flat rates anymore.</li>
+        <li><strong>Simple Interest (wrong):</strong> EMI = (Principal + Simple Interest) ï¿½ Months. This doesn't account for compounding.</li>
+        <li><strong>Flat Rate (sometimes used):</strong> EMI = (Principal + Flat Interest) ï¿½ Months. Banks don't use flat rates anymore.</li>
         <li><strong>Mental approximation:</strong> "10% rate roughly means 5-6% per annum effective..." (too imprecise)</li>
       </ul>
 
       <h3>The Correct Formula (Compound Interest):</h3>
-      <p style="font-size:1.1rem; font-family: monospace; background:#f3f4f6; padding:1rem; border-radius:6px;">EMI = P × [r(1+r)^n] / [(1+r)^n - 1]</p>
+      <p style="font-size:1.1rem; font-family: monospace; background:#f3f4f6; padding:1rem; border-radius:6px;">EMI = P ï¿½ [r(1+r)^n] / [(1+r)^n - 1]</p>
       <p>where:</p>
       <ul>
         <li>P = Principal (loan amount)</li>
-        <li>r = Monthly interest rate (annual rate ÷ 12)</li>
+        <li>r = Monthly interest rate (annual rate ï¿½ 12)</li>
         <li>n = Number of months</li>
       </ul>
 
@@ -294,10 +373,10 @@
       <p>Before signing your loan agreement, verify each point:</p>
 
       <ol>
-        <li> <strong>Monthly interest rate used in formula:</strong> Calculate monthly rate = annual ÷ 12 and verify the bank used this</li>
+        <li> <strong>Monthly interest rate used in formula:</strong> Calculate monthly rate = annual ï¿½ 12 and verify the bank used this</li>
         <li> <strong>All charges listed:</strong> Ask for itemized processing, legal, documentation, and insurance charges</li>
         <li> <strong>Prepayment terms clear:</strong> Ask if fixed-rate loan charges penalty; ask if floating-rate is free to prepay</li>
-        <li> <strong>Total interest calculated:</strong> Verify total interest = (EMI × tenure) - principal</li>
+        <li> <strong>Total interest calculated:</strong> Verify total interest = (EMI ï¿½ tenure) - principal</li>
         <li> <strong>Formula is compound interest:</strong> Verify bank uses the formula above, not simple or flat rate</li>
       </ol>
 
@@ -341,9 +420,9 @@
   <footer>
     <p>&copy; 2026 mytotalemi. All rights reserved.</p>
     <p>
-      <a href="/privacy-policy/">Privacy Policy</a> "¢ 
-      <a href="/terms-of-service/">Terms of Service</a> "¢ 
-      <a href="/about/">About</a> "¢ 
+      <a href="/privacy-policy/">Privacy Policy</a> "ï¿½ 
+      <a href="/terms-of-service/">Terms of Service</a> "ï¿½ 
+      <a href="/about/">About</a> "ï¿½ 
       <a href="/contact/">Contact</a>
     </p>
   </footer>
