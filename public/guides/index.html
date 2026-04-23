@@ -1,264 +1,214 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Comprehensive guides on EMI, loans, and financial planning. Learn how to calculate EMI, choose the right loan, and avoid costly mistakes." />
-    <title>Loan Guides: EMI Calculation & Loan Tips</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
-        line-height: 1.8; 
-        color: #333; 
-        background: #f9f9f9;
-      }
-      header { 
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border-bottom: 1px solid #e0e0e0; 
-        padding: 1rem 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      nav { 
-        max-width: 1200px; 
-        margin: 0 auto; 
-        padding: 0 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .logo { font-size: 1.5rem; font-weight: bold; }
-      nav a { 
-        margin-left: 2rem; 
-        text-decoration: none; 
-        color: white;
-        transition: opacity 0.3s;
-      }
-      nav a:hover { opacity: 0.8; }
-      main { 
-        max-width: 1000px; 
-        margin: 2rem auto; 
-        padding: 0 1rem;
-      }
-      h1 { 
-        margin-bottom: 1rem; 
-        color: white;
-        font-size: 3rem;
-        line-height: 1.2;
-        margin-top: 2rem;
-      }
-      .hero {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 3rem 1rem;
-        border-radius: 8px;
-        color: white;
-        margin-bottom: 3rem;
-      }
-      .hero p {
-        font-size: 1.2rem;
-        margin-top: 1rem;
-      }
-      .guides-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin: 2rem 0;
-      }
-      .guide-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .guide-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      }
-      .guide-card h3 {
-        color: #667eea;
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-      }
-      .guide-card p {
-        color: #666;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-      }
-      .guide-card a {
-        display: inline-block;
-        background: #667eea;
-        color: white;
-        padding: 0.7rem 1.5rem;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: background 0.3s;
-      }
-      .guide-card a:hover {
-        background: #764ba2;
-      }
-      .guide-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      h2 {
-        color: #333;
-        font-size: 2rem;
-        margin: 2rem 0 1rem 0;
-        border-left: 4px solid #667eea;
-        padding-left: 1rem;
-      }
-      .features {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        margin: 2rem 0;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      }
-      .features ul {
-        list-style: none;
-        margin: 0;
-      }
-      .features li {
-        padding: 0.8rem 0;
-        padding-left: 2rem;
-        position: relative;
-      }
-      .features li:before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #28a745;
-        font-weight: bold;
-      }
-      footer {
-        background: #f9f9f9;
-        border-top: 1px solid #e0e0e0;
-        padding: 2rem;
-        margin-top: 3rem;
-        text-align: center;
-        color: #666;
-      }
-      .breadcrumb {
-        color: #999;
-        margin-bottom: 1.5rem;
-        font-size: 0.9rem;
-      }
-      .breadcrumb a { color: #667eea; text-decoration: none; }
-      .breadcrumb a:hover { text-decoration: underline; }
-    </style>
-  </head>
-  <body>
-    <header>
-  <nav>
-    <a href="/" class="brand">mytotalemi</a>
-    <a href="/">Calculator</a>
-    <a href="/blog/">Blog</a>
-    <a href="/guides/">Guides</a>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-    <a href="/contact/" class="btn-apply">Apply</a>
-  </nav>
-</header>
-
-    <div class="hero">
-      <div style="max-width: 1000px; margin: 0 auto; padding: 0 1rem;">
-        <h1>Loan & EMI Guides</h1>
-        <p>Comprehensive guides to help you make smart borrowing decisions, calculate EMI, and save thousands on your loans.</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive guides on EMI, loans, and financial planning. Learn how to calculate EMI, choose the right loan, and avoid costly mistakes.">
+  <title>Loan Guides: EMI Calculation & Loan Tips</title>
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
       </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%); color: white; padding: 3rem 1rem; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Loan & EMI Guides</h1>
+      <p style="font-size: 1.1rem; color: rgba(255,255,255,0.95);">Comprehensive guides to help you make smart borrowing decisions, calculate EMI, and save thousands on your loans.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main style="max-width: 1200px; margin: 3rem auto; padding: 0 1rem;">
+
+    <h2 style="margin: 2rem 0 1rem; font-size: 2rem; color: var(--text); border-left: 4px solid var(--primary); padding-left: 1rem;">Popular Guides</h2>
+    
+    <div class="blog-grid" style="margin: 3rem 0;">
+      <article class="post-card">
+        <div class="card-stripe" style="background: #3b82f6;"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category" style="background: #dbeafe; color: #1e40af;">What is EMI</span>
+          </div>
+          <h3 class="card-title">What is EMI?</h3>
+          <p class="card-description">Learn the fundamentals of EMI (Equated Monthly Installment), how it works, why it matters, and how it impacts your loan repayment strategy.</p>
+          <a href="/guides/what-is-emi.html" class="card-link">Learn more</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-stripe" style="background: #8b5cf6;"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category" style="background: #ede9fe; color: #6d28d9;">Calculation</span>
+          </div>
+          <h3 class="card-title">How EMI is Calculated</h3>
+          <p class="card-description">Master the EMI formula with detailed step-by-step explanations, real examples, and comparisons of different scenarios.</p>
+          <a href="/guides/how-emi-is-calculated.html" class="card-link">Read guide</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-stripe" style="background: #3b82f6;"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category" style="background: #dbeafe; color: #1e40af;">Home Loans</span>
+          </div>
+          <h3 class="card-title">Home Loan EMI Guide</h3>
+          <p class="card-description">Complete guide to home loans including eligibility, approval process, tax benefits, and strategies to minimize your home loan burden.</p>
+          <a href="/guides/home-loan-emi-guide.html" class="card-link">Read guide</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-stripe" style="background: #f59e0b;"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category" style="background: #fef3c7; color: #92400e;">Car Loans</span>
+          </div>
+          <h3 class="card-title">Car Loan EMI Guide</h3>
+          <p class="card-description">Learn about car loan EMI calculation, down payment impact, depreciation, and how to get the best deal on your vehicle loan.</p>
+          <a href="/guides/car-loan-emi-guide.html" class="card-link">Read guide</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-stripe" style="background: #ec4899;"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category" style="background: #fce7f3; color: #831843;">Personal Loans</span>
+          </div>
+          <h3 class="card-title">Personal Loan Mistakes</h3>
+          <p class="card-description">Avoid 10 common personal loan mistakes that cost borrowers thousands. Learn how to save money and make better decisions.</p>
+          <a href="/guides/personal-loan-mistakes.html" class="card-link">Read guide</a>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="card-stripe" style="background: #10b981;"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category" style="background: #d1fae5; color: #065f46;">Tools</span>
+          </div>
+          <h3 class="card-title">Home vs Personal Loan</h3>
+          <p class="card-description">Understand the key differences, pros, cons, and choose the best loan based on your financial goals and situation.</p>
+          <a href="/guides/home-vs-personal-loan.html" class="card-link">Compare now</a>
+        </div>
+      </article>
     </div>
 
-    <main>
-      <h2>Popular Guides</h2>
-      
-      <div class="guides-grid">
-        <div class="guide-card">
-          <div class="guide-icon">&#128202;</div>
-          <h3>What is EMI?</h3>
-          <p>Learn the fundamentals of EMI (Equated Monthly Installment), how it works, why it matters, and how it impacts your loan repayment strategy.</p>
-          <a href="/guides/what-is-emi.html">Read Guide →</a>
-        </div>
+    <h2 style="margin: 3rem 0 1rem; font-size: 2rem; color: var(--text); border-left: 4px solid var(--primary); padding-left: 1rem;">Why Use Our Guides?</h2>
+    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); margin: 2rem 0; box-shadow: var(--shadow);">
+      <ul style="list-style: none; margin: 0;">
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Written by financial experts with real-world lending experience</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Updated with latest interest rates and loan policies</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Includes practical examples and real-world scenarios</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Step-by-step explanations for complex concepts</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Covers all major loan types (home, car, personal, education)</li>
+      </ul>
+    </div>
 
-        <div class="guide-card">
-          <div class="guide-icon">&#129518;</div>
-          <h3>How EMI is Calculated</h3>
-          <p>Master the EMI formula with detailed step-by-step explanations, real examples, and comparisons of different scenarios.</p>
-          <a href="/guides/how-emi-is-calculated.html">Read Guide →</a>
-        </div>
+    <h2 style="margin: 3rem 0 1rem; font-size: 2rem; color: var(--text); border-left: 4px solid var(--primary); padding-left: 1rem;">Topics Covered</h2>
+    <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); margin: 2rem 0; box-shadow: var(--shadow);">
+      <ul style="list-style: none; margin: 0;">
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Understanding EMI and how it's calculated</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Comparing different loan options</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Eligibility criteria and approval process</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Tax benefits and financial planning</li>
+        <li style="padding: 0.8rem 0; padding-left: 2rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span> Pre-payment strategies to save interest</li>
+      </ul>
+    </div>
 
-        <div class="guide-card">
-          <div class="guide-icon">&#127968;</div>
-          <h3>Home Loan EMI Guide</h3>
-          <p>Complete guide to home loans including eligibility, approval process, tax benefits, and strategies to minimize your home loan burden.</p>
-          <a href="/guides/home-loan-emi-guide.html">Read Guide →</a>
-        </div>
+    <h2 style="margin: 3rem 0 1rem; font-size: 2rem; color: var(--text); border-left: 4px solid var(--primary); padding-left: 1rem;">Start Your Learning Journey</h2>
+    <p style="font-size: 1.1rem; color: var(--text-muted); margin: 2rem 0;">
+      Whether you're planning to buy a home, purchase a car, or take a personal loan, our comprehensive guides will help you understand the process, make smart decisions, and save thousands of rupees.
+    </p>
 
-        <div class="guide-card">
-          <div class="guide-icon">🚗</div>
-          <h3>Car Loan EMI Guide</h3>
-          <p>Learn about car loan EMI calculation, down payment impact, depreciation, and how to get the best deal on your vehicle loan.</p>
-          <a href="/guides/car-loan-emi-guide.html">Read Guide →</a>
-        </div>
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="/guides/what-is-emi.html" style="display: inline-block; background: var(--primary); color: white; padding: 1rem 2rem; border-radius: var(--radius); text-decoration: none; font-size: 1.1rem; margin: 0 0.5rem; font-weight: 600; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Start with What is EMI?</a>
+      <a href="/" style="display: inline-block; background: var(--accent); color: white; padding: 1rem 2rem; border-radius: var(--radius); text-decoration: none; font-size: 1.1rem; margin: 0 0.5rem; font-weight: 600; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">Open Calculator →</a>
+    </div>
+  </main>
 
-        <div class="guide-card">
-          <div class="guide-icon">⚠️</div>
-          <h3>Personal Loan Mistakes</h3>
-          <p>Avoid 10 common personal loan mistakes that cost borrowers thousands. Learn how to save money and make better decisions.</p>
-          <a href="/guides/personal-loan-mistakes.html">Read Guide →</a>
-        </div>
+  <!-- Footer -->
 
-        <div class="guide-card">
-          <div class="guide-icon">📱</div>
-          <h3>EMI Calculator</h3>
-          <p>Use our powerful EMI calculator to instantly calculate monthly payments for any loan type and compare different scenarios.</p>
-          <a href="/">Open Calculator →</a>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
         </div>
       </div>
-
-      <h2>Why Use Our Guides?</h2>
-      <div class="features">
-        <ul>
-          <li>Written by financial experts with real-world lending experience</li>
-          <li>Updated with latest interest rates and loan policies</li>
-          <li>Includes practical examples and real-world scenarios</li>
-          <li>Step-by-step explanations for complex concepts</li>
-          <li>Covers all major loan types (home, car, personal, education)</li>
-          <li>Focuses on helping you save money and avoid costly mistakes</li>
-          <li>Free and accessible to everyone</li>
-        </ul>
+      <div class="footer-divider">
+        © 2026 mytotalemi. All rights reserved.
       </div>
+    </div>
+  </footer>
 
-      <h2>Topics Covered</h2>
-      <div class="features">
-        <ul>
-          <li>Understanding EMI and how it's calculated</li>
-          <li>Comparing different loan options</li>
-          <li>Eligibility criteria and approval process</li>
-          <li>Impact of down payment on EMI</li>
-          <li>Tax benefits and financial planning</li>
-          <li>Common mistakes and how to avoid them</li>
-          <li>Pre-payment strategies to save interest</li>
-          <li>Credit score and its impact on loan rates</li>
-          <li>Hidden charges and additional costs</li>
-          <li>Refinancing and loan restructuring options</li>
-        </ul>
-      </div>
+  <!-- JavaScript: Mobile Menu Toggle -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-      <h2>Start Your Learning Journey</h2>
-      <p style="font-size: 1.1rem; color: #666; margin: 2rem 0;">
-        Whether you're planning to buy a home, purchase a car, or take a personal loan, our comprehensive guides will help you understand the process, make smart decisions, and save thousands of rupees.
-      </p>
+    hamburgerBtn.addEventListener('click', function() {
+      hamburgerBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
 
-      <div style="text-align: center; margin: 3rem 0;">
-        <a href="/guides/what-is-emi.html" style="display: inline-block; background: #667eea; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-size: 1.1rem; margin: 0 0.5rem;">Start with What is EMI?</a>
-        <a href="/" style="display: inline-block; background: #28a745; color: white; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-size: 1.1rem; margin: 0 0.5rem;">Open Calculator</a>
-      </div>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 Loan EMI Calculator. All rights reserved.</p>
-      <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-service/">Terms of Service</a> | <a href="/about/">About</a> | <a href="/contact/">Contact</a></p>
-    </footer>
-  </body>
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
 </html>

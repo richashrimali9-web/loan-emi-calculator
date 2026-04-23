@@ -1,70 +1,246 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Blog &mdash; Loan EMI Calculator</title>
-    <style>
-      header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border-bottom: 1px solid #e0e0e0;
-        padding: 1rem 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      nav {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .brand { font-weight: bold; font-size: 1.2rem; color: white; text-decoration: none; }
-      nav a { margin-right: 1rem; text-decoration: none; color: white; }
-      nav a:hover { opacity: 0.9; }
-      .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-      .post-card { background: white; border: 1px solid #e0e0e0; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-      .post-card a { text-decoration: none; color: #2c3e50; font-weight: 600; }
-      .post-card p { color: #555; margin-top: 0.5rem; font-size: 0.95rem; }
-</style>
-  </head>
-  <body>
-        <header>
-      <nav>
-        <a href="/" class="brand">mytotalemi</a>
-        <div>
-          <a href="/">Calculator</a>
-          <a href="/blog/">Blog</a>
-          <a href="/guides/">Guides</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-          <a href="/contact/" class="btn-apply">Apply</a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <h1>Blog</h1>
-      <p>Latest guides and case studies for loans and EMI strategies.</p>
-      <div class="posts-grid">
-        <article class="post-card"><a href="/blog/post-1.html">How EMI Works: Complete Guide</a><p>Learn EMI components, calculators and planning tips.</p></article>
-        <article class="post-card"><a href="/blog/post-2.html">Home Loan vs Personal Loan: Which to Choose</a><p>Compare interest, tenure, and repayment for your needs.</p></article>
-        <article class="post-card"><a href="/blog/post-3.html">Understanding Mudra and Small Business Loans</a><p>Small business borrowing options and eligibility explained.</p></article>
-        <article class="post-card"><a href="/blog/post-4.html">PMAY Scheme: Benefits and Eligibility</a><p>Government housing incentive details and application guide.</p></article>
-        <article class="post-card"><a href="/blog/post-5.html">Car Loan Tips: Reduce Your Interest Cost</a><p>Strategies to save on EMI for vehicle loans.</p></article>
-        <article class="post-card"><a href="/blog/post-6.html">Education Loan Options and Repayment Strategies</a><p>Study loan features, moratorium and prepayment advice.</p></article>
-        <article class="post-card"><a href="/blog/post-7.html">Advanced EMI Strategies: Prepayment and Part-Payments</a><p>Optimize cash flows with smart repayment planning.</p></article>
-        <article class="post-card"><a href="/blog/post-8.html">Loan Comparison Checklist</a><p>Compare rates, fees, and conditions before signing.</p></article>
-        <article class="post-card"><a href="/blog/post-9.html">Case Study: How a Family Saved on Home EMI</a><p>Real-world examples of savings through refinancing.</p></article>
-        <article class="post-card"><a href="/blog/post-10.html">Regional Schemes Roundup</a><p>Review local housing and social loan programs.</p></article>
-      </div>    </main>
-  </body>
-</html>
-    <footer>
-      <p>© 2026 mytotalemi. All rights reserved.</p>
-      <p>
-        <a href="/privacy-policy/">Privacy Policy</a> | 
-        <a href="/about/">About</a> | 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Loan EMI Calculator & Financial Guides | mytotalemi</title>
+  <meta name="description" content="Read our latest blog posts on loan EMI calculations, home loans, personal loans, car loans, and smart borrowing strategies.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
-      </p>
-    </footer>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 3rem 1.5rem; border-radius: 0; margin: 0; max-width: 100%;">
+      <h1 style="color: white;">Blog</h1>
+      <p class="hero-subtitle" style="color: rgba(255,255,255,0.95);">Learn about loans, EMI strategies, and smart borrowing decisions</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <main class="container" style="margin: 3rem auto;">
+    <div class="blog-grid">
+      <!-- Post 1 -->
+      <article class="post-card">
+        <div class="card-stripe home"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Home Loan</span>
+            <span class="card-read-time">6 min read</span>
+          </div>
+          <h3 class="card-title">How EMI Works: Complete Guide</h3>
+          <p class="card-description">Learn how EMI is calculated, the components involved, and how to use our calculator for accurate results.</p>
+          <a href="/blog/post-1.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="post-card">
+        <div class="card-stripe home"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Strategy</span>
+            <span class="card-read-time">7 min read</span>
+          </div>
+          <h3 class="card-title">Home Loan vs Personal Loan: Which to Choose</h3>
+          <p class="card-description">Compare interest rates, tenure options, and repayment flexibility between home and personal loans for your needs.</p>
+          <a href="/blog/post-2.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="post-card">
+        <div class="card-stripe government"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Government</span>
+            <span class="card-read-time">8 min read</span>
+          </div>
+          <h3 class="card-title">Understanding Mudra and Small Business Loans</h3>
+          <p class="card-description">Explore government-backed small business loan programs, eligibility criteria, and application processes.</p>
+          <a href="/blog/post-3.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="post-card">
+        <div class="card-stripe government"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Government</span>
+            <span class="card-read-time">7 min read</span>
+          </div>
+          <h3 class="card-title">PMAY Scheme: Benefits and Eligibility</h3>
+          <p class="card-description">Complete guide to Pradhan Mantri Awas Yojana benefits, eligibility requirements, and application steps.</p>
+          <a href="/blog/post-4.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="post-card">
+        <div class="card-stripe car"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Car Loan</span>
+            <span class="card-read-time">6 min read</span>
+          </div>
+          <h3 class="card-title">Car Loan Tips: Reduce Your Interest Cost</h3>
+          <p class="card-description">Smart strategies to negotiate better car loan rates, lower EMI, and save on total interest paid.</p>
+          <a href="/blog/post-5.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="post-card">
+        <div class="card-stripe education"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Education</span>
+            <span class="card-read-time">8 min read</span>
+          </div>
+          <h3 class="card-title">Education Loan Options and Repayment Strategies</h3>
+          <p class="card-description">Loan features, moratorium periods, repayment options, and strategies to manage education debt effectively.</p>
+          <a href="/blog/post-6.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 7 -->
+      <article class="post-card">
+        <div class="card-stripe strategy"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Strategy</span>
+            <span class="card-read-time">9 min read</span>
+          </div>
+          <h3 class="card-title">Advanced EMI Strategies: Prepayment and Part-Payments</h3>
+          <p class="card-description">Master advanced techniques to optimize cash flow, reduce interest burden, and pay off loans faster.</p>
+          <a href="/blog/post-7.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 8 -->
+      <article class="post-card">
+        <div class="card-stripe strategy"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Comparison</span>
+            <span class="card-read-time">5 min read</span>
+          </div>
+          <h3 class="card-title">Loan Comparison Checklist</h3>
+          <p class="card-description">Comprehensive checklist to compare loan offers across interest rates, fees, terms, and conditions.</p>
+          <a href="/blog/post-8.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 9 -->
+      <article class="post-card">
+        <div class="card-stripe home"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Case Study</span>
+            <span class="card-read-time">7 min read</span>
+          </div>
+          <h3 class="card-title">Case Study: How a Family Saved on Home EMI</h3>
+          <p class="card-description">Real-world example of how strategic financing and refinancing decisions led to significant interest savings.</p>
+          <a href="/blog/post-9.html" class="card-link">Read more</a>
+        </div>
+      </article>
+
+      <!-- Post 10 -->
+      <article class="post-card">
+        <div class="card-stripe government"></div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span class="card-category">Government</span>
+            <span class="card-read-time">8 min read</span>
+          </div>
+          <h3 class="card-title">Regional Schemes Roundup</h3>
+          <p class="card-description">Overview of state-specific and local housing/business loan programs and their unique benefits.</p>
+          <a href="/blog/post-10.html" class="card-link">Read more</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        © 2026 mytotalemi. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript: Mobile Menu Toggle -->
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburgerBtn.addEventListener('click', function() {
+      hamburgerBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
