@@ -112,6 +112,14 @@
       <footer>
         <p style="margin-top: 1rem;">Numbers are rounded for illustration. Validate with your lender's amortization schedule and our calculator before deciding.</p>
   </footer>
-</article></body></html>
+</article><script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body></html>
+
 
 

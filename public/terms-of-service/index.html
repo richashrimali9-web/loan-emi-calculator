@@ -51,8 +51,16 @@
       <h2>Contact</h2>
       <p>See <a href="/contact/">Contact</a>\n          <a href="/contact/" style="margin-left:1rem;background:#667eea;color:#fff;padding:.4rem .6rem;border-radius:4px;text-decoration:none;">Apply</a> for questions about these terms.</p>
     </main>
-  </body>
+  <script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body>
 </html>
+
 
 
 

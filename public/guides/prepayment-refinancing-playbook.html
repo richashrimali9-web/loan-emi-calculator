@@ -133,6 +133,14 @@
 <p>Use the <a href="/">EMI Calculator</a> to simulate these strategies on your loan.</p>
 </footer>
 </article>
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
 </body>
 </html>
+
 

@@ -352,7 +352,14 @@
         <p style="margin-top: 1.5rem;">Updated for current lending practices. This article provides general education and is not financial advice. Always confirm rates and terms with your lender.</p>
       </footer>
     </article>
-  </body>
+  <script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body>
 </html>
   <ul>
     <li>Check pre-approved offers from your bank/credit card issuer.</li>
@@ -416,6 +423,14 @@
       <footer>
     <p style="margin-top: 1rem;">Educational content. Verify current rates, fees, and policies with your lender/dealer before signing.</p>
   </footer>
-</article></body></html>
+</article><script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body></html>
+
 
 

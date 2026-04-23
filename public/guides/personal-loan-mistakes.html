@@ -583,7 +583,15 @@
       <p>&copy; 2024 Loan EMI Calculator. All rights reserved.</p>
       <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-service/">Terms of Service</a> | <a href="/about/">About</a> | <a href="/contact/">Contact</a></p>
     </footer>
-  </body>
+  <script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body>
 </html>
+
 
 
