@@ -1,49 +1,53 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How EMI Works ” Loan EMI Calculator</title>
-  <meta name="description" content="Understand what EMI is, the exact formula, worked examples with numbers, amortization table, tips to reduce interest, and FAQs. Learn how banks calculate EMI and model scenarios with our free calculator.">
-  <meta name="theme-color" content="#4f46e5">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
-  <link rel="stylesheet" href="/css/style.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- Reading Progress Bar -->
-  <div class="reading-progress"></div>
-
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <a href="/" class="brand">mytotalemi</a>
-      
-      <button class="hamburger" id="hamburgerBtn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <ul id="navMenu">
-        <li><a href="/">Calculator</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/guides/">Guides</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
-      </ul>
-      
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="/">Calculator</a>
-        <a href="/blog/">Blog</a>
-        <a href="/guides/">Guides</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-      </div>
-    </nav>
-  </header>
-  <!-- Main Content -->
-<article>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>How EMI Works ” Loan EMI Calculator</title>
+    <meta name="description" content="Understand what EMI is, the exact formula, worked examples with numbers, amortization table, tips to reduce interest, and FAQs. Learn how banks calculate EMI and model scenarios with our free calculator." />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #1f2937; }
+      header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 1rem 0; }
+      nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+      nav a { margin-right: 1rem; text-decoration: none; color: #6b7280; }
+      nav a:hover { color: #7c3aed; }
+      article { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+      h1 { margin-bottom: 0.75rem; color: #111827; font-size: 2rem; }
+      h2 { margin: 2rem 0 0.5rem; color: #111827; font-size: 1.35rem; }
+      h3 { margin: 1.25rem 0 0.25rem; color: #111827; font-size: 1.1rem; }
+      p { margin-bottom: 1rem; }
+      ul { margin-left: 1.25rem; margin-bottom: 1rem; }
+      li { margin: 0.25rem 0; }
+      a { color: #7c3aed; }
+      .muted { color: #6b7280; }
+      .box { background: #f9fafb; border: 1px solid #e5e7eb; padding: 1rem; border-radius: 8px; }
+      .note { background: #f5f3ff; border: 1px solid #ddd6fe; padding: 0.75rem 1rem; border-radius: 8px; }
+      table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+      th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.5rem; text-align: right; }
+      th { background: #fafafa; color: #374151; }
+      td.left, th.left { text-align: left; }
+      .small { font-size: 0.9rem; color: #4b5563; }
+      .toc { margin: 1rem 0; }
+      .toc a { display: inline-block; margin-right: 0.75rem; font-size: 0.95rem; }
+      footer { margin-top: 2rem; font-size: 0.95rem; color: #6b7280; }
+    </style>
+  </head>
+  <body>
+    <header style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;">
+  <nav style="max-width:1200px;margin:0 auto;padding:1rem;display:flex;align-items:center;justify-content:space-between;">
+    <a href="/" class="brand" style="font-weight:bold;font-size:1.2rem;color:white;text-decoration:none;">mytotalemi</a>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="/" style="color:white;text-decoration:none;">Calculator</a>
+      <a href="/blog/" style="color:white;text-decoration:none;">Blog</a>
+      <a href="/guides/" style="color:white;text-decoration:none;">Guides</a>
+      <a href="/about/" style="color:white;text-decoration:none;">About</a>
+      <a href="/contact/" style="color:white;text-decoration:none;">Contact</a>
+      <a href="/contact/" style="padding:0.4rem 0.8rem;border-radius:4px;background:#fff;color:#3b3b3b;text-decoration:none;font-weight:600;">Apply</a>
+    </div>
+  </nav>
+</header>
+    <article>
       <h1>How EMI Works: Complete, Practical Guide</h1>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem;">
         <div>
@@ -88,16 +92,16 @@
       <p>For floating-rate loans, the EMI can change when the reference rate (e.g., repo-linked rate) is reset by the lender. For fixed-rate loans, the EMI typically remains the same throughout the tenure unless you prepay or restructure.</p>
 
       <h2 id="worked-example">Worked example with numbers</h2>
-      <p>Suppose you take a home loan of <strong>?10,00,000</strong> at an annual interest rate of <strong>10%</strong> for <strong>20 years</strong> (240 months).</p>
+      <p>Suppose you take a home loan of <strong>₹10,00,000</strong> at an annual interest rate of <strong>10%</strong> for <strong>20 years</strong> (240 months).</p>
       <ul>
         <li>P = 10,00,000</li>
-        <li>r = 10% ÷ 12 = 0.10 ÷ 12 ˜ <strong>0.008333</strong> per month</li>
+        <li>r = 10% ÷ 12 = 0.10 ÷ 12 ≈ <strong>0.008333</strong> per month</li>
         <li>n = 20 × 12 = <strong>240</strong> months</li>
       </ul>
-      <p>Using the formula, the EMI comes to approximately <strong>?9,650 per month</strong>.</p>
+      <p>Using the formula, the EMI comes to approximately <strong>₹9,650 per month</strong>.</p>
       <ul>
-        <li>Total of payments over 20 years ˜ 9,650 × 240 = <strong>?23,16,000</strong></li>
-        <li>Total interest paid ˜ 23,16,000 âˆ’ 10,00,000 = <strong>?13,16,000</strong></li>
+        <li>Total of payments over 20 years ≈ 9,650 × 240 = <strong>₹23,16,000</strong></li>
+        <li>Total interest paid ≈ 23,16,000 âˆ’ 10,00,000 = <strong>₹13,16,000</strong></li>
       </ul>
       <p class="small">These figures are rounded for readability. Use the <a href="/">calculator</a> to see exact values and try other combinations (different rates and tenures).</p>
 
@@ -107,10 +111,10 @@
         <thead>
           <tr>
             <th class="left">Month</th>
-            <th>EMI (?)</th>
-            <th>Interest (?)</th>
-            <th>Principal (?)</th>
-            <th>Balance (?)</th>
+            <th>EMI (₹)</th>
+            <th>Interest (₹)</th>
+            <th>Principal (₹)</th>
+            <th>Balance (₹)</th>
           </tr>
         </thead>
         <tbody>
@@ -170,13 +174,13 @@
       </ul>
 
       <div class="box">
-        <h3>EMI comparison by tenure (?10,00,000 at 10% p.a.)</h3>
-        <table aria-label="EMI vs Tenure for ?10 lakh at 10%">
+        <h3>EMI comparison by tenure (₹10,00,000 at 10% p.a.)</h3>
+        <table aria-label="EMI vs Tenure for ₹10 lakh at 10%">
           <thead>
             <tr>
               <th class="left">Tenure</th>
-              <th>Approx. EMI (?)</th>
-              <th>Total Interest (?)</th>
+              <th>Approx. EMI (₹)</th>
+              <th>Total Interest (₹)</th>
             </tr>
           </thead>
           <tbody>
@@ -249,7 +253,7 @@
       <p>For many floating-rate home loans to individuals, prepayment penalties are not permitted by regulation. For fixed-rate and non-home loans, lenders may charge fees”check your loan agreement.</p>
 
       <h3>How can I quickly estimate EMI without a calculator?</h3>
-      <p>A rough thumb rule for home loans at ~9–10% is: EMI per lakh over 20 years ˜ ?900–?1,000. So for ?25 lakh, expect roughly ?22,500–?25,000 per month. Always verify with the <a href="/">calculator</a> for accuracy.</p>
+      <p>A rough thumb rule for home loans at ~9–10% is: EMI per lakh over 20 years ≈ ₹900–₹1,000. So for ₹25 lakh, expect roughly ₹22,500–₹25,000 per month. Always verify with the <a href="/">calculator</a> for accuracy.</p>
 
       <div style="background:#e7f3ff;border:1px solid #bfdbfe;padding:1rem;border-radius:8px;margin-top:1.5rem;">
         <h3 style="margin-bottom:0.5rem;color:#111827">Model this scenario</h3>
@@ -270,7 +274,5 @@
 </script>
 </body>
 </html>
-
-
 
 
