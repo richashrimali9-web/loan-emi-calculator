@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,18 +24,33 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/" style="font-weight:bold;font-size:1.2rem;">mytotalemi</a>
-        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-          <a href="/">Calculator</a>
-          <a href="/blog/">Blog</a>
-          <a href="/guides/">Guides</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-        </div>
-      </nav>
-    </header>
+      <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
     <main>
       <h1>Terms of Service</h1>
       <p><strong>Last updated:</strong> March 2026</p>
@@ -58,8 +73,16 @@
       <p>For questions or concerns, please use our <a href="/contact/">Contact</a> page.</p>
     </main>
     <footer>
-      <p>© 2026 mytotalemi. All rights reserved.</p>
+      <p>Â© 2026 mytotalemi. All rights reserved.</p>
       <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-service/">Terms</a> | <a href="/about/">About</a> | <a href="/contact/">Contact</a></p>
     </footer>
-  </body>
+  <script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body>
 </html>
+

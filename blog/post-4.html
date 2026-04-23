@@ -34,19 +34,33 @@
     </style>
   </head>
   <body>
-    <header style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;">
-  <nav style="max-width:1200px;margin:0 auto;padding:1rem;display:flex;align-items:center;justify-content:space-between;">
-    <a href="/" class="brand" style="font-weight:bold;font-size:1.2rem;color:white;text-decoration:none;">mytotalemi</a>
-    <div style="display:flex;align-items:center;gap:1rem;">
-      <a href="/" style="color:white;text-decoration:none;">Calculator</a>
-      <a href="/blog/" style="color:white;text-decoration:none;">Blog</a>
-      <a href="/guides/" style="color:white;text-decoration:none;">Guides</a>
-      <a href="/about/" style="color:white;text-decoration:none;">About</a>
-      <a href="/contact/" style="color:white;text-decoration:none;">Contact</a>
-      <a href="/contact/" style="padding:0.4rem 0.8rem;border-radius:4px;background:#fff;color:#3b3b3b;text-decoration:none;font-weight:600;">Apply</a>
-    </div>
-  </nav>
-</header>
+      <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
     <article>
       <h1>PMAY Scheme: Benefits, Eligibility, and Impact on Home Loan EMI</h1>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem;">
@@ -361,7 +375,14 @@
         <p style="margin-top: 1.5rem;">Updated for current PMAY guidelines. This article provides general education and is not financial advice. Always confirm eligibility and subsidy amounts with your lender and local PMAY authorities.</p>
       </footer>
     </article>
-  </body>
+  <script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body>
 </html>
     <li>Property criteria: carpet area caps vary by income category; property must meet statutory building norms.</li>
     <li>First-time beneficiary: should not have availed prior central assistance under housing schemes.</li>
@@ -419,4 +440,12 @@
       <footer>
     <p style="margin-top: 1rem;">Educational overview only. Always rely on the latest official notifications and lender communications for exact benefits and criteria.</p>
   </footer>
-</article></body></html>
+</article><script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body></html>
+

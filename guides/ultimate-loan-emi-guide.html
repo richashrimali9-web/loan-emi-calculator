@@ -34,8 +34,32 @@
   </script>
 </head>
 <body>
-  <header>
-    <nav><a href="/blog/">Blog</a> | <a href="/">Calculator</a> | <a href="/guides/">Guides</a></nav>
+    <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
   </header>
   <article>
     <h1>The Ultimate Loan & EMI Guide</h1>
@@ -115,5 +139,13 @@
         <p class="muted" style="margin-top:1rem;">This mega-guide consolidates and expands content from several posts. For more specialized articles, see: <a href="/guides/home-loan-emi-guide.html">Home Loan EMI Guide</a>, <a href="/guides/home-vs-personal-loan.html">Home vs Personal Loan</a>, <a href="/guides/prepayment-refinancing-playbook.html">Prepayment Playbook</a>.</p>
 
   </article>
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
 </body>
 </html>
+

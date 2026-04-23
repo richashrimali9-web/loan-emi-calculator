@@ -1,11 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
   <meta charset="UTF-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Contact Loan EMI Calculator. Get in touch with our team for questions, feedback, or partnership inquiries." />
-    <title>Contact Us — Loan EMI Calculator</title>
+    <title>Contact Us â€” Loan EMI Calculator</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { 
@@ -153,17 +153,33 @@
     </style>
   </head>
   <body>
-    <header>
-  <nav>
-  <a href="/" class="brand">mytotalemi</a>
-  <a href="/">Calculator</a>
-  <a href="/blog/">Blog</a>
-  <a href="/guides/">Guides</a>
-  <a href="/about/">About</a>
-  <a href="/contact/">Contact</a>
-  <a href="/contact/" class="btn-apply">Apply</a>
-</nav>
-</header>
+      <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
     <main>
       <div class="breadcrumb">
         <a href="/">Home</a> / Contact
@@ -179,15 +195,15 @@
       <div class="contact-info">
         <h3>Reach Us Here:</h3>
         <div class="contact-item">
-          <strong>📧 Email</strong>
+          <strong>ðŸ“§ Email</strong>
           <a href="mailto:support@mytotalemi.co.in">support@mytotalemi.co.in</a>
         </div>
         <div class="contact-item">
-          <strong>💬 Response Time</strong>
+          <strong>ðŸ’¬ Response Time</strong>
           <p>We typically respond to emails within 24-48 hours during business days.</p>
         </div>
         <div class="contact-item">
-          <strong>🏢 Website</strong>
+          <strong>ðŸ¢ Website</strong>
           <p>www.mytotalemi.co.in</p>
         </div>
       </div>
@@ -227,7 +243,7 @@
         <button type="submit">Send Message</button>
         
         <div class="response-time">
-          <strong>✓ Thank you!</strong> We'll get back to you as soon as possible.
+          <strong>âœ“ Thank you!</strong> We'll get back to you as soon as possible.
         </div>
       </form>
 
@@ -263,5 +279,13 @@
       <p>&copy; 2024 Loan EMI Calculator. All rights reserved.</p>
       <p><a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-of-service/">Terms of Service</a> | <a href="/about/">About</a> | <a href="/contact/">Contact</a></p>
     </footer>
-  </body>
+  <script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body>
 </html>
+

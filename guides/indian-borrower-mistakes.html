@@ -47,9 +47,33 @@
     </script>
 </head>
 <body>
-    <header>
-      <nav><a href="/blog/">Blog</a> | <a href="/">Calculator</a> | <a href="/guides/">Guides</a></nav>
-    </header>
+      <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
     <article>
       <h1>10 Costly Loan Mistakes Indian Borrowers Make (& How to Avoid Them)</h1>
       <div style="border-bottom: 2px solid #e5e7eb; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
@@ -459,6 +483,14 @@
         </p>
       </footer>
     </article>
-  </body>
+  <script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body>
 </html>
+
 
