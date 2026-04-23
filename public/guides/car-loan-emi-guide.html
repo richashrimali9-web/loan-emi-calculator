@@ -142,6 +142,70 @@
       }
       .breadcrumb a { color: #667eea; text-decoration: none; }
       .breadcrumb a:hover { text-decoration: underline; }
+    
+      /* Fix for new header layout */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+      .brand {
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #667eea;
+      }
+      .nav-btn-apply {
+        background-color: #667eea;
+        color: white !important;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      .hamburger span {
+        width: 2rem;
+        height: 0.2rem;
+        background: #333;
+        border-radius: 10px;
+      }
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 100;
+      }
+      .mobile-menu.visible {
+        display: flex;
+      }
+      .mobile-menu a {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+      }
+      @media (max-width: 768px) {
+        nav ul { display: none; }
+        .hamburger { display: flex; }
+      }
+
     </style>
   </head>
   <body>
