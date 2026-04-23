@@ -1,178 +1,49 @@
-<!doctype html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Learn what EMI (Equated Monthly Installment) is, how it works, and why it matters for your loans. Complete guide with formulas and examples." />
-    <title>What is EMI? Complete Guide to Equated Monthly Installments</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
-        line-height: 1.8; 
-        color: #333; 
-        background: #f9f9f9;
-      }
-      header { 
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border-bottom: 1px solid #e0e0e0; 
-        padding: 1rem 0; 
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      nav { 
-        max-width: 1200px; 
-        margin: 0 auto; 
-        padding: 0 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .logo { font-size: 1.5rem; font-weight: bold; }
-      nav a { 
-        margin-left: 2rem; 
-        text-decoration: none; 
-        color: white;
-        transition: opacity 0.3s;
-      }
-      nav a:hover { opacity: 0.8; }
-      main { 
-        max-width: 900px; 
-        margin: 2rem auto; 
-        padding: 0 1rem;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        padding: 2rem;
-      }
-      h1 { 
-        margin-bottom: 1rem; 
-        color: #1a1a1a;
-        font-size: 2.5rem;
-        line-height: 1.2;
-      }
-      .intro { 
-        font-size: 1.1rem;
-        color: #666;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid #667eea;
-      }
-      h2 { 
-        margin-top: 2.5rem; 
-        margin-bottom: 1rem; 
-        color: #333;
-        font-size: 1.8rem;
-        border-left: 4px solid #667eea;
-        padding-left: 1rem;
-      }
-      h3 {
-        margin-top: 1.5rem;
-        margin-bottom: 0.8rem;
-        color: #555;
-        font-size: 1.3rem;
-      }
-      p { 
-        margin-bottom: 1rem;
-        line-height: 1.8;
-      }
-      ul, ol { 
-        margin-left: 2rem; 
-        margin-bottom: 1rem;
-      }
-      li { 
-        margin-bottom: 0.8rem;
-        line-height: 1.6;
-      }
-      .formula {
-        background: #f0f0f0;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        border-radius: 6px;
-        font-family: 'Courier New', monospace;
-        border-left: 4px solid #667eea;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1.5rem 0;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      }
-      th, td {
-        padding: 1rem;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-      th {
-        background: #667eea;
-        color: white;
-        font-weight: 600;
-      }
-      tr:hover { background: #f5f5f5; }
-      .example-box {
-        background: #e8f4f8;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        border-radius: 6px;
-        border-left: 4px solid #17a2b8;
-      }
-      .key-point {
-        background: #fff3cd;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        border-radius: 6px;
-        border-left: 4px solid #ffc107;
-      }
-      .cta-box {
-        background: #e7f3ff;
-        padding: 1.5rem;
-        margin: 2rem 0;
-        border-radius: 6px;
-        border-left: 4px solid #667eea;
-        text-align: center;
-      }
-      .cta-box a {
-        display: inline-block;
-        background: #667eea;
-        color: white;
-        padding: 0.8rem 2rem;
-        border-radius: 4px;
-        text-decoration: none;
-        margin-top: 1rem;
-        transition: background 0.3s;
-      }
-      .cta-box a:hover { background: #764ba2; }
-      footer {
-        background: #f9f9f9;
-        border-top: 1px solid #e0e0e0;
-        padding: 2rem;
-        margin-top: 3rem;
-        text-align: center;
-        color: #666;
-      }
-      .breadcrumb {
-        color: #999;
-        margin-bottom: 1.5rem;
-        font-size: 0.9rem;
-      }
-      .breadcrumb a { color: #667eea; text-decoration: none; }
-      .breadcrumb a:hover { text-decoration: underline; }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="/" class="brand" style="font-weight:bold;font-size:1.2rem;color:#111827;text-decoration:none;">mytotalemi</a>
-        <div>
-          <a href="/">Calculator</a>
-          <a href="/blog/">Blog</a>
-          <a href="/guides/">Guides</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-        </div>
-      </nav>
-    </header>
-    <main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is EMI? Complete Guide to Equated Monthly Installments</title>
+  <meta name="description" content="Learn what EMI (Equated Monthly Installment) is, how it works, and why it matters for your loans. Complete guide with formulas and examples.">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>ðŸ“–</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <!-- Main Content -->
+<main>
       <div class="breadcrumb">
         <a href="/">Home</a> / <a href="/guides/">Guides</a> / What is EMI?
       </div>
@@ -239,11 +110,11 @@
       </p>
 
       <div class="formula">
-        <strong>EMI = P × r × (1 + r)^n / ((1 + r)^n - 1)</strong><br><br>
+        <strong>EMI = P Ã— r Ã— (1 + r)^n / ((1 + r)^n - 1)</strong><br><br>
         Where:<br>
         P = Principal (Loan Amount)<br>
-        r = Monthly Interest Rate (Annual Rate ÷ 12)<br>
-        n = Number of Monthly Installments (Tenure in years × 12)
+        r = Monthly Interest Rate (Annual Rate Ã· 12)<br>
+        n = Number of Monthly Installments (Tenure in years Ã— 12)
       </div>
 
       <h3>Formula Explanation</h3>
@@ -273,20 +144,20 @@
         <h4>Step-by-Step Calculation:</h4>
         <ul>
           <li>Principal (P) = ?10,00,000</li>
-          <li>Monthly Interest Rate (r) = 8.5% ÷ 12 = 0.708% = 0.00708</li>
-          <li>Number of Months (n) = 10 × 12 = 120</li>
+          <li>Monthly Interest Rate (r) = 8.5% Ã· 12 = 0.708% = 0.00708</li>
+          <li>Number of Months (n) = 10 Ã— 12 = 120</li>
         </ul>
 
         <h4>Applying the Formula:</h4>
         <p>
-          EMI = 10,00,000 × 0.00708 × (1.00708)^120 / ((1.00708)^120 - 1)<br>
-          <strong>EMI ˜ ?11,761</strong>
+          EMI = 10,00,000 Ã— 0.00708 Ã— (1.00708)^120 / ((1.00708)^120 - 1)<br>
+          <strong>EMI Ëœ ?11,761</strong>
         </p>
 
         <h4>What This Means:</h4>
         <ul>
           <li>Monthly Payment: ?11,761</li>
-          <li>Total Amount Paid in 10 years: ?11,761 × 120 = ?14,11,320</li>
+          <li>Total Amount Paid in 10 years: ?11,761 Ã— 120 = ?14,11,320</li>
           <li>Total Interest Paid: ?14,11,320 - ?10,00,000 = ?4,11,320</li>
         </ul>
       </div>
@@ -510,4 +381,5 @@
     </footer>
   </body>
 </html>
+
 
