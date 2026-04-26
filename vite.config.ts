@@ -21,7 +21,7 @@ export default defineConfig({
               const url = rawUrl.split('?')[0];
               if (!url) return next();
 
-              const publicDir = path.join(process.cwd(), 'public');
+              const publicDir = path.join(process.cwd()); // Serve from repo root, not public/
 
               // Section roots that should serve their own index.html
               const SECTION_PREFIXES = [
@@ -121,12 +121,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  // Serve static assets (css, html pages) from repo root, not /public
+  publicDir: false,
   build: {
     target: 'esnext',
     outDir: 'build',
-    // Increase warning limit for chunk size
     chunkSizeWarningLimit: 1000,
-    // Split node_modules into separate vendor chunks
     rollupOptions: {
       output: {
         manualChunks(id) {
