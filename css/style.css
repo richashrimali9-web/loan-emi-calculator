@@ -1,6 +1,7 @@
 /* ============================================================================
    LOAN EMI CALCULATOR — GLOBAL STYLESHEET
    Complete CSS overhaul for AdSense-compliant design
+   Version: 2026-04-26-v2 (button hover fix + sitemap update)
    ============================================================================ */
 
 /* ============================================================================
@@ -571,12 +572,15 @@ button,
 .btn {
   background: var(--primary);
   color: var(--surface);
+  text-decoration: none;
 }
 
 .btn-primary:hover,
 .button-primary:hover,
 .btn:hover {
   background: var(--primary-dark);
+  color: var(--surface);
+  text-decoration: none;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
@@ -592,10 +596,13 @@ button,
   background: var(--bg);
   color: var(--text);
   border: 1px solid var(--border);
+  text-decoration: none;
 }
 
 .btn-secondary:hover {
   background: var(--border);
+  color: var(--text);
+  text-decoration: none;
 }
 
 .btn-block {
