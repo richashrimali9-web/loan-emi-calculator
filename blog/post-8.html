@@ -1,0 +1,205 @@
+﻿<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Loan Comparison Checklist: Find the Best Offer - Loan EMI Calculator</title>
+<meta name="description" content="Cut through marketing noise with a concise loan comparison checklist: interest, APR-like costs, fees, prepayment rules, hidden charges, and documentation. Includes tables and examples." />
+<style>* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.7; color: #1f2937; } header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 1rem 0; } nav { max-width: 1200px; margin: 0 auto; padding: 0 1rem; } nav a { margin-right: 1rem; text-decoration: none; color: #6b7280; } nav a:hover { color: #7c3aed; } article { max-width: 900px; margin: 2rem auto; padding: 0 1rem; } h1 { margin-bottom: 0.75rem; color: #111827; font-size: 2rem; } h2 { margin: 2rem 0 0.5rem; color: #111827; font-size: 1.35rem; } h3 { margin: 1.25rem 0 0.25rem; color: #111827; font-size: 1.1rem; } p { margin-bottom: 1rem; } ul { margin-left: 1.25rem; margin-bottom: 1rem; } li { margin: 0.25rem 0; } a { color: #7c3aed; } .muted { color: #6b7280; } .box { background: #f9fafb; border: 1px solid #e5e7eb; padding: 1rem; border-radius: 8px; } .note { background: #f5f3ff; border: 1px solid #ddd6fe; padding: 0.75rem 1rem; border-radius: 8px; } table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; } th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.5rem; text-align: left; } th { background: #fafafa; color: #374151; } td.num, th.num { text-align: right; } .small { font-size: 0.9rem; color: #4b5563; } .toc { margin: 1rem 0; } .toc a { display: inline-block; margin-right: 0.75rem; font-size: 0.95rem; } footer { margin-top: 2rem; font-size: 0.95rem; color: #6b7280; }
+      /* Fix for new header layout */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+      .brand {
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #667eea;
+      }
+      .nav-btn-apply {
+        background-color: #667eea;
+        color: white !important;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        text-decoration: none;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+      .hamburger span {
+        width: 2rem;
+        height: 0.2rem;
+        background: #333;
+        border-radius: 10px;
+      }
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 100;
+      }
+      .mobile-menu.visible {
+        display: flex;
+      }
+      .mobile-menu a {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #eee;
+      }
+      @media (max-width: 768px) {
+        nav ul { display: none; }
+        .hamburger { display: flex; }
+      }
+
+    </style></head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="brand">mytotalemi</a>
+      
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul id="navMenu">
+        <li><a href="/">Calculator</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Calculator</a>
+        <a href="/blog/">Blog</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </nav>
+  </header>
+<article>
+  <h1>Loan Comparison Checklist</h1>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem;">
+    <div>
+      <p class="muted">
+                <span class="small">Last Updated: February 28, 2026 | Verified against RBI Guidelines & Current Bank Policies</span>
+      </p>
+      <p class="muted" style="margin-top: 0.5rem;">A practical framework for comparing loan offers from banks and NBFCs"so you can choose the best deal with data, not hype.</p>
+    </div>
+  </div>
+
+  <div class="toc"><strong>On this page:</strong>
+    <a href="#rate">Interest & APR-like cost</a>
+    <a href="#fees">Fees & charges</a>
+    <a href="#terms">Prepayment terms</a>
+    <a href="#eligibility">Eligibility factors</a>
+    <a href="#examples">Comparison example</a>
+    <a href="#checklist">Printable checklist</a>
+    <a href="#faq">FAQs</a>
+  </div>
+
+  <div class="note">Use the <a href="/">EMI Calculator</a> to compute EMI and total interest for each quote. Export schedules to compare side-by-side.</div>
+
+  <!-- Standalone checklist article retained; users may also consult the Ultimate Loan & EMI Guide for consolidated guidance. -->
+
+  <h2 id="rate">Interest and all-in cost</h2>
+  <ul>
+    <li><strong>Nominal rate:</strong> The headline annual interest rate. Lower is better, all else equal.</li>
+    <li><strong>All-in cost (APR-like):</strong> Add processing fees, insurance, and other one-time costs to compare fairly across lenders.</li>
+    <li><strong>Rate type:</strong> Fixed vs floating and reset frequency (for floating).</li>
+  </ul>
+
+  <h2 id="fees">Fees and charges</h2>
+  <ul>
+    <li>Processing fee (flat or % of loan)</li>
+    <li>Insurance premiums (credit life/property)</li>
+    <li>Documentation/legal/valuation charges</li>
+    <li>Prepayment/foreclosure fees and part-payment minimums</li>
+    <li>Late payment and bounce charges</li>
+  </ul>
+
+  <h2 id="terms">Prepayment and foreclosure terms</h2>
+  <ul>
+    <li>Is prepayment allowed? From when? Any lock-in?</li>
+    <li>Charges for part-prepayment vs foreclosure</li>
+    <li>Whether you can choose to reduce tenure or EMI</li>
+  </ul>
+
+  <h2 id="eligibility">Eligibility and documentation</h2>
+  <ul>
+    <li>Credit score, income stability, existing EMIs (DTI/FOIR)</li>
+    <li>Employer or business profile</li>
+    <li>Property valuation (for secured loans)</li>
+    <li>Documentation requirements and turn-around time</li>
+  </ul>
+
+  <h2 id="examples">Worked comparison example</h2>
+  <p>Loan: ₹15,00,000 for 7 years. Compare Offer A vs Offer B.</p>
+  <table aria-label="Offer comparison">
+    <thead><tr><th>Item</th><th>Offer A</th><th>Offer B</th></tr></thead>
+    <tbody>
+      <tr><td>Rate (p.a.)</td><td>10.50%</td><td>9.95%</td></tr>
+      <tr><td>Processing fee</td><td>1.0% (₹15,000)</td><td>1.5% (₹22,500)</td></tr>
+      <tr><td>Insurance</td><td>₹3,000</td><td>₹3,000</td></tr>
+      <tr><td>EMI (approx)</td><td>₹25,062</td><td>₹24,749</td></tr>
+      <tr><td>Total interest (approx)</td><td>₹6.06 lakh</td><td>₹5.91 lakh</td></tr>
+      <tr><td>All-in upfront cost</td><td>₹18,000</td><td>₹25,500</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Interpretation:</strong> Offer B has a lower EMI and total interest but higher upfront fees. If you plan to keep the loan long-term, B may still be cheaper overall. If you plan to refinance early, A could be competitive due to lower fees.</p>
+
+  <div class="box">
+    <h3 id="checklist">Printable checklist</h3>
+    <ul>
+      <li>Rate (type, margin, reset frequency)</li>
+      <li>EMI and total interest (use calculator)</li>
+      <li>Processing/legal/valuation/insurance charges</li>
+      <li>Prepayment and foreclosure rules</li>
+      <li>Turn-around time and documentation</li>
+      <li>Eligibility (DTI/FOIR constraints)</li>
+    </ul>
+  </div>
+
+  <h2 id="faq">FAQs</h2>
+  <h3>Is the lowest EMI always the best?</h3>
+  <p>No. Low EMI often means longer tenure and higher total interest. Compare total cost and flexibility.</p>
+
+  <h3>Should I pay a higher fee for a lower rate?</h3>
+  <p>Sometimes yes. Calculate breakeven"how long it takes for lower EMI savings to offset the extra fee.</p>
+
+      <div style="background:#e7f3ff;border:1px solid #bfdbfe;padding:1rem;border-radius:8px;margin-top:1.5rem;">
+        <h3 style="margin-bottom:0.5rem;color:#111827">Model this scenario</h3>
+        <p>Use the <a href="/">EMI Calculator</a> to simulate the numbers above, or read our <a href="/guides/prepayment-refinancing-playbook.html">Prepayment &amp; Refinancing Playbook</a> for execution checklists.</p>
+        <p><a href="/" style="display:inline-block;background:#667eea;color:#fff;padding:.5rem .75rem;border-radius:4px;text-decoration:none;">Open EMI Calculator</a> <a href="/guides/prepayment-refinancing-playbook.html" style="margin-left:.5rem;">Read Playbook</a></p>
+      </div>
+
+      <footer>
+        <p style="margin-top: 1rem;">Educational content. Always demand a detailed cost sheet from lenders and verify assumptions in the calculator.</p>
+  </footer>
+</article><script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('visible'));
+  }
+</script>
+</body></html>
+
