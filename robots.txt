@@ -1,3 +1,20 @@
 User-agent: *
 Allow: /
+Disallow: /guides/_rate-comparison-template.html
+Disallow: /find_classes.js
+Disallow: /fix-encoding.js
+Disallow: /fix_all_utf8.py
+Disallow: /fix_contact.js
+Disallow: /fix_contact_page.js
+Disallow: /fix_headers.js
+Disallow: /fix_headers_safe.js
+Disallow: /fix_legal_pages.js
+Disallow: /fix_quotes.js
+Disallow: /fix_titles.js
+Disallow: /fix_utf8.py
+Disallow: /force_header_replace.js
+Disallow: /inject_nav_css.js
+Disallow: /rename_slugs.js
+Disallow: /clean_css_links.js
+
 Sitemap: https://mytotalemi.co.in/sitemap.xml
