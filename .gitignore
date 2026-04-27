@@ -16,8 +16,18 @@ node_modules/
 // Local backup files
 *.local
 .gitignore.local
+# Project-specific ignores
+/public/css/
+/public/sitemap.xml
+/public/robots.txt
+/public/ads.txt
+/public/CNAME
+/public/manifest.json
 
-// Explicit log files
-npm-debug.log*
-yarn-debug.log*
-.yarn-error.log*
+# Temporary scripts
+*_fix.js
+fix_*.js
+rename_*.js
+clean_*.js
+*.ps1
+*.py
