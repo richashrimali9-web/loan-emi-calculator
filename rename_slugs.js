@@ -29,14 +29,16 @@ function walk(d) {
   return r;
 }
 
-// 1. Rename files in blog directory
-Object.keys(mapping).forEach(oldName => {
-  const oldPath = path.join('blog', oldName);
-  const newPath = path.join('blog', mapping[oldName]);
-  if (fs.existsSync(oldPath)) {
-    fs.renameSync(oldPath, newPath);
-    console.log(`Renamed: ${oldPath} -> ${newPath}`);
-  }
+// 1. Rename files in blog and public/blog directories
+['blog', 'public/blog'].forEach(dir => {
+  Object.keys(mapping).forEach(oldName => {
+    const oldPath = path.join(dir, oldName);
+    const newPath = path.join(dir, mapping[oldName]);
+    if (fs.existsSync(oldPath)) {
+      fs.renameSync(oldPath, newPath);
+      console.log(`Renamed: ${oldPath} -> ${newPath}`);
+    }
+  });
 });
 
 // 2. Update links in all files
