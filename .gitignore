@@ -17,12 +17,13 @@ node_modules/
 *.local
 .gitignore.local
 # Project-specific ignores
-/public/css/
-/public/sitemap.xml
-/public/robots.txt
-/public/ads.txt
-/public/CNAME
-/public/manifest.json
+# Keep deployment artifacts tracked for GitHub Pages
+# /public/css/
+# /public/sitemap.xml
+# /public/robots.txt
+# /public/ads.txt
+# /public/CNAME
+# /public/manifest.json
 
 # Temporary scripts
 *_fix.js
