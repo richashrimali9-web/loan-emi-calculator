@@ -1655,6 +1655,113 @@ textarea:focus {
   display: block !important;
 }
 
+/* Step Cards Grid for How to Use */
+.saas-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+  text-align: left;
+}
+
+@media (max-width: 992px) {
+  .saas-step-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .saas-step-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.saas-step-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.saas-step-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.saas-step-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* Verification Checklist Cards */
+.saas-check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .saas-check-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.saas-check-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.saas-check-icon {
+  background: #dcfce7;
+  color: #166534;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* CTA Banner Box */
+.saas-cta-box {
+  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 100%);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin: 4rem auto;
+}
+
+.saas-cta-buttons {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
 /* ============================================================================
    END STYLESHEET
    ============================================================================ */
