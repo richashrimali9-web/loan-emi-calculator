@@ -312,7 +312,7 @@ footer {
 }
 
 .footer-container {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -322,12 +322,19 @@ footer {
   gap: 2rem;
   margin-bottom: 2rem;
   width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-col h4 {
@@ -341,6 +348,7 @@ footer {
 .footer-col p {
   font-size: 0.9rem;
   line-height: 1.6;
+  max-width: 280px;
 }
 
 .footer-col ul {
