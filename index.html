@@ -89,101 +89,105 @@
         </button>
       </div>
 
-      <div class="saas-calc-card">
-        <h2 style="text-align: center; margin-top: 0; border: none; padding-bottom: 0; font-size: 1.6rem;" id="calcTitle">Home Loan EMI Calculator</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">Adjust the sliders or enter exact figures to see instant payment updates.</p>
-        
-        <!-- Loan Amount -->
-        <div class="input-field">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <label for="loanAmount" style="margin: 0;">Loan Amount</label>
-            <span style="font-weight: 700; color: var(--primary); font-size: 1.1rem;">₹<span id="loanAmountLabel">50,00,000</span></span>
+      <!-- 2-Column SaaS Dashboard Grid -->
+      <div class="saas-dashboard-grid">
+        <!-- Left Column: Inputs -->
+        <div class="saas-calc-card">
+          <h2 style="text-align: left; margin-top: 0; border: none; padding-bottom: 0; font-size: 1.4rem;" id="calcTitle">Home Loan EMI Calculator</h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.75rem; font-size: 0.9rem;">Adjust sliders to see instant payment updates.</p>
+          
+          <!-- Loan Amount -->
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="loanAmount" style="margin: 0;">Loan Amount</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;">₹<span id="loanAmountLabel">50,00,000</span></span>
+            </div>
+            <input type="range" id="loanAmountSlider" min="50000" max="10000000" step="50000" value="5000000">
+            <input type="number" id="loanAmount" min="50000" max="10000000" step="50000" value="5000000" placeholder="Enter loan amount">
           </div>
-          <input type="range" id="loanAmountSlider" min="50000" max="10000000" step="50000" value="5000000">
-          <input type="number" id="loanAmount" min="50000" max="10000000" step="50000" value="5000000" placeholder="Enter loan amount">
+
+          <!-- Interest Rate -->
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="interestRate" style="margin: 0;">Annual Interest Rate (%)</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;"><span id="interestRateLabel">8.5</span>%</span>
+            </div>
+            <input type="range" id="interestRateSlider" min="5" max="24" step="0.1" value="8.5">
+            <input type="number" id="interestRate" min="5" max="24" step="0.1" value="8.5" placeholder="Enter interest rate">
+          </div>
+
+          <!-- Tenure -->
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="tenure" style="margin: 0;">Loan Tenure (Years)</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;"><span id="tenureLabel">20</span> Yrs</span>
+            </div>
+            <input type="range" id="tenureSlider" min="1" max="30" step="1" value="20">
+            <input type="number" id="tenure" min="1" max="30" step="1" value="20" placeholder="Enter tenure in years">
+          </div>
+
+          <button class="btn-primary btn-block" id="calculateBtn" style="font-size: 1rem; padding: 0.85rem; border-radius: var(--radius-sm); margin-top: 0.75rem;">Recalculate Schedule</button>
         </div>
 
-        <!-- Interest Rate -->
-        <div class="input-field">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <label for="interestRate" style="margin: 0;">Annual Interest Rate (%)</label>
-            <span style="font-weight: 700; color: var(--primary); font-size: 1.1rem;"><span id="interestRateLabel">8.5</span>%</span>
+        <!-- Right Column: Live Results & Distribution -->
+        <div id="results" style="display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;">
+          <div class="saas-stat-card hero-stat" style="padding: 1.75rem;">
+            <div class="stat-label" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Calculated Monthly EMI</div>
+            <div class="stat-value" style="font-size: 2.5rem; margin: 0.5rem 0 0; font-weight: 800;">₹<span id="emiValue">0</span></div>
           </div>
-          <input type="range" id="interestRateSlider" min="5" max="24" step="0.1" value="8.5">
-          <input type="number" id="interestRate" min="5" max="24" step="0.1" value="8.5" placeholder="Enter interest rate">
-        </div>
 
-        <!-- Tenure -->
-        <div class="input-field">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <label for="tenure" style="margin: 0;">Loan Tenure (Years)</label>
-            <span style="font-weight: 700; color: var(--primary); font-size: 1.1rem;"><span id="tenureLabel">20</span> Yrs</span>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="saas-stat-card" style="padding: 1.25rem;">
+              <div class="stat-value error" style="font-size: 1.3rem;">₹<span id="totalInterestValue">0</span></div>
+              <div class="stat-label" style="font-size: 0.8rem;">Total Interest</div>
+            </div>
+            <div class="saas-stat-card" style="padding: 1.25rem;">
+              <div class="stat-value text" style="font-size: 1.3rem;">₹<span id="totalPaymentValue">0</span></div>
+              <div class="stat-label" style="font-size: 0.8rem;">Total Payable</div>
+            </div>
           </div>
-          <input type="range" id="tenureSlider" min="1" max="30" step="1" value="20">
-          <input type="number" id="tenure" min="1" max="30" step="1" value="20" placeholder="Enter tenure in years">
-        </div>
 
-        <!-- Calculate Button -->
-        <button class="btn-primary btn-block" id="calculateBtn" style="font-size: 1.05rem; padding: 1rem; border-radius: var(--radius-sm); margin-top: 1rem;">Recalculate Amortization Schedule</button>
+          <!-- Stacked Progress Bar -->
+          <div class="card" style="padding: 1.25rem; border: 1px solid var(--border); margin: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Principal vs Interest Split</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Real-time</span>
+            </div>
+            <div style="display: flex; height: 28px; border-radius: 6px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+              <div id="principalBar" style="background: var(--primary); flex: 60; position: relative; transition: flex 0.3s ease;">
+                <span style="position: absolute; left: 10px; top: 5px; color: white; font-size: 12px; font-weight: 700;" id="principalPercent">60% Principal</span>
+              </div>
+              <div id="interestBar" style="background: var(--error); flex: 40; position: relative; transition: flex 0.3s ease;">
+                <span style="position: absolute; right: 10px; top: 5px; color: white; font-size: 12px; font-weight: 700;" id="interestPercent">40% Interest</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Results Section -->
-      <div id="results" style="margin-top: 2.5rem;">
-        <div class="stats-grid">
-          <div class="saas-stat-card hero-stat">
-            <div class="stat-value" style="font-size: 2.3rem;">₹<span id="emiValue">0</span></div>
-            <div class="stat-label">Monthly EMI</div>
-          </div>
-          <div class="saas-stat-card">
-            <div class="stat-value error">₹<span id="totalInterestValue">0</span></div>
-            <div class="stat-label">Total Interest Payable</div>
-          </div>
-          <div class="saas-stat-card">
-            <div class="stat-value text">₹<span id="totalPaymentValue">0</span></div>
-            <div class="stat-label">Total Amount Payable</div>
+      <!-- 5-Year Amortization Schedule Table (Full Width 1200px) -->
+      <div class="table-wrapper" style="margin-top: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+          <h3 style="margin: 0;">5-Year Amortization Schedule</h3>
+          <div class="saas-toolbar" style="margin: 0;">
+            <button class="btn-outline-sm" onclick="window.print()">🖨️ Print Schedule</button>
           </div>
         </div>
-
-        <!-- Stacked Bar Chart (Principal vs Interest) -->
-        <div class="card" style="margin: 2rem 0; border: 1px solid var(--border);">
-          <h3 style="margin-top: 0; display: flex; justify-content: space-between; align-items: center;">
-            <span>Principal vs Interest Distribution</span>
-            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal;">Live Breakdown</span>
-          </h3>
-          <div style="display: flex; height: 32px; border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
-            <div id="principalBar" style="background: var(--primary); flex: 60; position: relative; transition: flex 0.3s ease;">
-              <span style="position: absolute; left: 12px; top: 6px; color: white; font-size: 13px; font-weight: 700;" id="principalPercent">60% Principal</span>
-            </div>
-            <div id="interestBar" style="background: var(--error); flex: 40; position: relative; transition: flex 0.3s ease;">
-              <span style="position: absolute; right: 12px; top: 6px; color: white; font-size: 13px; font-weight: 700;" id="interestPercent">40% Interest</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Toolbar & Amortization Table -->
-        <div class="table-wrapper" style="margin-top: 2rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-            <h3 style="margin: 0;">5-Year Amortization Schedule</h3>
-            <div class="saas-toolbar" style="margin: 0;">
-              <button class="btn-outline-sm" onclick="window.print()">🖨️ Print Schedule</button>
-            </div>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Year</th>
-                <th>Principal Paid</th>
-                <th>Interest Paid</th>
-                <th>Remaining Balance</th>
-              </tr>
-            </thead>
-            <tbody id="amortizationTable">
-              <tr>
-                <td colspan="4" style="text-align: center; padding: 2rem;">Loading schedule...</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Principal Paid</th>
+              <th>Interest Paid</th>
+              <th>Remaining Balance</th>
+            </tr>
+          </thead>
+          <tbody id="amortizationTable">
+            <tr>
+              <td colspan="4" style="text-align: center; padding: 2rem;">Loading schedule...</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 

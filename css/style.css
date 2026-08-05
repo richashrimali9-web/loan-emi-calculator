@@ -382,7 +382,7 @@ link[rel="icon"] {
    8. HELPER CLASSES & CARDS
    ============================================================================ */
 .container {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -1501,7 +1501,21 @@ textarea:focus {
   padding: 2.25rem;
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+}
+
+/* 2-Column SaaS Dashboard Layout */
+.saas-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .saas-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Glowing Stat Cards */
