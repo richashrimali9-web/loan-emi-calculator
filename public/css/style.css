@@ -375,15 +375,38 @@ link[rel="icon"] {
    8. HELPER CLASSES & CARDS
    ============================================================================ */
 .container {
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 .container-narrow {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+/* ============================================================================
+   14. LOAN TYPE CARDS GRID
+   ============================================================================ */
+.loan-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .loan-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .loan-types-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -1461,7 +1484,6 @@ textarea:focus {
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
 
-/* Glassmorphism Calculator Card */
 .saas-calc-card {
   background: var(--surface-glass);
   backdrop-filter: blur(16px);
@@ -1469,7 +1491,8 @@ textarea:focus {
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   padding: 2.25rem;
-  max-width: 780px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
