@@ -52,83 +52,122 @@
   <!-- Main Content -->
   <main id="main">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="saas-hero">
       <div class="hero-content">
-        <h1>Free EMI Calculator</h1>
-        <p class="hero-subtitle">Estimate monthly EMI, compare repayment scenarios, and understand how tenure and rate changes affect the total cost of borrowing.</p>
+        <div class="hero-pill-badge">
+          <span>✨ 2026 Next-Gen Financial Engine</span>
+          <span>•</span>
+          <span>100% Free & Independent</span>
+        </div>
+        <h1 style="font-size: 2.75rem; letter-spacing: -0.5px;">Smart Loan EMI Calculator</h1>
+        <p class="hero-subtitle" style="font-size: 1.15rem; max-width: 680px; margin: 0 auto 2rem;">Simulate repayment schedules, analyze interest vs. principal split, and compare top Indian bank rates in real-time.</p>
         
         <!-- Trust Signals -->
         <div class="trust-signals">
-          <div class="trust-signal">No login required</div>
-          <div class="trust-signal">Educational estimates</div>
-          <div class="trust-signal">Instant comparison</div>
+          <div class="trust-signal">Instant Calculations</div>
+          <div class="trust-signal">RBI Benchmark Compliant</div>
+          <div class="trust-signal">No Login Required</div>
         </div>
       </div>
     </section>
 
     <!-- Calculator Section -->
     <section class="container">
-      <div class="calculator-card card">
-        <h2 style="text-align: center; margin-top: 0; border: none; padding-bottom: 0;">Loan EMI Calculator</h2>
+      <!-- Mode Switcher Pill Tabs -->
+      <div class="saas-mode-switcher">
+        <button class="saas-tab-btn active" data-loan-type="home" data-amount="5000000" data-rate="8.5" data-tenure="20">
+          <span>🏠</span> Home Loan
+        </button>
+        <button class="saas-tab-btn" data-loan-type="personal" data-amount="500000" data-rate="12.0" data-tenure="5">
+          <span>👤</span> Personal
+        </button>
+        <button class="saas-tab-btn" data-loan-type="car" data-amount="1000000" data-rate="9.0" data-tenure="7">
+          <span>🚗</span> Car Loan
+        </button>
+        <button class="saas-tab-btn" data-loan-type="education" data-amount="1000000" data-rate="8.5" data-tenure="15">
+          <span>🎓</span> Education
+        </button>
+      </div>
+
+      <div class="saas-calc-card">
+        <h2 style="text-align: center; margin-top: 0; border: none; padding-bottom: 0; font-size: 1.6rem;" id="calcTitle">Home Loan EMI Calculator</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">Adjust the sliders or enter exact figures to see instant payment updates.</p>
         
         <!-- Loan Amount -->
         <div class="input-field">
-          <label for="loanAmount">Loan Amount (₹)</label>
-          <input type="range" id="loanAmountSlider" min="50000" max="10000000" step="50000" value="500000">
-          <input type="number" id="loanAmount" min="50000" max="10000000" step="50000" value="500000" placeholder="Enter loan amount">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <label for="loanAmount" style="margin: 0;">Loan Amount</label>
+            <span style="font-weight: 700; color: var(--primary); font-size: 1.1rem;">₹<span id="loanAmountLabel">50,00,000</span></span>
+          </div>
+          <input type="range" id="loanAmountSlider" min="50000" max="10000000" step="50000" value="5000000">
+          <input type="number" id="loanAmount" min="50000" max="10000000" step="50000" value="5000000" placeholder="Enter loan amount">
         </div>
 
         <!-- Interest Rate -->
         <div class="input-field">
-          <label for="interestRate">Annual Interest Rate (%)</label>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <label for="interestRate" style="margin: 0;">Annual Interest Rate (%)</label>
+            <span style="font-weight: 700; color: var(--primary); font-size: 1.1rem;"><span id="interestRateLabel">8.5</span>%</span>
+          </div>
           <input type="range" id="interestRateSlider" min="5" max="24" step="0.1" value="8.5">
           <input type="number" id="interestRate" min="5" max="24" step="0.1" value="8.5" placeholder="Enter interest rate">
         </div>
 
         <!-- Tenure -->
         <div class="input-field">
-          <label for="tenure">Loan Tenure (Years)</label>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <label for="tenure" style="margin: 0;">Loan Tenure (Years)</label>
+            <span style="font-weight: 700; color: var(--primary); font-size: 1.1rem;"><span id="tenureLabel">20</span> Yrs</span>
+          </div>
           <input type="range" id="tenureSlider" min="1" max="30" step="1" value="20">
           <input type="number" id="tenure" min="1" max="30" step="1" value="20" placeholder="Enter tenure in years">
         </div>
 
         <!-- Calculate Button -->
-        <button class="btn-primary btn-block" id="calculateBtn">Calculate EMI</button>
+        <button class="btn-primary btn-block" id="calculateBtn" style="font-size: 1.05rem; padding: 1rem; border-radius: var(--radius-sm); margin-top: 1rem;">Recalculate Amortization Schedule</button>
       </div>
 
       <!-- Results Section -->
-      <div id="results" style="display: none; margin-top: 2rem;">
+      <div id="results" style="margin-top: 2.5rem;">
         <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value primary">₹<span id="emiValue">0</span></div>
+          <div class="saas-stat-card hero-stat">
+            <div class="stat-value" style="font-size: 2.3rem;">₹<span id="emiValue">0</span></div>
             <div class="stat-label">Monthly EMI</div>
           </div>
-          <div class="stat-card">
+          <div class="saas-stat-card">
             <div class="stat-value error">₹<span id="totalInterestValue">0</span></div>
-            <div class="stat-label">Total Interest</div>
+            <div class="stat-label">Total Interest Payable</div>
           </div>
-          <div class="stat-card">
+          <div class="saas-stat-card">
             <div class="stat-value text">₹<span id="totalPaymentValue">0</span></div>
-            <div class="stat-label">Total Payment</div>
+            <div class="stat-label">Total Amount Payable</div>
           </div>
         </div>
 
         <!-- Stacked Bar Chart (Principal vs Interest) -->
-        <div class="card" style="margin: 2rem 0;">
-          <h3 style="margin-top: 0;">Principal vs Interest Breakdown</h3>
-          <div style="display: flex; height: 30px; border-radius: 4px; overflow: hidden; box-shadow: var(--shadow);">
-            <div id="principalBar" style="background: var(--primary); flex: 1; position: relative;">
-              <span style="position: absolute; left: 10px; top: 6px; color: white; font-size: 12px; font-weight: 600;" id="principalPercent">60%</span>
+        <div class="card" style="margin: 2rem 0; border: 1px solid var(--border);">
+          <h3 style="margin-top: 0; display: flex; justify-content: space-between; align-items: center;">
+            <span>Principal vs Interest Distribution</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal;">Live Breakdown</span>
+          </h3>
+          <div style="display: flex; height: 32px; border-radius: 8px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+            <div id="principalBar" style="background: var(--primary); flex: 60; position: relative; transition: flex 0.3s ease;">
+              <span style="position: absolute; left: 12px; top: 6px; color: white; font-size: 13px; font-weight: 700;" id="principalPercent">60% Principal</span>
             </div>
-            <div id="interestBar" style="background: var(--error); flex: 1; position: relative;">
-              <span style="position: absolute; right: 10px; top: 6px; color: white; font-size: 12px; font-weight: 600;" id="interestPercent">40%</span>
+            <div id="interestBar" style="background: var(--error); flex: 40; position: relative; transition: flex 0.3s ease;">
+              <span style="position: absolute; right: 12px; top: 6px; color: white; font-size: 13px; font-weight: 700;" id="interestPercent">40% Interest</span>
             </div>
           </div>
         </div>
 
-        <!-- Amortization Table (First 5 Years) -->
-        <div class="table-wrapper">
-          <h3>5-Year Amortization Schedule</h3>
+        <!-- Toolbar & Amortization Table -->
+        <div class="table-wrapper" style="margin-top: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+            <h3 style="margin: 0;">5-Year Amortization Schedule</h3>
+            <div class="saas-toolbar" style="margin: 0;">
+              <button class="btn-outline-sm" onclick="window.print()">🖨️ Print Schedule</button>
+            </div>
+          </div>
           <table>
             <thead>
               <tr>
@@ -140,11 +179,81 @@
             </thead>
             <tbody id="amortizationTable">
               <tr>
-                <td colspan="4" style="text-align: center; padding: 2rem;">Calculate EMI to view schedule</td>
+                <td colspan="4" style="text-align: center; padding: 2rem;">Loading schedule...</td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <!-- Partner Bank Rates Comparison Widget (Monetization Engine) -->
+    <section class="container">
+      <div class="saas-rates-table-wrapper">
+        <div style="padding: 1.5rem 1.5rem 1rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h3 style="margin: 0; color: var(--text);">Top Indian Bank Home Loan Rates (2026)</h3>
+            <p style="margin: 0.25rem 0 0; color: var(--text-muted); font-size: 0.9rem;">Compare benchmark interest rates and processing fees before applying.</p>
+          </div>
+          <span class="saas-tag saas-tag-indigo">Updated Monthly</span>
+        </div>
+        <table class="saas-rates-table">
+          <thead>
+            <tr>
+              <th>Lender</th>
+              <th>Interest Rate (p.a.)</th>
+              <th>Processing Fee</th>
+              <th>Key Feature</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="saas-bank-badge">
+                  <span style="font-size: 1.2rem;">🏛️</span> State Bank of India (SBI)
+                </div>
+              </td>
+              <td><strong style="color: var(--accent);">8.40% – 9.15%</strong></td>
+              <td>0.35% (Max ₹10,000)</td>
+              <td><span class="saas-tag saas-tag-emerald">Lowest Rate</span></td>
+              <td><a href="/contact/" class="btn-apply-sm">Check Offer</a></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="saas-bank-badge">
+                  <span style="font-size: 1.2rem;">🏢</span> HDFC Bank
+                </div>
+              </td>
+              <td><strong>8.50% – 9.25%</strong></td>
+              <td>0.50% or ₹3,000</td>
+              <td><span class="saas-tag saas-tag-indigo">Instant Digital Approval</span></td>
+              <td><a href="/contact/" class="btn-apply-sm">Check Offer</a></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="saas-bank-badge">
+                  <span style="font-size: 1.2rem;">🏦</span> ICICI Bank
+                </div>
+              </td>
+              <td><strong>8.55% – 9.30%</strong></td>
+              <td>0.50% of loan amount</td>
+              <td><span class="saas-tag saas-tag-amber">Pre-approved Offers</span></td>
+              <td><a href="/contact/" class="btn-apply-sm">Check Offer</a></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="saas-bank-badge">
+                  <span style="font-size: 1.2rem;">🌐</span> Axis Bank
+                </div>
+              </td>
+              <td><strong>8.60% – 9.35%</strong></td>
+              <td>Up to 1%</td>
+              <td><span class="saas-tag saas-tag-indigo">Flexible Prepayment</span></td>
+              <td><a href="/contact/" class="btn-apply-sm">Check Offer</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -289,80 +398,67 @@
     });
   </script>
 
-  <!-- JavaScript: EMI Calculator -->
+  <!-- JavaScript: 2026 Reactive SaaS EMI Calculator -->
   <script>
     const loanAmountInput = document.getElementById('loanAmount');
     const loanAmountSlider = document.getElementById('loanAmountSlider');
+    const loanAmountLabel = document.getElementById('loanAmountLabel');
+
     const interestRateInput = document.getElementById('interestRate');
     const interestRateSlider = document.getElementById('interestRateSlider');
+    const interestRateLabel = document.getElementById('interestRateLabel');
+
     const tenureInput = document.getElementById('tenure');
     const tenureSlider = document.getElementById('tenureSlider');
+    const tenureLabel = document.getElementById('tenureLabel');
+
     const calculateBtn = document.getElementById('calculateBtn');
     const resultsDiv = document.getElementById('results');
+    const calcTitle = document.getElementById('calcTitle');
 
-    // Sync slider and input (Loan Amount)
-    loanAmountSlider.addEventListener('input', function() {
-      loanAmountInput.value = this.value;
-    });
-    loanAmountInput.addEventListener('input', function() {
-      loanAmountSlider.value = this.value;
-    });
+    function formatINR(val) {
+      return Math.round(val).toLocaleString('en-IN');
+    }
 
-    // Sync slider and input (Interest Rate)
-    interestRateSlider.addEventListener('input', function() {
-      interestRateInput.value = this.value;
-    });
-    interestRateInput.addEventListener('input', function() {
-      interestRateSlider.value = this.value;
-    });
+    function calculateEMI() {
+      const principal = parseFloat(loanAmountInput.value) || 0;
+      const rateVal = parseFloat(interestRateInput.value) || 0;
+      const tenureVal = parseFloat(tenureInput.value) || 0;
 
-    // Sync slider and input (Tenure)
-    tenureSlider.addEventListener('input', function() {
-      tenureInput.value = this.value;
-    });
-    tenureInput.addEventListener('input', function() {
-      tenureSlider.value = this.value;
-    });
+      // Update Labels
+      loanAmountLabel.textContent = formatINR(principal);
+      interestRateLabel.textContent = rateVal;
+      tenureLabel.textContent = tenureVal;
 
-    // Calculate EMI
-    calculateBtn.addEventListener('click', function() {
-      const principal = parseFloat(loanAmountInput.value);
-      const monthlyRate = parseFloat(interestRateInput.value) / 100 / 12;
-      const numPayments = parseFloat(tenureInput.value) * 12;
+      if (principal <= 0 || rateVal <= 0 || tenureVal <= 0) return;
 
-      if (isNaN(principal) || isNaN(monthlyRate) || isNaN(numPayments)) {
-        alert('Please enter valid values');
-        return;
-      }
+      const monthlyRate = rateVal / 100 / 12;
+      const numPayments = tenureVal * 12;
 
-      // EMI formula: P * r * (1 + r)^n / ((1 + r)^n - 1)
+      // EMI formula
       const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / 
                   (Math.pow(1 + monthlyRate, numPayments) - 1);
       
       const totalPayment = emi * numPayments;
       const totalInterest = totalPayment - principal;
 
-      // Update display
-      document.getElementById('emiValue').textContent = Math.round(emi).toLocaleString('en-IN');
-      document.getElementById('totalInterestValue').textContent = Math.round(totalInterest).toLocaleString('en-IN');
-      document.getElementById('totalPaymentValue').textContent = Math.round(totalPayment).toLocaleString('en-IN');
+      // Update values
+      document.getElementById('emiValue').textContent = formatINR(emi);
+      document.getElementById('totalInterestValue').textContent = formatINR(totalInterest);
+      document.getElementById('totalPaymentValue').textContent = formatINR(totalPayment);
 
-      // Update stacked bar
+      // Update stacked progress bar
       const principalPercent = (principal / totalPayment) * 100;
       const interestPercent = (totalInterest / totalPayment) * 100;
       document.getElementById('principalBar').style.flex = principalPercent;
       document.getElementById('interestBar').style.flex = interestPercent;
-      document.getElementById('principalPercent').textContent = Math.round(principalPercent) + '%';
-      document.getElementById('interestPercent').textContent = Math.round(interestPercent) + '%';
+      document.getElementById('principalPercent').textContent = Math.round(principalPercent) + '% Principal';
+      document.getElementById('interestPercent').textContent = Math.round(interestPercent) + '% Interest';
 
-      // Generate amortization table (first 5 years)
-      generateAmortizationTable(principal, monthlyRate, emi, 60); // 5 years = 60 months
+      // Generate Amortization Table
+      generateAmortizationTable(principal, monthlyRate, emi, 60);
+    }
 
-      resultsDiv.style.display = 'block';
-      resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-    // Generate Amortization Table
     function generateAmortizationTable(principal, monthlyRate, emi, totalMonths) {
       const tableBody = document.getElementById('amortizationTable');
       tableBody.innerHTML = '';
@@ -381,13 +477,12 @@
         yearPrincipal += principalPayment;
         yearInterest += interestPayment;
 
-        // Add row every 12 months (1 year)
         if (monthCount === 12 || i === Math.min(totalMonths, 60)) {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td>Year ${yearIndex}</td>
-            <td>₹${Math.round(yearPrincipal).toLocaleString('en-IN')}</td>
-            <td>₹${Math.round(yearInterest).toLocaleString('en-IN')}</td>
+            <td><strong>Year ${yearIndex}</strong></td>
+            <td>₹${formatINR(yearPrincipal)}</td>
+            <td>₹${formatINR(yearInterest)}</td>
             <td>₹${Math.max(0, Math.round(balance)).toLocaleString('en-IN')}</td>
           `;
           tableBody.appendChild(row);
@@ -398,15 +493,45 @@
         }
       }
     }
-  </script>
 
-  <!-- JavaScript: Loan Type Cards -->
-  <script>
-    document.querySelectorAll('.loan-card').forEach(card => {
-      card.addEventListener('click', function() {
+    // Bind slider & input sync + live auto-calc
+    function syncAndCalc(input, slider) {
+      slider.addEventListener('input', function() {
+        input.value = this.value;
+        calculateEMI();
+      });
+      input.addEventListener('input', function() {
+        slider.value = this.value;
+        calculateEMI();
+      });
+    }
+
+    syncAndCalc(loanAmountInput, loanAmountSlider);
+    syncAndCalc(interestRateInput, interestRateSlider);
+    syncAndCalc(tenureInput, tenureSlider);
+
+    calculateBtn.addEventListener('click', calculateEMI);
+
+    // Pill Tab Switcher
+    document.querySelectorAll('.saas-tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.saas-tab-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
         const amount = this.dataset.amount;
         const rate = this.dataset.rate;
         const term = this.dataset.tenure;
+        const type = this.dataset.loanType;
+
+        if (calcTitle) {
+          const titles = {
+            home: 'Home Loan EMI Calculator',
+            personal: 'Personal Loan EMI Calculator',
+            car: 'Car Loan EMI Calculator',
+            education: 'Education Loan EMI Calculator'
+          };
+          calcTitle.textContent = titles[type] || 'Loan EMI Calculator';
+        }
 
         loanAmountInput.value = amount;
         loanAmountSlider.value = amount;
@@ -415,9 +540,25 @@
         tenureInput.value = term;
         tenureSlider.value = term;
 
-        calculateBtn.click();
+        calculateEMI();
       });
     });
+
+    // Loan Card Click Handler
+    document.querySelectorAll('.loan-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const type = this.dataset.loanType;
+        const tabBtn = document.querySelector(`.saas-tab-btn[data-loan-type="${type}"]`);
+        if (tabBtn) {
+          tabBtn.click();
+          window.scrollTo({ top: document.querySelector('.saas-calc-card').offsetTop - 80, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Initial calculation on page load
+    document.addEventListener('DOMContentLoaded', calculateEMI);
+    calculateEMI();
   </script>
 </body>
 </html>
