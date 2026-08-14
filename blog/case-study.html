@@ -66,13 +66,14 @@
         .hamburger { display: flex; }
       }
 
-    </style></head>
+    </style>  <link rel="stylesheet" href="../css/style.css">
+</head>
 <body>
-  <header>
+    <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
       
-      <button class="hamburger" id="hamburgerBtn">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -161,9 +162,43 @@
         <p><a href="/" style="display:inline-block;background:#667eea;color:#fff;padding:.5rem .75rem;border-radius:4px;text-decoration:none;">Open EMI Calculator</a> <a href="/guides/prepayment-refinancing-playbook.html" style="margin-left:.5rem;">Read Playbook</a></p>
       </div>
 
-      <footer>
-        <p style="margin-top: 1rem;">Numbers are rounded for illustration. Validate with your lender's amortization schedule and our calculator before deciding.</p>
+        <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free, independent loan EMI calculator & financial decision platform for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2026 mytotalemi. All rights reserved. Educational financial calculations only.</p>
+      </div>
+    </div>
   </footer>
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('active'));
+    }
+  </script>
 </article><script>
   const btn = document.getElementById('hamburgerBtn');
   const menu = document.getElementById('mobileMenu');

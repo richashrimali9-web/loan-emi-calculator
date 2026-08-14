@@ -12,10 +12,16 @@
 </head>
 <body>
   <!-- Navigation -->
-  <header>
+    <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
-      <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+      
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
       <ul id="navMenu">
         <li><a href="/">Calculator</a></li>
         <li><a href="/blog/">Blog</a></li>
@@ -23,6 +29,7 @@
         <li><a href="/about/">About</a></li>
         <li><a href="/contact/" class="nav-btn-apply">Contact</a></li>
       </ul>
+      
       <div class="mobile-menu" id="mobileMenu">
         <a href="/">Calculator</a>
         <a href="/blog/">Blog</a>
@@ -132,10 +139,43 @@
       <p>Use our <a href="/">Home Loan EMI Calculator</a> to input your current MCLR rate and compare it with the prevailing 8.5% Repo-linked rate. See exactly how much you are losing every month to banking inertia.</p>
     </div>
 
-    <footer>
-      <hr style="margin: 3rem 0; border: 0; border-top: 1px solid #eee;">
-      <p class="muted">Disclaimer: Interest rates are subject to change based on RBI policy and individual bank credit assessments. This article is for educational purposes and does not constitute financial advice. Always read your loan agreement carefully.</p>
-    </footer>
+      <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free, independent loan EMI calculator & financial decision platform for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2026 mytotalemi. All rights reserved. Educational financial calculations only.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('active'));
+    }
+  </script>
   </article>
 
   <!-- Footer -->

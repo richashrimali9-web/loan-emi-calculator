@@ -21,11 +21,11 @@
   <a href="#main" class="skip-to-main">Skip to main content</a>
   
   <!-- Navigation -->
-  <header>
+    <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
       
-      <button class="hamburger" id="hamburgerBtn">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -402,12 +402,12 @@
   </main>
 
   <!-- Footer -->
-  <footer>
+    <footer>
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>mytotalemi</h4>
-          <p>Free EMI calculator and loan guides for Indian borrowers.</p>
+          <p>Free, independent loan EMI calculator & financial decision platform for Indian borrowers.</p>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
@@ -428,10 +428,17 @@
         </div>
       </div>
       <div class="footer-divider">
-        © 2026 mytotalemi. All rights reserved.
+        <p>&copy; 2026 mytotalemi. All rights reserved. Educational financial calculations only.</p>
       </div>
     </div>
   </footer>
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('active'));
+    }
+  </script>
 
   <!-- JavaScript: Mobile Menu Toggle -->
   <script>

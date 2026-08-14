@@ -1,10 +1,19 @@
 <!doctype html>
 <html lang="en">
-      <header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Loan EMI Calculator — mytotalemi</title>
+  <meta name="description" content="Calculate your Business Loan EMI Calculator monthly EMI, total interest, and annual schedule. Compare rates from top Indian banks and optimize your loan repayment.">
+  <link rel="canonical" href="https://mytotalemi.co.in/calculators/business-loan.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
       
-      <button class="hamburger" id="hamburgerBtn">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -27,29 +36,247 @@
       </div>
     </nav>
   </header>
-    <main>
-      <h1 style="text-align:center; margin-top:2rem;">Business Loan EMI Calculator</h1>
-      <p style="max-width:900px; margin:0.75rem auto; text-align:left;">Business loans can be secured or unsecured and are designed to support working capital, equipment purchases, expansion, or inventory financing. Interest rates vary by size, tenure, lender and risk profile. Many lenders consider business vintage, turnover, profitability and balance sheet strength when pricing loans.</p>
 
-      <h2>Key considerations for businesses</h2>
-      <p style="max-width:900px; margin:0.5rem auto; text-align:left;">Assess cashflow impact before taking on EMIs. Longer tenures ease monthly cashflow but increase total cost. Consider blended financing options—partial term loans plus working capital limits—to match cash conversion cycles. Factor in GST credit timelines and operational seasonality when planning repayments.</p>
+  <main>
+    <section class="saas-hero">
+      <div class="hero-content">
+        <div class="hero-pill-badge">
+          <span>✨ 2026 Financial Engine</span>
+          <span>•</span>
+          <span>100% Free & Independent</span>
+        </div>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.75rem;">Business Loan EMI Calculator</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 1.5rem;">Model monthly debt service for SME working capital, equipment, and commercial expansion loans.</p>
+      </div>
+    </section>
 
-      <h2>Worked example</h2>
-      <p style="max-width:900px; margin:0.5rem auto; text-align:left;">Example: Loan ₹10,00,000 at 12% p.a. for 5 years ? EMI = ₹22,244. If your project returns cash in year 2, prepayment can reduce interest and shorten tenure — model these scenarios with the calculator.</p>
+    <!-- Calculator Section -->
+    <section class="container" style="margin: 0 auto 3rem;">
+      <div class="saas-dashboard-grid">
+        <div class="saas-calc-card">
+          <h2 style="text-align: left; margin-top: 0; border: none; padding-bottom: 0; font-size: 1.4rem;">Business Loan EMI Calculator</h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.75rem; font-size: 0.9rem;">Adjust sliders to see instant payment updates.</p>
+          
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="loanAmount" style="margin: 0;">Loan Amount</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;">₹<span id="loanAmountLabel">10,00,000</span></span>
+            </div>
+            <input type="range" id="loanAmountSlider" min="50000" max="10000000" step="50000" value="1000000">
+            <input type="number" id="loanAmount" min="50000" max="10000000" step="50000" value="1000000">
+          </div>
 
-      <h2>FAQs — Business Loans</h2>
-      <ol style="max-width:900px; margin:0.5rem auto; text-align:left;">
-        <li><strong>Q:</strong> Do banks require collateral? <strong>A:</strong> For larger amounts yes; small business loans may be offered under government schemes with relaxed collateral norms.</li>
-        <li><strong>Q:</strong> How is interest calculated? <strong>A:</strong> Typically monthly on outstanding principal; check tenor and type (fixed/floating).</li>
-        <li><strong>Q:</strong> Can I get working capital along with term loan? <strong>A:</strong> Many lenders bundle products; structure depends on need.</li>
-      </ol>
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="interestRate" style="margin: 0;">Annual Interest Rate (%)</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;"><span id="interestRateLabel">14</span>%</span>
+            </div>
+            <input type="range" id="interestRateSlider" min="5" max="24" step="0.1" value="14">
+            <input type="number" id="interestRate" min="5" max="24" step="0.1" value="14">
+          </div>
 
-      <p style="max-width:900px; margin:0.5rem auto; text-align:left;">Related reading: <a href="/guides/business-loan-guide.html">Business Loan Guide</a> — <a href="/blog/understanding-mudra-and-small-business-loans.html">Funding Options for SMEs</a></p>
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="tenure" style="margin: 0;">Loan Tenure (Years)</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;"><span id="tenureLabel">5</span> Yrs</span>
+            </div>
+            <input type="range" id="tenureSlider" min="1" max="30" step="1" value="5">
+            <input type="number" id="tenure" min="1" max="30" step="1" value="5">
+          </div>
 
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </main>
-    <!-- Removed old stub footer section to avoid duplicate content -->
-  </body>
+          <button class="btn-primary btn-block" id="calculateBtn" style="font-size: 1rem; padding: 0.85rem; border-radius: var(--radius-sm); margin-top: 0.75rem;">Recalculate Schedule</button>
+        </div>
+
+        <div id="results" style="display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;">
+          <div class="saas-stat-card hero-stat" style="padding: 1.75rem;">
+            <div class="stat-label" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Calculated Monthly EMI</div>
+            <div class="stat-value" style="font-size: 2.5rem; margin: 0.5rem 0 0; font-weight: 800;">₹<span id="emiValue">0</span></div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="saas-stat-card" style="padding: 1.25rem;">
+              <div class="stat-value error" style="font-size: 1.3rem;">₹<span id="totalInterestValue">0</span></div>
+              <div class="stat-label" style="font-size: 0.8rem;">Total Interest</div>
+            </div>
+            <div class="saas-stat-card" style="padding: 1.25rem;">
+              <div class="stat-value text" style="font-size: 1.3rem;">₹<span id="totalPaymentValue">0</span></div>
+              <div class="stat-label" style="font-size: 0.8rem;">Total Payable</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; border: 1px solid var(--border); margin: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Principal vs Interest Split</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Real-time</span>
+            </div>
+            <div style="display: flex; height: 28px; border-radius: 6px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+              <div id="principalBar" style="background: var(--primary); flex: 60; position: relative; transition: flex 0.3s ease;">
+                <span style="position: absolute; left: 10px; top: 5px; color: white; font-size: 12px; font-weight: 700;" id="principalPercent">60% Principal</span>
+              </div>
+              <div id="interestBar" style="background: var(--error); flex: 40; position: relative; transition: flex 0.3s ease;">
+                <span style="position: absolute; right: 10px; top: 5px; color: white; font-size: 12px; font-weight: 700;" id="interestPercent">40% Interest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+          <h3 style="margin: 0;">5-Year Amortization Schedule</h3>
+          <div class="saas-toolbar" style="margin: 0;">
+            <button class="btn-outline-sm" onclick="window.print()">🖨️ Print Schedule</button>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Principal Paid</th>
+              <th>Interest Paid</th>
+              <th>Remaining Balance</th>
+            </tr>
+          </thead>
+          <tbody id="amortizationTable">
+            <tr>
+              <td colspan="4" style="text-align: center; padding: 2rem;">Loading schedule...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Deep Guide & FAQ Section -->
+    <section class="container" style="margin: 4rem auto;">
+      <div class="card" style="padding: 2.5rem;">
+        <h2 style="margin-top: 0;">Understanding Your Business Loan EMI Calculator</h2>
+        <p>Model monthly debt service for SME working capital, equipment, and commercial expansion loans.</p>
+        
+        <h3>Frequently Asked Questions</h3>
+        <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1rem;">
+          
+            <div style="background: var(--bg); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <h4 style="margin: 0 0 0.4rem; font-size: 1rem; color: var(--text);">What documents are required for business loans?</h4>
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Lenders typically require 2 years of audited P&L statements, GST returns, and bank statements.</p>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free, independent loan EMI calculator & financial decision platform for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2026 mytotalemi. All rights reserved. Educational financial calculations only.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('active'));
+    }
+
+    // Basic calculation script for standalone calculator pages
+    function calculateEMI() {
+      const amount = parseFloat(document.getElementById('loanAmount').value) || 0;
+      const rate = (parseFloat(document.getElementById('interestRate').value) || 0) / 12 / 100;
+      const tenure = (parseInt(document.getElementById('tenure').value) || 0) * 12;
+
+      document.getElementById('loanAmountLabel').innerText = amount.toLocaleString('en-IN');
+      document.getElementById('interestRateLabel').innerText = document.getElementById('interestRate').value;
+      document.getElementById('tenureLabel').innerText = document.getElementById('tenure').value;
+
+      if (amount <= 0 || rate <= 0 || tenure <= 0) return;
+
+      const emi = (amount * rate * Math.pow(1 + rate, tenure)) / (Math.pow(1 + rate, tenure) - 1);
+      const totalPayment = emi * tenure;
+      const totalInterest = totalPayment - amount;
+
+      document.getElementById('emiValue').innerText = Math.round(emi).toLocaleString('en-IN');
+      document.getElementById('totalInterestValue').innerText = Math.round(totalInterest).toLocaleString('en-IN');
+      document.getElementById('totalPaymentValue').innerText = Math.round(totalPayment).toLocaleString('en-IN');
+
+      const pPercent = Math.round((amount / totalPayment) * 100);
+      const iPercent = 100 - pPercent;
+
+      document.getElementById('principalBar').style.flex = pPercent;
+      document.getElementById('interestBar').style.flex = iPercent;
+      document.getElementById('principalPercent').innerText = pPercent + '% Principal';
+      document.getElementById('interestPercent').innerText = iPercent + '% Interest';
+
+      let tbody = '';
+      let balance = amount;
+      for (let yr = 1; yr <= Math.min(5, Math.ceil(tenure / 12)); yr++) {
+        let yrInterest = 0;
+        let yrPrincipal = 0;
+        for (let m = 1; m <= 12; m++) {
+          if (balance <= 0) break;
+          let mInterest = balance * rate;
+          let mPrincipal = emi - mInterest;
+          yrInterest += mInterest;
+          yrPrincipal += mPrincipal;
+          balance -= mPrincipal;
+        }
+        tbody += '<tr>' +
+          '<td>Year ' + yr + '</td>' +
+          '<td>₹' + Math.round(yrPrincipal).toLocaleString('en-IN') + '</td>' +
+          '<td>₹' + Math.round(yrInterest).toLocaleString('en-IN') + '</td>' +
+          '<td>₹' + Math.max(0, Math.round(balance)).toLocaleString('en-IN') + '</td>' +
+          '</tr>';
+      }
+      document.getElementById('amortizationTable').innerHTML = tbody;
+    }
+
+    ['loanAmountSlider', 'interestRateSlider', 'tenureSlider'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', (e) => {
+          const targetId = id.replace('Slider', '');
+          document.getElementById(targetId).value = e.target.value;
+          calculateEMI();
+        });
+      }
+    });
+
+    ['loanAmount', 'interestRate', 'tenure'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', (e) => {
+          const sliderId = id + 'Slider';
+          document.getElementById(sliderId).value = e.target.value;
+          calculateEMI();
+        });
+      }
+    });
+
+    document.getElementById('calculateBtn')?.addEventListener('click', calculateEMI);
+    calculateEMI();
+  </script>
+</body>
 </html>
-

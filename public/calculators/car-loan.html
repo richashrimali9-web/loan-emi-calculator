@@ -1,10 +1,19 @@
 <!doctype html>
 <html lang="en">
-      <header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Loan EMI Calculator — mytotalemi</title>
+  <meta name="description" content="Calculate your Car Loan EMI Calculator monthly EMI, total interest, and annual schedule. Compare rates from top Indian banks and optimize your loan repayment.">
+  <link rel="canonical" href="https://mytotalemi.co.in/calculators/car-loan.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
       
-      <button class="hamburger" id="hamburgerBtn">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -27,30 +36,252 @@
       </div>
     </nav>
   </header>
-    <main>
-      <h1 style="text-align:center; margin-top:2rem;">Car Loan EMI Calculator</h1>
-      <p style="max-width:900px; margin:0.75rem auto; text-align:left;">Car loans finance vehicle purchases; they can be new or used car loans. These loans are often secured against the vehicle, giving lenders lower rates than unsecured personal loans. Loan tenures typically range from 1—7 years. Downpayments reduce principal and monthly EMIs; consider manufacturer discounts and insurance when budgeting.</p>
 
-      <h2>What affects your car loan rate?</h2>
-      <p style="max-width:900px; margin:0.5rem auto; text-align:left;">Factors include borrower credit score, loan-to-value (LTV), vehicle age (used cars carry higher rates), and lender offers. Manufacturer financing or dealer tie-ups sometimes provide promotional rates for new cars—always read the fine print for processing and documentation charges.</p>
+  <main>
+    <section class="saas-hero">
+      <div class="hero-content">
+        <div class="hero-pill-badge">
+          <span>✨ 2026 Financial Engine</span>
+          <span>•</span>
+          <span>100% Free & Independent</span>
+        </div>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.75rem;">Car Loan EMI Calculator</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 1.5rem;">Estimate monthly installments for new and used auto loans. Model down payment impact and find the best financing option for your budget.</p>
+      </div>
+    </section>
 
-      <h2>Worked example</h2>
-      <p style="max-width:900px; margin:0.5rem auto; text-align:left;">Example: Loan ₹7,00,000 at 9% p.a. for 5 years ? EMI = ₹14,346. If you make a ₹1,00,000 downpayment, the principal reduces to ₹6,00,000 and EMI drops accordingly. Use the calculator to compare scenarios with varying downpayments and tenures.</p>
+    <!-- Calculator Section -->
+    <section class="container" style="margin: 0 auto 3rem;">
+      <div class="saas-dashboard-grid">
+        <div class="saas-calc-card">
+          <h2 style="text-align: left; margin-top: 0; border: none; padding-bottom: 0; font-size: 1.4rem;">Car Loan EMI Calculator</h2>
+          <p style="color: var(--text-muted); margin-bottom: 1.75rem; font-size: 0.9rem;">Adjust sliders to see instant payment updates.</p>
+          
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="loanAmount" style="margin: 0;">Loan Amount</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;">₹<span id="loanAmountLabel">10,00,000</span></span>
+            </div>
+            <input type="range" id="loanAmountSlider" min="50000" max="10000000" step="50000" value="1000000">
+            <input type="number" id="loanAmount" min="50000" max="10000000" step="50000" value="1000000">
+          </div>
 
-      <h2>FAQs — Car Loans</h2>
-      <ol style="max-width:900px; margin:0.5rem auto; text-align:left;">
-        <li><strong>Q:</strong> Can I get a loan for a used car? <strong>A:</strong> Yes; expect slightly higher rates and strict vehicle inspection criteria.</li>
-        <li><strong>Q:</strong> What is foreclosure? <strong>A:</strong> Paying off your loan early; some lenders charge a fee—check terms.</li>
-        <li><strong>Q:</strong> Are EMIs fixed? <strong>A:</strong> For fixed-rate loans yes; for floating-rate loans EMIs can change with rate resets.</li>
-        <li><strong>Q:</strong> Is insurance mandatory? <strong>A:</strong> Lenders typically require comprehensive insurance as collateral protection.</li>
-      </ol>
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="interestRate" style="margin: 0;">Annual Interest Rate (%)</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;"><span id="interestRateLabel">9</span>%</span>
+            </div>
+            <input type="range" id="interestRateSlider" min="5" max="24" step="0.1" value="9">
+            <input type="number" id="interestRate" min="5" max="24" step="0.1" value="9">
+          </div>
 
-      <p style="max-width:900px; margin:0.5rem auto; text-align:left;">Related reading: <a href="/blog/fixed-vs-floating-rate-interest-in-india.html">How Interest Rates are Calculated</a> — <a href="/guides/">Loan Guides</a></p>
+          <div class="input-field">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <label for="tenure" style="margin: 0;">Loan Tenure (Years)</label>
+              <span style="font-weight: 700; color: var(--primary); font-size: 1.05rem;"><span id="tenureLabel">7</span> Yrs</span>
+            </div>
+            <input type="range" id="tenureSlider" min="1" max="30" step="1" value="7">
+            <input type="number" id="tenure" min="1" max="30" step="1" value="7">
+          </div>
 
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </main>
-    <!-- Removed old stub footer section to avoid duplicate content -->
-  </body>
+          <button class="btn-primary btn-block" id="calculateBtn" style="font-size: 1rem; padding: 0.85rem; border-radius: var(--radius-sm); margin-top: 0.75rem;">Recalculate Schedule</button>
+        </div>
+
+        <div id="results" style="display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;">
+          <div class="saas-stat-card hero-stat" style="padding: 1.75rem;">
+            <div class="stat-label" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Calculated Monthly EMI</div>
+            <div class="stat-value" style="font-size: 2.5rem; margin: 0.5rem 0 0; font-weight: 800;">₹<span id="emiValue">0</span></div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="saas-stat-card" style="padding: 1.25rem;">
+              <div class="stat-value error" style="font-size: 1.3rem;">₹<span id="totalInterestValue">0</span></div>
+              <div class="stat-label" style="font-size: 0.8rem;">Total Interest</div>
+            </div>
+            <div class="saas-stat-card" style="padding: 1.25rem;">
+              <div class="stat-value text" style="font-size: 1.3rem;">₹<span id="totalPaymentValue">0</span></div>
+              <div class="stat-label" style="font-size: 0.8rem;">Total Payable</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; border: 1px solid var(--border); margin: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-weight: 600; font-size: 0.9rem;">Principal vs Interest Split</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Real-time</span>
+            </div>
+            <div style="display: flex; height: 28px; border-radius: 6px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+              <div id="principalBar" style="background: var(--primary); flex: 60; position: relative; transition: flex 0.3s ease;">
+                <span style="position: absolute; left: 10px; top: 5px; color: white; font-size: 12px; font-weight: 700;" id="principalPercent">60% Principal</span>
+              </div>
+              <div id="interestBar" style="background: var(--error); flex: 40; position: relative; transition: flex 0.3s ease;">
+                <span style="position: absolute; right: 10px; top: 5px; color: white; font-size: 12px; font-weight: 700;" id="interestPercent">40% Interest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-wrapper" style="margin-top: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+          <h3 style="margin: 0;">5-Year Amortization Schedule</h3>
+          <div class="saas-toolbar" style="margin: 0;">
+            <button class="btn-outline-sm" onclick="window.print()">🖨️ Print Schedule</button>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Principal Paid</th>
+              <th>Interest Paid</th>
+              <th>Remaining Balance</th>
+            </tr>
+          </thead>
+          <tbody id="amortizationTable">
+            <tr>
+              <td colspan="4" style="text-align: center; padding: 2rem;">Loading schedule...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Deep Guide & FAQ Section -->
+    <section class="container" style="margin: 4rem auto;">
+      <div class="card" style="padding: 2.5rem;">
+        <h2 style="margin-top: 0;">Understanding Your Car Loan EMI Calculator</h2>
+        <p>Estimate monthly installments for new and used auto loans. Model down payment impact and find the best financing option for your budget.</p>
+        
+        <h3>Frequently Asked Questions</h3>
+        <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1rem;">
+          
+            <div style="background: var(--bg); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <h4 style="margin: 0 0 0.4rem; font-size: 1rem; color: var(--text);">What is the maximum tenure for a car loan?</h4>
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Car loan tenures in India generally range from 1 to 7 years.</p>
+            </div>
+          
+            <div style="background: var(--bg); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <h4 style="margin: 0 0 0.4rem; font-size: 1rem; color: var(--text);">Are interest rates higher for used cars?</h4>
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Yes, used car loans carry 2% to 4% higher interest rates compared to new car financing.</p>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>mytotalemi</h4>
+          <p>Free, independent loan EMI calculator & financial decision platform for Indian borrowers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Calculator</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2026 mytotalemi. All rights reserved. Educational financial calculations only.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => menu.classList.toggle('active'));
+    }
+
+    // Basic calculation script for standalone calculator pages
+    function calculateEMI() {
+      const amount = parseFloat(document.getElementById('loanAmount').value) || 0;
+      const rate = (parseFloat(document.getElementById('interestRate').value) || 0) / 12 / 100;
+      const tenure = (parseInt(document.getElementById('tenure').value) || 0) * 12;
+
+      document.getElementById('loanAmountLabel').innerText = amount.toLocaleString('en-IN');
+      document.getElementById('interestRateLabel').innerText = document.getElementById('interestRate').value;
+      document.getElementById('tenureLabel').innerText = document.getElementById('tenure').value;
+
+      if (amount <= 0 || rate <= 0 || tenure <= 0) return;
+
+      const emi = (amount * rate * Math.pow(1 + rate, tenure)) / (Math.pow(1 + rate, tenure) - 1);
+      const totalPayment = emi * tenure;
+      const totalInterest = totalPayment - amount;
+
+      document.getElementById('emiValue').innerText = Math.round(emi).toLocaleString('en-IN');
+      document.getElementById('totalInterestValue').innerText = Math.round(totalInterest).toLocaleString('en-IN');
+      document.getElementById('totalPaymentValue').innerText = Math.round(totalPayment).toLocaleString('en-IN');
+
+      const pPercent = Math.round((amount / totalPayment) * 100);
+      const iPercent = 100 - pPercent;
+
+      document.getElementById('principalBar').style.flex = pPercent;
+      document.getElementById('interestBar').style.flex = iPercent;
+      document.getElementById('principalPercent').innerText = pPercent + '% Principal';
+      document.getElementById('interestPercent').innerText = iPercent + '% Interest';
+
+      let tbody = '';
+      let balance = amount;
+      for (let yr = 1; yr <= Math.min(5, Math.ceil(tenure / 12)); yr++) {
+        let yrInterest = 0;
+        let yrPrincipal = 0;
+        for (let m = 1; m <= 12; m++) {
+          if (balance <= 0) break;
+          let mInterest = balance * rate;
+          let mPrincipal = emi - mInterest;
+          yrInterest += mInterest;
+          yrPrincipal += mPrincipal;
+          balance -= mPrincipal;
+        }
+        tbody += '<tr>' +
+          '<td>Year ' + yr + '</td>' +
+          '<td>₹' + Math.round(yrPrincipal).toLocaleString('en-IN') + '</td>' +
+          '<td>₹' + Math.round(yrInterest).toLocaleString('en-IN') + '</td>' +
+          '<td>₹' + Math.max(0, Math.round(balance)).toLocaleString('en-IN') + '</td>' +
+          '</tr>';
+      }
+      document.getElementById('amortizationTable').innerHTML = tbody;
+    }
+
+    ['loanAmountSlider', 'interestRateSlider', 'tenureSlider'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', (e) => {
+          const targetId = id.replace('Slider', '');
+          document.getElementById(targetId).value = e.target.value;
+          calculateEMI();
+        });
+      }
+    });
+
+    ['loanAmount', 'interestRate', 'tenure'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', (e) => {
+          const sliderId = id + 'Slider';
+          document.getElementById(sliderId).value = e.target.value;
+          calculateEMI();
+        });
+      }
+    });
+
+    document.getElementById('calculateBtn')?.addEventListener('click', calculateEMI);
+    calculateEMI();
+  </script>
+</body>
 </html>
-
