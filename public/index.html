@@ -15,10 +15,62 @@
   
   <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
+
+  <!-- Google Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://mytotalemi.co.in/#webapp",
+        "url": "https://mytotalemi.co.in/",
+        "name": "mytotalemi - Loan EMI Calculator India",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "description": "Free, independent loan EMI calculator for home, personal, car, and education loans in India. Calculate monthly EMI, total interest payable, and 5-year repayment schedule.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://mytotalemi.co.in/#organization",
+        "name": "mytotalemi",
+        "url": "https://mytotalemi.co.in/",
+        "logo": "https://mytotalemi.co.in/icons/icon-512x512.png",
+        "description": "Independent loan financial planning and decision platform for Indian borrowers."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mytotalemi.co.in/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is loan EMI calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EMI is calculated using the formula: EMI = P × r × (1 + r)^n / ((1 + r)^n - 1), where P is principal, r is monthly interest rate, and n is tenure in months."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are prepayment charges applicable on home loans in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Per RBI guidelines, individual floating-rate home loans carry zero prepayment or pre-closure penalty."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Skip to main content -->
-  <a href="#main" class="skip-to-main">Skip to main content</a>
   
   <!-- Navigation -->
     <header>
