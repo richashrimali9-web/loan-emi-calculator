@@ -3,17 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Loan EMI Calculator</title>
-  <meta name="description" content="Learn about mytotalemi: Free EMI calculator, loan guides, and financial education for Indian borrowers. Accurate, transparent, and user-focused.">
+  <title>About Us — Independent Loan Planning & Financial Engine | mytotalemi</title>
+  <meta name="description" content="Learn about mytotalemi: India's premier independent loan EMI calculator and borrower education platform. Transparent, accurate, and free.">
   <meta name="theme-color" content="#4f46e5">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ffffff'/><text x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='%234f46e5'>₹</text></svg>">
   <link rel="stylesheet" href="/css/style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063078781485185" crossorigin="anonymous"></script>
   <link rel="canonical" href="https://mytotalemi.co.in/about/">
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #312e81 100%);
+      color: #ffffff;
+      padding: 4.5rem 1rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .about-hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(99,102,241,0.2) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .about-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      padding: 0.45rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.3px;
+    }
+    .about-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.25rem;
+      max-width: 1050px;
+      margin: 3rem auto 0;
+    }
+    .about-stat-box {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      transition: transform var(--transition-fast);
+    }
+    .about-stat-box:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.09);
+    }
+    .about-stat-num {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #38bdf8;
+      font-family: var(--font-heading);
+    }
+    .about-stat-desc {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-top: 0.25rem;
+    }
+    .feature-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+      margin: 2rem 0;
+    }
+    .premium-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+      position: relative;
+    }
+    .premium-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    .card-icon-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.25rem;
+      box-shadow: inset 0 0 0 1px rgba(99,102,241,0.15);
+    }
+    .step-badge {
+      display: inline-block;
+      padding: 0.3rem 0.85rem;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .trust-banner {
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      border: 1px solid #c7d2fe;
+      border-left: 5px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      margin: 3rem 0;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
-    <header>
+  <header>
     <nav>
       <a href="/" class="brand">mytotalemi</a>
       
@@ -41,53 +158,155 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main style="max-width: 900px; margin: 3rem auto; padding: 0 1rem;">
-      <h1>About mytotalemi</h1>
-      <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
-        mytotalemi helps Indian borrowers understand common loan questions in plain language. The site combines an EMI calculator, practical guides, and comparison articles so readers can explore scenarios before they speak to a lender.
+  <!-- Hero Header Section -->
+  <section class="about-hero">
+    <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
+      <div class="about-pill">
+        <span>✨ 2026 Next-Gen Financial Decision Engine</span>
+      </div>
+      <h1 style="font-size: 3rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 1.25rem; line-height: 1.15;">
+        Democratizing Financial Clarity for Indian Borrowers
+      </h1>
+      <p style="font-size: 1.2rem; color: #cbd5e1; max-width: 760px; margin: 0 auto; line-height: 1.6;">
+        mytotalemi is a 100% independent financial technology & publishing engine designed to bring complete transparency to housing, personal, car, business, and education loans in India.
       </p>
 
-      <div class="card-flat" style="margin-bottom: 2rem;">
-        <h2 style="margin-top: 0;">What this site does</h2>
-        <p>We explain how EMI works, how tenure and rate changes affect monthly payments, and how common loan decisions can influence total cost. The content is written for educational use and is meant to support informed planning rather than replace lender-specific advice.</p>
-        <p><strong>Last updated:</strong> July 2026</p>
+      <!-- Key Platform Stats -->
+      <div class="about-stats-grid">
+        <div class="about-stat-box">
+          <div class="about-stat-num">100% Free</div>
+          <div class="about-stat-desc">No Paywalls or Hidden Fees</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-num">RBI Compliant</div>
+          <div class="about-stat-desc">Reducing-Balance Math Engine</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-num">Zero Data Track</div>
+          <div class="about-stat-desc">Calculations Processed Locally</div>
+        </div>
+        <div class="about-stat-box">
+          <div class="about-stat-num">48+ Guides</div>
+          <div class="about-stat-desc">Deep Borrower Educational Hub</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main style="max-width: 1050px; margin: 3.5rem auto; padding: 0 1.25rem;">
+
+    <!-- What We Do Section -->
+    <section>
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 2.5rem;">
+        <h2 style="border: none; padding: 0; font-size: 2.2rem; margin-bottom: 0.5rem;">Core Platform Pillars</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">How mytotalemi helps you make smarter, interest-saving borrowing decisions.</p>
       </div>
 
-      <h2>Who it is for</h2>
-      <ul>
-        <li>Borrowers comparing home, car, personal, or education loans</li>
-        <li>Readers trying to understand EMI, interest, and repayment trade-offs</li>
-        <li>People looking for plain-language explanations before applying or refinancing</li>
-      </ul>
+      <div class="feature-card-grid">
+        <div class="premium-card">
+          <div class="card-icon-badge">🧮</div>
+          <h3 style="margin-top: 0; color: var(--text); font-size: 1.3rem;">Instant Amortization Engine</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Simulate repayment schedules, test custom interest rates, down payments, and loan tenures with real-time principal versus interest breakdown bars.</p>
+        </div>
 
-      <h2>How we prepare content</h2>
-      <ul>
-        <li>We use standard financial formulas and explain the inputs clearly.</li>
-        <li>We describe assumptions and note where lender terms can differ.</li>
-        <li>We aim to be transparent about fees, rounding, and other factors that can change a final quote.</li>
-      </ul>
+        <div class="premium-card">
+          <div class="card-icon-badge">📊</div>
+          <h3 style="margin-top: 0; color: var(--text); font-size: 1.3rem;">Comprehensive Lenders Matrix</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Compare benchmark interest rates, processing fees, and eligibility thresholds across leading Indian banks like SBI, HDFC, ICICI, Axis Bank, and Bank of Baroda.</p>
+        </div>
 
-      <h2>What this site does not do</h2>
-      <p>mytotalemi is not a lender, bank, broker, or legal adviser. We do not approve loans, issue offers, or provide personalised financial advice for a specific borrower. For an official quote, please contact the lender directly and review the full agreement before acting.</p>
+        <div class="premium-card">
+          <div class="card-icon-badge">💡</div>
+          <h3 style="margin-top: 0; color: var(--text); font-size: 1.3rem;">Prepayment & Tax Optimization</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Learn how Section 80C, Section 24(b), and Section 80E tax deductions save you taxes, and how paying 1 extra EMI yearly cuts loan tenure by up to 40%.</p>
+        </div>
+      </div>
+    </section>
 
-      <h2>Editorial note</h2>
-      <p>Content on this site is prepared for educational purposes. Rates, fees, eligibility criteria, and policy terms can change by lender and over time, so the examples here should be treated as illustrative rather than final.</p>
+    <!-- How Content is Prepared -->
+    <section style="margin: 4rem 0;">
+      <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Our Rigorous Editorial & Calculation Methodology</h2>
+      <div class="feature-card-grid">
+        <div class="premium-card">
+          <span class="step-badge">Phase 1</span>
+          <h3 style="margin-top: 0.5rem; color: var(--text); font-size: 1.2rem;">Standard RBI Formulas</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">We strictly adhere to reducing-balance interest math as prescribed by Reserve Bank of India guidelines. Every input parameter is clearly disclosed.</p>
+        </div>
 
-      <h2>Contact us</h2>
-      <p>Have questions, suggestions, or feedback? Visit our <a href="/contact/">Contact page</a> and we will review your message as soon as possible.</p>
+        <div class="premium-card">
+          <span class="step-badge">Phase 2</span>
+          <h3 style="margin-top: 0.5rem; color: var(--text); font-size: 1.2rem;">Independent Transparency</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">We are not owned by, affiliated with, or funded by any commercial bank or NBFC. Our comparisons are 100% unbiased and objective.</p>
+        </div>
 
-      <h2>Resources</h2>
-      <ul>
-        <li><a href="/guides/">All Guides</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/">EMI Calculator</a></li>
-        <li><a href="/privacy-policy/">Privacy Policy</a></li>
-      </ul>
+        <div class="premium-card">
+          <span class="step-badge">Phase 3</span>
+          <h3 style="margin-top: 0.5rem; color: var(--text); font-size: 1.2rem;">Continuous Policy Audits</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Our content and rate matrices are regularly updated to reflect new monetary policy rates (RLLR / MCLR), repo rate changes, and tax law amendments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust & Non-Lender Disclaimer Banner -->
+    <div class="trust-banner">
+      <h3 style="margin-top: 0; color: var(--primary-dark); font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem;">
+        🛡️ Important Transparency Notice
+      </h3>
+      <p style="color: #334155; margin-bottom: 0.75rem; font-size: 0.98rem; line-height: 1.6;">
+        <strong>mytotalemi is an independent educational publisher and calculator provider.</strong> We are not a bank, non-banking financial company (NBFC), credit broker, or financial advisor. We do not issue loan approvals, collect loan applications, or charge any fee for borrowing guidance.
+      </p>
+      <p style="color: #475569; margin: 0; font-size: 0.92rem;">
+        All figures produced by our calculators are for illustrative and planning purposes only. Before executing a loan agreement, please verify exact terms, interest rates, and processing fees directly with your chosen lending institution.
+      </p>
+    </div>
+
+    <!-- Quick Navigation Grid -->
+    <section style="margin: 3.5rem 0;">
+      <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Explore Financial Tools & Resources</h2>
+      <div class="feature-card-grid">
+        <a href="/calculators/home-loan.html" class="premium-card" style="text-decoration: none; color: inherit;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏠</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary);">Home Loan Calculator</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Calculate monthly housing EMIs, tax deductions under Sec 80C & 24b, and 30-year schedules.</p>
+        </a>
+
+        <a href="/calculators/personal-loan.html" class="premium-card" style="text-decoration: none; color: inherit;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">👤</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary);">Personal Loan Calculator</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Compare reducing vs flat rates, check CIBIL score requirements, and prepayment rules.</p>
+        </a>
+
+        <a href="/calculators/car-loan.html" class="premium-card" style="text-decoration: none; color: inherit;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚗</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary);">Car Loan Calculator</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Plan new and used vehicle auto financing, on-road funding, and 7-year amortization schedules.</p>
+        </a>
+
+        <a href="/calculators/business-loan.html" class="premium-card" style="text-decoration: none; color: inherit;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">💼</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary);">Business Loan Calculator</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Calculate collateral-free MSME loans, PM MUDRA Yojana tiers, and working capital EMI.</p>
+        </a>
+
+        <a href="/calculators/education-loan.html" class="premium-card" style="text-decoration: none; color: inherit;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎓</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary);">Education Loan Calculator</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Calculate study abroad loans, moratorium interest rules, and Section 80E tax relief.</p>
+        </a>
+
+        <a href="/contact/" class="premium-card" style="text-decoration: none; color: inherit;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">✉️</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--primary);">Get in Touch</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Have suggestions or editorial feedback? Contact our support team for prompt assistance.</p>
+        </a>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
-    <footer>
+  <footer>
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-col">
@@ -98,17 +317,22 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Calculator</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/guides/">Guides</a></li>
-            <li><a href="/about/">About</a></li>
+            <li><a href="/calculators/home-loan.html">Home Loan EMI</a></li>
+            <li><a href="/calculators/personal-loan.html">Personal Loan EMI</a></li>
+            <li><a href="/calculators/car-loan.html">Car Loan EMI</a></li>
+            <li><a href="/calculators/business-loan.html">Business Loan EMI</a></li>
+            <li><a href="/calculators/education-loan.html">Education Loan EMI</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4>Resources & Legal</h4>
           <ul>
+            <li><a href="/blog/">Financial Blog</a></li>
+            <li><a href="/guides/">Borrower Guides</a></li>
+            <li><a href="/about/">About Us</a></li>
             <li><a href="/privacy-policy/">Privacy Policy</a></li>
             <li><a href="/terms-of-service/">Terms of Service</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -117,30 +341,23 @@
       </div>
     </div>
   </footer>
-  <script>
-    const btn = document.getElementById('hamburgerBtn');
-    const menu = document.getElementById('mobileMenu');
-    if (btn && menu) {
-      btn.addEventListener('click', () => menu.classList.toggle('active'));
-    }
-  </script>
 
   <!-- JavaScript: Mobile Menu Toggle -->
   <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-
-    hamburgerBtn.addEventListener('click', function() {
-      hamburgerBtn.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function() {
-        hamburgerBtn.classList.remove('active');
-        mobileMenu.classList.remove('active');
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
       });
-    });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          hamburgerBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
+      });
+    }
   </script>
 </body>
 </html>
