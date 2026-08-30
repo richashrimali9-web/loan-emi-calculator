@@ -1,273 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
-    <loc>https://mytotalemi.co.in/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/about/</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Blog Index -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- High Value Expert Articles -->
   <url>
-    <loc>https://mytotalemi.co.in/blog/repo-linked-home-loans-vs-mclr-comparison-2026.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/blog/5-common-emi-calculation-mistakes-indians-make-and-how-to-avoid-them.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytotalemi.co.in/blog/cibil-score-optimization-90-day-action-plan.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/blog/7-smart-tips-to-reduce-your-home-loan-emi-in-2026-india.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytotalemi.co.in/blog/pmay-u-2-0-eligibility-subsidy-calculator-guide.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/blog/home-loan-prepayment-vs-equity-investment-wealth-comparison.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/blog/advanced-emi-strategies.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytotalemi.co.in/blog/car-loan-vs-personal-loan-for-vehicle-hidden-cost-analysis.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Blog Articles (Topic-named) -->
   <url>
-    <loc>https://mytotalemi.co.in/blog/7-smart-tips-to-reduce-your-home-loan-emi-in-2026-india.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/blog/case-study.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytotalemi.co.in/blog/how-your-cibil-score-directly-affects-your-emi-and-loan-approval.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/blog/cibil-score-optimization-90-day-action-plan.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/education-loan-options-and-repayment-strategies.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytotalemi.co.in/blog/fixed-vs-floating-interest-rate.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytotalemi.co.in/blog/prepayment-vs-investing.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/blog/fixed-vs-floating-rate-interest-in-india.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mytotalemi.co.in/blog/5-common-emi-calculation-mistakes-indians-make-and-how-to-avoid-them.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/blog/home-loan-prepayment-vs-equity-investment-wealth-comparison.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytotalemi.co.in/blog/home-loan-tax-benefits-in-india.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/home-loan-vs-personal-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/how-emi-works.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/how-your-cibil-score-directly-affects-your-emi-and-loan-approval.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/loan-comparison-checklist.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/pmay-scheme.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/pmay-u-2-0-eligibility-subsidy-calculator-guide.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/prepayment-vs-investing.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/regional-schemes-roundup.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/repo-linked-home-loans-vs-mclr-comparison-2026.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/blog/understanding-mudra-and-small-business-loans.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/business-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Blog Articles (Numbered — How EMI Works) -->
   <url>
-    <loc>https://mytotalemi.co.in/blog/how-emi-works.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Home Loan vs Personal Loan) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/home-loan-vs-personal-loan.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Mudra and Small Business Loans) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/understanding-mudra-and-small-business-loans.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — PMAY Scheme Guide) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/pmay-scheme.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Fixed vs Floating Rate) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/fixed-vs-floating-rate-interest-in-india.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Education Loans) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/education-loan-options-and-repayment-strategies.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Prepayment and Refinancing) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/advanced-emi-strategies.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Loan Comparison Checklist) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/loan-comparison-checklist.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Family Home Loan Case Study) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/case-study.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Blog Articles (Numbered — Government Schemes) -->
-  <url>
-    <loc>https://mytotalemi.co.in/blog/regional-schemes-roundup.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Guides Index -->
-  <url>
-    <loc>https://mytotalemi.co.in/guides/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/calculators/business-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/what-is-emi.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/how-emi-is-calculated.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/home-loan-emi-guide.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/car-loan-emi-guide.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/personal-loan-mistakes.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/prepayment-refinancing-playbook.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/pmay-scheme-guide.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/indian-borrower-mistakes.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/guides/ultimate-loan-emi-guide.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Calculators -->
-  <url>
-    <loc>https://mytotalemi.co.in/calculators/home-loan.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mytotalemi.co.in/calculators/personal-loan.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mytotalemi.co.in/calculators/car-loan.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mytotalemi.co.in/calculators/business-loan.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/calculators/education-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-
-  <!-- Utility Pages -->
   <url>
-    <loc>https://mytotalemi.co.in/about/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://mytotalemi.co.in/calculators/home-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/calculators/personal-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/car-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mytotalemi.co.in/contact/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/education-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/car-loan-emi-guide.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/home-loan-emi-guide.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/home-vs-personal-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/how-emi-is-calculated.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/indian-borrower-mistakes.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/personal-loan-mistakes.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/pmay-scheme-guide.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/prepayment-refinancing-playbook.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/ultimate-loan-emi-guide.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/guides/what-is-emi.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/home-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mytotalemi.co.in/personal-loan.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mytotalemi.co.in/privacy-policy/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mytotalemi.co.in/terms-of-service/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>
