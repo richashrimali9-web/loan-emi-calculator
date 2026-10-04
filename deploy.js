@@ -19,7 +19,7 @@ const ROOT = __dirname;
 const PUBLIC = path.join(ROOT, 'public');
 
 // Directories inside public/ that should be synced to root
-const SYNC_DIRS = ['blog', 'guides', 'about', 'contact', 'privacy-policy', 'terms-of-service', 'calculators', 'icons'];
+const SYNC_DIRS = ['blog', 'guides', 'about', 'author', 'contact', 'privacy-policy', 'terms-of-service', 'calculators', 'icons'];
 
 // Individual files inside public/ that should be synced to root
 const SYNC_FILES = ['css/style.css', 'sitemap.xml', 'robots.txt', 'ads.txt', 'CNAME', 'manifest.json', 'index.html', 'home-loan.html', 'personal-loan.html', 'car-loan.html', 'business-loan.html', 'education-loan.html', 'google957f8a3821643898.html'];
